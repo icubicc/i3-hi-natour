@@ -1,3 +1,130 @@
+.page-container {
+  .page-hero {
+    min-height: 640px;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+		align-items: flex-end;
+
+    .hero-text {
+      padding-top: 32px;
+      padding-left: 48px;
+      padding-bottom: 32px;
+      max-width: 600px;
+      position: relative;
+      margin-bottom: 130px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 480px;
+        background-color: rgba(#63173C, 0.4);
+      }
+
+      .hero-text-container {
+        padding: 48px 32px;
+        color: $white;
+        background-color: rgba(#331321, 0.4);
+        position: relative;
+
+        .title {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .search-filter {
+    position: absolute;
+    width: 100%;
+    margin-top: -48px;
+
+    .search-filter-container {
+      .filter-head {
+        padding: 12px 24px;
+        text-align: center;
+        background-color: #1A1919;
+        color: $white;
+      }
+      .filter-content {
+        background-color: #414141;
+        padding: 12px 24px;
+
+        .form {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .filter-fields {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: -8px;
+
+            .filter-field {
+              padding: 8px;
+              width: 25%;
+
+              .input {
+                width: 100%;
+                padding: 6px 8px;
+              }
+
+              select.input {
+                padding: 5px 24px 5px 8px;
+
+                option {
+                  margin: 0;
+                  padding: 0;
+                }
+              }
+            }
+          }
+
+          .filter-action {
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .page-content {
+    background: url('../images/batik-bg.png') no-repeat;
+    background-size: 100%;
+    background-position: top center;
+		padding-top: 48px;
+		padding-bottom: 48px;
+		min-height: 480px;
+
+		&.with-filter {
+			padding-top: 120px;
+		}
+
+		&.plain-page-content {
+			padding-top: 200px;
+		}
+
+		&.zero-bottom {
+			padding-bottom: 0;
+		}
+
+		.section {
+			.section-heading {
+				text-align: center;
+				margin-bottom: 48px;
+
+				.title {
+					font-weight: 400;
+				}
+			}
+		}
+  }
+}
+
 .page-navigation {
 	align-items: center;
 	border-top: 1px solid $color-border;

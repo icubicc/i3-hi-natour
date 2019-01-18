@@ -4,10 +4,11 @@
 	background-color: $color-one-500;
 	border: 1px solid transparent;
 	border-radius: 0;
-	color: $white;
+	color: #1A1919;
+	font-weight: 700;
 	display: inline-block;
 	line-height: inherit;
-	padding: 3px 12px;
+	padding: 6px 24px;
 	position: relative;
 	text-align: center;
 	transition: all 0.2s ease-out;
@@ -21,7 +22,7 @@
 	&:hover,
 	&:focus {
 		background-color: $color-one-600;
-		color: $white;
+		color: #1A1919;
 		outline: 0;
 		text-decoration: none;
 	}

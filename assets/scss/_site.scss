@@ -20,13 +20,16 @@
 }
 
 .site-header {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	z-index: 8;
 
 	.site-header-container {
-		background-color: #1A1919;
-		padding: 16px;
+
+		.site-header-frame {
+			background-color: #1A1919;
+			padding: 16px;
+		}
 
 		.header-top {
 			display: flex;
@@ -45,7 +48,7 @@
 
 					.switch-option {
 						display: block;
-						font-size: 11px;
+						font-size: 10px;
 						color: $white;
 						line-height: 1;
 						padding: 6px;
@@ -65,31 +68,52 @@
 		.header-main {
 			display: flex;
 			align-items: flex-end;
+			justify-content: center;
 
 			.site-header-logo {
 				width: 100%;
 				max-width: 116px;
 				margin: 0 32px;
+				margin-top: -28px;
 				text-align: center;
 			}
 
 			.site-header-nav {
-				width: 100%;
 				padding-bottom: 8px;
 
 				.items {
 					display: flex;
+					flex-wrap: wrap;
 					align-items: center;
-					justify-content: space-between;
 
 					.item {
 						padding: 8px 24px;
 
 						a {
 							display: block;
+							text-align: center;
 							color: $white;
 							font-weight: 700;
 							text-decoration: none;
+							transition: all 0.2s ease-in-out;
+						}
+
+						.icon {
+							font-size: 18px;
+							margin-right: 6px;
+						}
+
+						&:hover {
+							a {
+								color: $color-one-500;
+							}
+						}
+
+						&.item-current {
+
+							a {
+								color: $color-one-500;
+							}
 						}
 					}
 				}
@@ -103,6 +127,7 @@
 	flex: 1 0 auto;
 	flex-direction: column;
 	position: relative;
+	background-color: #FEFFFE;
 
 	@at-root {
 		.site-content-inner {
@@ -132,8 +157,219 @@
 
 	@at-root {
 		.site-footer-inner {
-			padding-bottom: 24px;
-			padding-top: 24px;
+		}
+	}
+
+	.site-footer-main {
+		padding-top: 48px;
+		padding-bottom: 64px;
+		display: flex;
+		justify-content: space-between;
+		
+		.footer-left {
+			padding-right: 64px;
+
+			.newsletter {
+				margin-bottom: 24px;
+
+				.label {
+					display: block;
+					margin-bottom: 12px;
+				}
+
+				.button {
+					width: 100%;
+					max-width: 240px;
+				}
+			}
+
+			.social-media {
+				margin-bottom: 64px;
+
+				.list {
+					display: flex;
+					flex-wrap: wrap;
+					margin: -8px;
+					list-style-type: none;
+					padding: 0;
+
+					.item {
+						margin: 8px;
+
+						.icon {
+							font-size: 24px;
+
+							&.instagram {
+								color: #B74072;
+							}
+
+							&.facebook {
+								color: #2876CD;
+							}
+
+							&.twitter {
+								color: #3DB1E2;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.footer-right {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: -24px;
+
+			.footer-nav {
+				width: 40%;
+				padding: 24px;
+
+				&.wide {
+					width: 60%;
+				}
+
+				.footer-nav-item {
+					&:not(:last-child) {
+						margin-bottom: 64px;
+					}
+
+					.heading {
+						margin-bottom: 12px;
+					}
+
+					.list {
+						padding: 0;
+						list-style-type: none;
+
+						.item {
+							position: relative;
+							padding-left: 16px;
+
+							&:not(:last-child) {
+								margin-bottom: 4px;
+							}
+
+							a {
+								color: $white;
+								text-decoration: none;
+								text-transform: uppercase;
+								font-size: 12px;
+								font-weight: 700;
+							}
+
+							&:before {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 9px;
+								width: 6px;
+								height: 10px;
+								background: url('../images/list-angle.png') no-repeat;
+								background-size: contain;
+							}
+						}
+
+						&.two-column {
+							display: flex;
+							flex-wrap: wrap;
+
+							.item {
+								width: 50%;
+								padding: 0 12px;
+								padding-left: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.site-footer-attribution {
+		padding-top: 24px;
+		padding-bottom: 24px;
+		border-top: 1px solid $white;
+		font-size: 13px;
+	}
+}
+
+.mega-menu {
+	.mega-menu-item {
+		width: 100%;
+		padding: 32px 48px;
+		background-color: rgba($black, 0.5);
+		border-bottom: 4px solid #7C174B;
+		display: none;
+
+		.list {
+			padding: 0;
+			list-style-type: none;
+
+			.item {
+				position: relative;
+				padding-left: 32px;
+
+				&:not(:last-child) {
+					margin-bottom: 24px;
+				}
+
+				&.item-current {
+					a {
+						color: $color-one-500;
+						font-weight: 700;
+					}
+				}
+
+				a {
+					color: $white;
+					text-decoration: none;
+					transition: color 0.2s ease-in-out;
+
+					&:hover {
+						color: $color-one-500;
+					}
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					background: url('../images/icon-dropmenu.png') no-repeat;
+					background-size: cover;
+					width: 21px;
+					height: 21px;
+				}
+
+				.list-child {
+					padding: 0;
+					padding-top: 12px;
+
+					.item-child {
+						&:not(:last-child) {
+							margin-bottom: 12px;
+						}
+
+						a {
+							color: $white;
+							font-weight: 400;
+
+							&:hover {
+								color: $color-one-500;
+							}
+						}
+
+						&.item-current {
+							a {
+								color: $color-one-500;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

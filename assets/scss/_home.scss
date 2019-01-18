@@ -1,0 +1,295 @@
+.featured-promo {
+  margin-bottom: 64px;
+
+  .featured-promo-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2px;
+
+    .featured-promo-item {
+      width: calc(25% - 4px);
+      margin: 2px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba($black, 0.2);
+      transform: scale(1);
+      position: relative;
+      background-color: #414141;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+        z-index: 1;
+      }
+
+      .image {
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .title {
+        padding: 32px 24px;
+        color: $white;
+        font-weight: 700;
+      }
+
+      .learn-more {
+        display: block;
+        color: $white;
+        text-transform: uppercase;
+        background-color: #1A1919;
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.membership-promo {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  background-position: center !important;
+  background-size: cover !important;
+  margin-bottom: 16px;
+
+  .inner {
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .membership-promo-text {
+    width: 100%;
+    max-width: 578px;
+    background-color: rgba(#4B162E, 0.8);
+    padding: 48px;
+    text-align: center;
+    color: $white;
+
+    .text-container {
+      max-width: 320px;
+      margin: 0 auto;
+
+      .title {
+        margin-bottom: 18px;
+      }
+
+      .desc {
+        margin-bottom: 18px;
+      }
+
+      .button-join {
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+
+      .login-link {
+        a {
+          font-weight: 700;
+          text-decoration: underline;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.featured-hotel-slider {
+  margin-bottom: 16px;
+  
+  .slides {
+
+    .flickity-prev-next-button {
+      background-color: transparent;
+
+      .arrow {
+        fill: $white;
+      }
+
+      &.previous {
+        left: 24px;
+      }
+
+      &.next {
+        right: 24px;  
+      }
+      
+    }
+
+    .slide {
+      width: 100%;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($black, 0.4);
+      }
+
+      .slide-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        
+        .slide-text-container {
+          text-align: center;
+          color: $white;
+
+          .title {
+            font-size: 48px;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-bottom: 12px;
+          }
+
+          .subtitle {
+            font-size: 24px;
+            max-width: 480px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+          }
+
+          .button {
+            text-transform: uppercase;
+            color: $white;
+            background-color: $black;
+            padding: 12px 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-additional {
+  margin-bottom: 2px;
+
+  .inner {
+    display: flex;
+    margin: -1px;
+  }
+
+  .wrapper {
+    padding: 0;
+    max-width: 1425px;
+  }
+
+  .home-additional-section {
+    width: calc(50% - 2px);
+    margin: 1px;
+
+    &.instagram {
+      position: relative;
+      overflow: hidden;
+      min-height: 540px;
+
+      .instagram-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .instagram-icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .view-more {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 16px 24px;
+        color: $white;
+        background-color: rgba(#7C174B, 0.4);
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+
+    &.post {
+      .post-list {
+        .post-item {
+          position: relative;
+          overflow: hidden;
+          min-height: 270px;
+
+          &:not(:last-child) {
+            margin-bottom: 2px;
+          }
+
+          .post-bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 2s ease-in-out;
+            transform: scale(1);
+          }
+
+          &:hover {
+            .post-bg {
+              transform: scale(1.2);
+            }
+          }
+
+          .text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .text-container {
+              text-align: center;
+              color: $white;
+
+              .title {
+                margin-bottom: 16px;
+              }
+
+              .button {
+                font-size: 14px;
+                color: $white;
+                text-transform: uppercase;
+                padding: 10px 32px;
+                background-color: rgba($black, 0.8);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.login-page {
+  .login-page-heading {
+    text-align: center;
+    padding-bottom: 48px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #414141;
+  }
+
+  .login-page-content {
+    .login-form {
+      max-width: 800px;
+      margin: 0 auto 48px;
+
+      .form {
+        .form-text {
+          margin-bottom: 16px;
+
+          .input {
+            padding: 12px;
+          }
+
+          .remember-me {
+            display: flex;
+            align-items: center;
+            padding-top: 8px;
+
+            .label {
+              display: block;
+              padding-left: 8px;
+              margin-bottom: 0;
+              color: $color-text-light;
+            }
+          }
+        }
+
+        .social-login {
+          padding-top: 32px;
+          text-align: center;
+
+          .social-login-heading {
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+          }
+
+          .social-login-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -12px -24px;
+
+            .social-login-item {
+              padding: 12px 24px;
+
+              .link {
+                display: block;
+                width: 64px;
+              }
+            }
+          }
+        }
+
+        .form-submit {
+          text-align: center;
+          padding-top: 48px;
+
+          .button {
+            width: 100%;
+            max-width: 380px;
+            margin-bottom: 16px;
+            padding: 12px 24px;
+            font-weight: 400;
+          }
+
+          .forgot-password {
+            display: block;
+            color: $color-text;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .signup-link-section {
+      border-top: 1px solid #414141;
+      padding: 48px 0;
+      text-align: center;
+
+      .heading {
+        font-weight: 400;
+        margin-bottom: 32px;
+      }
+
+      .button {
+        background-color: #7C174B;
+        color: $white;
+        padding: 12px 24px;
+        width: 100%;
+        max-width: 380px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+  }
+}

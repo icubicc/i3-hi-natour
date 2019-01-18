@@ -8,13 +8,13 @@
 	}
 
 	&:last-child {
-		margin-bottom: -8px;
+		margin-bottom: -12px -8px;
 	}
 
 	@at-root {
 		.form-group-item {
 			margin-bottom: 0;
-			padding: 8px 8px;
+			padding: 12px 8px;
 
 			@include breakpoint(crawler) {
 				flex: 0 1 50%;
@@ -26,7 +26,7 @@
 .form-file {
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	.js & {
@@ -127,7 +127,7 @@
 .form-phone {
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	.label {
@@ -165,7 +165,7 @@
 	flex-direction: column;
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	.inputs {
@@ -345,12 +345,11 @@
 .form-select {
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	.label {
 		display: inline-block;
-		font-weight: 700;
 		margin-bottom: 2px;
 	}
 
@@ -363,13 +362,12 @@
 	position: relative;
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	.label {
 		display: inline-block;
-		font-weight: 700;
-		margin-bottom: 2px;
+		margin-bottom: 8px;
 	}
 
 	.input {
@@ -403,6 +401,6 @@
 	}
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 }

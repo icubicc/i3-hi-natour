@@ -13,4 +13,37 @@ jQuery(document).ready(function($) {
 		removalDelay: 200
 	});
 
+	$('.site-header-nav .item a').hover(function() {
+		var $currentToggled = '#' + $('.mega-menu-item.is-toggled').attr('id');
+
+		if($(this).hasClass('mega-menu-toggle')) {
+			var $menutarget = $(this).data('menu-target');
+			
+			if($menutarget != $currentToggled) {
+				$($currentToggled).removeClass('is-toggled');
+				$($currentToggled).slideUp(200);
+			}
+
+			$($menutarget).addClass('is-toggled');
+			$($menutarget).slideDown(200);
+		}
+		else {
+			$($currentToggled).removeClass('is-toggled');
+			$($currentToggled).slideUp(200);
+		}
+	});
+
+	$('.site-header-container').hover(function() {
+
+	}, function() {
+		$('.mega-menu-item').removeClass('is-toggled');
+		$('.mega-menu-item').slideUp(200);
+	});
+
+	$('.featured-hotel-slider').find('.slides').flickity({
+		imagesLoaded: true,
+		wrapAround: false,
+		pageDots: false
+	});
+
 });
