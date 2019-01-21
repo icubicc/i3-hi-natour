@@ -1,0 +1,162 @@
+.signup-page {
+  .signup-page-heading {
+    text-align: center;
+    padding-bottom: 48px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #414141;
+
+    .title {
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .signup-page-content {
+    .signup-form {
+      max-width: 800px;
+      margin: 0 auto 48px;
+
+      .form {
+        .form-text {
+          margin-bottom: 16px;
+
+          .input {
+            padding: 12px;
+          }
+
+          select.input {
+            padding: 11px 12px;
+          }
+
+          &.form-text-title {
+            max-width: 280px;
+          }
+        }
+
+        .form-group-phone {
+          .form-group-item {
+            flex: 0 1 80%;
+
+            &:first-child {
+              flex: 0 1 20%;
+            }
+          }
+        }
+
+        .form-submit {
+          text-align: center;
+          padding-top: 48px;
+
+          .button {
+            width: 100%;
+            max-width: 380px;
+            margin-bottom: 16px;
+            padding: 12px 24px;
+            font-weight: 400;
+            background-color: #BC9764;
+            text-transform: uppercase;
+          }
+
+          .forgot-password {
+            display: block;
+            color: $color-text;
+            text-decoration: underline;
+          }
+        }
+
+        .password-qualification {
+          color: #868686;
+          margin-bottom: 24px;
+
+          .heading {
+            margin-bottom: 12px;
+          }
+
+          .list {
+            list-style-type: none;
+            padding: 0;
+
+            .item {
+              padding-left: 32px;
+              position: relative;
+
+              &:not(:last-child) {
+                margin-bottom: 8px;
+              }
+
+              &:before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                background-color: #BCBCBC;
+                border-radius: 50%;
+              }
+
+              &.qualified {
+                color: $color-text;
+
+                &:before {
+                  background-color: #76B25E;
+                }
+              }
+            }
+          }
+        }
+
+        .form-newsletter {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 16px;
+
+          input[name="newsletter_subscribtion"] {
+            margin-top: 5px;
+            transform: scale(1.2);
+          }
+
+          .label {
+            padding-left: 16px;
+            margin-bottom: 0;
+            color: #868686;
+          }
+        }
+
+        .signup-disclaimer {
+          color: #868686;
+
+          p:not(:last-child) {
+            margin-bottom: 16px;
+          }
+
+          a {
+            color: #868686;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .login-link-section {
+      border-top: 1px solid #414141;
+      padding: 48px 0;
+      text-align: center;
+
+      .heading {
+        font-weight: 400;
+        margin-bottom: 32px;
+      }
+
+      .button {
+        background-color: #005473;
+        color: $white;
+        padding: 12px 24px;
+        width: 100%;
+        max-width: 380px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+  }
+}

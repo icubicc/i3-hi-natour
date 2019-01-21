@@ -16,6 +16,10 @@
 			margin-bottom: 0;
 			padding: 12px 8px;
 
+			&.form-text {
+				margin-bottom: 0 !important;
+			}
+
 			@include breakpoint(crawler) {
 				flex: 0 1 50%;
 			}

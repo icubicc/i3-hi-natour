@@ -4,30 +4,18 @@
     background-size: cover !important;
     background-position: center !important;
     display: flex;
-		align-items: flex-end;
-
+		align-items: center;
+		justify-content: center;
+		padding-top: 124px;
+		position: relative;
+		
     .hero-text {
-      padding-top: 32px;
-      padding-left: 48px;
-      padding-bottom: 32px;
-      max-width: 600px;
-      position: relative;
-      margin-bottom: 130px;
-
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 480px;
-        background-color: rgba(#63173C, 0.4);
-      }
+			text-align: center;
+			position: relative;
+			z-index: 1;
 
       .hero-text-container {
-        padding: 48px 32px;
         color: $white;
-        background-color: rgba(#331321, 0.4);
         position: relative;
 
         .title {
@@ -112,6 +100,15 @@
 			padding-bottom: 0;
 		}
 
+		.page-content-heading {
+			text-align: center;
+			margin-bottom: 54px;
+
+			.title {
+				font-weight: 400;
+			}
+		}
+
 		.section {
 			.section-heading {
 				text-align: center;
@@ -119,6 +116,11 @@
 
 				.title {
 					font-weight: 400;
+					margin-bottom: 12px;
+				}
+
+				.subtitle {
+					color: #868686;
 				}
 			}
 		}

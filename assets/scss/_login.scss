@@ -4,6 +4,10 @@
     padding-bottom: 48px;
     margin-bottom: 32px;
     border-bottom: 1px solid #414141;
+
+    .title {
+      text-transform: uppercase;
+    }
   }
 
   .login-page-content {
@@ -70,6 +74,7 @@
             margin-bottom: 16px;
             padding: 12px 24px;
             font-weight: 400;
+            text-transform: uppercase;
           }
 
           .forgot-password {
