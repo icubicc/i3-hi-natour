@@ -46,4 +46,10 @@ jQuery(document).ready(function($) {
 		pageDots: false
 	});
 
+	$('.js-destination-slider').find('.slides').flickity({
+		imagesLoaded: true,
+		wrapAround: false,
+		//prevNextButtons: false,
+	});
+
 });

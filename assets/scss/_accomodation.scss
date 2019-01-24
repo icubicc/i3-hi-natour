@@ -51,8 +51,28 @@
           background-color: #FAFAFA;
           display: flex;
           justify-content: space-between;
+          align-items: center;
           padding-top: 12px;
           padding-bottom: 12px;
+
+          .rating {
+            padding-left: 24px;
+            padding-right: 24px;
+
+            .rating-star {
+              .star {
+                font-size: 22px;
+                width: 117px;
+                height: 22px;
+              }
+
+              .fill {
+                font-size: 22px;
+                height: 22px;
+                color: #FFB41F;
+              }
+            }
+          }
 
           .action {
             .button-book {
@@ -71,6 +91,104 @@
         color: $color-text;
         font-size: 18px;
         text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.destination-slider {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: $white;
+    box-shadow: inset 0 5px 5px rgba($black, 0.2);
+    height: 240px;
+  }
+
+  .destination-slider-container {
+    background-color: #F9FAF9;
+    box-shadow: 0 0 5px 2px rgba($black, 0.2);
+    border-bottom: 8px solid #7C174B;
+    position: relative;
+
+    .slides {
+
+      .flickity-prev-next-button {
+        top: 77%;
+
+        &.previous {
+          left: 12px;
+        }
+
+        &.next {
+          right: 12px;
+        }
+      }
+
+      .slide {
+        width: 100%;
+        
+        .slide-image {
+
+        }
+
+        .slide-text {
+          padding: 48px 64px;
+          text-align: center;
+
+          .heading {
+            font-weight: 400;
+            margin-bottom: 32px;
+          }
+
+          .text {
+            color: #868686;
+          }
+        }
+      }
+
+      .flickity-page-dots {
+        bottom: 0;
+        position: relative;
+        padding-top: 48px;
+        padding-bottom: 54px;
+
+        .dot {
+          width: 18px;
+          height: 18px;
+          border: 2px solid $black;
+          margin: 0 6px;
+
+          &.is-selected {
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.destination-hotel-selection {
+  padding-top: 48px;
+
+  .accomodation-list {
+    padding-bottom: 0 !important;
+  }
+}
+
+.accomodation-sections {
+  .section.destination-hotel-selection {
+    background-color: $white;
+    
+    .section-heading {
+      .title {
+        font-weight: 400 !important;
       }
     }
   }
