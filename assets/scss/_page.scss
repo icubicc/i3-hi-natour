@@ -8,7 +8,7 @@
 		justify-content: center;
 		padding-top: 124px;
 		position: relative;
-		
+
     .hero-text {
 			text-align: center;
 			position: relative;
@@ -23,12 +23,16 @@
         }
       }
     }
-  }
+	}
+
+	.page-hero + .search-filter,
+	.home-page-hero + .search-filter {
+		position: absolute;
+		margin-top: -48px;
+	}
 
   .search-filter {
-    position: absolute;
     width: 100%;
-    margin-top: -48px;
 
     .search-filter-container {
       .filter-head {
@@ -106,6 +110,7 @@
 
 			.title {
 				font-weight: 400;
+				text-transform: uppercase;
 			}
 		}
 
