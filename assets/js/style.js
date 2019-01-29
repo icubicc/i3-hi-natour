@@ -26,7 +26,7 @@
 
 	// fluidvids
 	fluidvids.init({
-		selector: ['.js-fluidvids'],
+		selector: ['.js-fluidvids iframe'],
 		players: ['www.youtube.com']
 	});
 

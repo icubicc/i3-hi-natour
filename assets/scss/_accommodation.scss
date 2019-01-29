@@ -501,7 +501,7 @@
       }
 
       .reviews-heading {
-        margin: -12px -12px 20px;
+        margin: -12px -12px 36px;
         display: flex;
 
         .heading-section {
@@ -510,6 +510,8 @@
 
           &.rating {
             .rating-star {
+              margin-bottom: 12px;
+
               .star {
                 font-size: 22px;
                 width: 117px;
@@ -520,6 +522,14 @@
                 font-size: 22px;
                 height: 22px;
                 color: #FFB41F;
+              }
+            }
+
+            .rating-info {
+              font-size: 14px;
+
+              span {
+                font-weight: 700;
               }
             }
           }
@@ -535,6 +545,114 @@
 
           &.logo {
             text-align: right;
+          }
+        }
+      }
+
+      .reviews-list {
+
+        .flickity-prev-next-button {
+          background-color: #686868;
+
+          .arrow {
+            fill: $white;
+          }
+
+          &.previous {
+            left: -48px;
+          }
+
+          &.next {
+            right: -48px;
+          }
+        }
+
+        .reviews-item {
+          width: 33.333333%;
+          padding: 16px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 16px;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            background-color: $white;
+            box-shadow: 0 3px 5px rgba($black, 0.2);
+          }
+
+          .reviews-item-container {
+            padding: 32px;
+            position: relative;
+          }
+
+          .author {
+            margin-bottom: 8px;
+            font-size: 18px;
+            text-transform: uppercase;
+          }
+
+          .rating-star {
+            margin-bottom: 8px;
+
+            .fill {
+              color: #FFB41F;
+            }
+          }
+
+          .title {
+            font-weight: 700;
+          }
+
+          .review-content {
+            font-size: 14px;
+            color: #686868;
+          }
+        }
+      }
+
+      .view-more-review {
+        padding-top: 32px;
+        text-align: center;
+
+        a {
+          color: $color-text;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .news {
+
+      .inner {
+        padding-top: 48px;
+        padding-bottom: 64px;
+      }
+
+      .news-heading {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .news-content {
+        .news-video {
+          max-width: 1024px;
+          margin: 0 auto 48px;
+        }
+
+        .news-archive-link {
+          text-align: center;
+
+          .heading {
+            color: #7C174B;
+          }
+
+          .link {
+            color: $color-text;
+            text-decoration: underline;
           }
         }
       }

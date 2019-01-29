@@ -58,4 +58,12 @@ jQuery(document).ready(function($) {
 		pageDots: false
 	});
 
+	$('.reviews-list').flickity({
+		imagesLoaded: true,
+		wrapAround: false,
+		groupCells: true,
+		contain: true,
+		pageDots: false
+	});
+
 });
