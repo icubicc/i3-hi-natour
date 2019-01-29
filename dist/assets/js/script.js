@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 		//prevNextButtons: false,
 	});
 
-	$('.accomodation-detail-slider').find('.slides').flickity({
+	$('.accommodation-detail-slider').find('.slides').flickity({
 		imagesLoaded: true,
 		wrapAround: false,
 		pageDots: false
