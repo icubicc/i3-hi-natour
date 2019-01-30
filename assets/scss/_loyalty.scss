@@ -1,14 +1,12 @@
 .loyalty-page-container {
-	@include wrapper-y;
-	@include wrapper-y-bottom;
+
+	.heading {
+		font-weight: 400;
+		text-transform: uppercase;
+	}
 
 	@at-root {
-		.loyalty-page-header {
-			min-height: 640px;
-			background-size: cover !important;
-			background-position: center !important;
-			position: relative;
-		}
+		.loyalty-page-header {}
 
 		.loyalty-page-content {
 
@@ -23,84 +21,29 @@
 			}
 		}
 	}
-
-	.search-filter {
-		width: 100%;
-
-		.search-filter-container {
-			.filter-head {
-				padding: 12px 24px;
-				text-align: center;
-				background-color: #1A1919;
-				color: $white;
-			}
-
-			.filter-content {
-				background-color: #414141;
-				padding: 12px 24px;
-
-				.form {
-					display: flex;
-					justify-content: space-between;
-					align-items: flex-end;
-
-					.filter-fields {
-						width: 100%;
-						display: flex;
-						flex-wrap: wrap;
-						margin: -8px;
-
-						.filter-field {
-							padding: 8px;
-							width: 25%;
-
-							.input {
-								width: 100%;
-								padding: 6px 8px;
-							}
-
-							select.input {
-								padding: 5px 24px 5px 8px;
-
-								option {
-									margin: 0;
-									padding: 0;
-								}
-							}
-						}
-					}
-
-					.filter-action {
-						padding-left: 16px;
-					}
-				}
-			}
-		}
-	}
 }
 
-
 .loyalty-banner {
-	width: 100%;
-	height: 100%;
-	max-width: 1425px;
-	margin: 0 auto;
-	position: absolute;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
 	display: flex;
-	align-items: flex-end;
-	top: 0;
-	left: 0;
-	right: 0;
+	min-height: 640px;
+	padding-top: 80px;
+	position: relative;
+
+	&:empty {
+		min-height: 320px;
+	}
 
 	@at-root {
 		.loyalty-banner-text {
-			padding: 48px 32px;
-			margin-left: 48px;
-			max-width: 600px;
-			color: $white;
 			background-color: rgba(#331321, 0.4);
+			color: $white;
+			margin-left: 48px;
+			max-width: 640px;
+			padding: 48px 32px;
 			position: relative;
-			margin-bottom: 164px;
 
 			&:before {
 				content: "";
@@ -116,11 +59,19 @@
 			}
 
 			.title {
+				@include font-size-h2;
+				letter-spacing: 0.1em;
 				position: relative;
 				text-transform: uppercase;
 			}
 
 			.subtitle {
+				@include font-size-400;
+				border-top: 1px solid $white;
+				letter-spacing: 0.1em;
+				margin-top: 32px;
+				max-width: 400px;
+				padding-top: 32px;
 				position: relative;
 			}
 		}
@@ -135,8 +86,8 @@
 			background-image: url(../images/bg-loyalty-desc.jpg);
 			background-position: center bottom;
 			background-size: cover;
+			margin-top: 144px;
 			min-height: 480px;
-			margin-top: 96px;
 		}
 
 		.loyalty-desc-logo {
@@ -257,6 +208,7 @@
 	@include wrapper-x-400;
 	background-color: $color-bg-light;
 	box-shadow: $box-shadow-400;
+	margin-bottom: 96px;
 	padding-bottom: 48px;
 	padding-top: 48px;
 
@@ -345,4 +297,139 @@
 			}
 		}
 	}
+}
+
+.loyalty-earn {
+	background-image: url(../images/bg-batik.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-bottom: 64px;
+	padding-top: 64px;
+
+	@at-root {
+		.loyalty-earn-head {
+			@include padding-x;
+			@include wrapper-x;
+			margin-bottom: 48px;
+			text-align: center;
+
+			.heading {
+				@include font-size-h1;
+			}
+		}
+
+		.loyalty-earn-step {
+			@include padding-x;
+			@include wrapper-x;
+			@include wrapper-x-400;
+		}
+	}
+}
+
+.loyalty-box {
+
+	@at-root {
+		.loyalty-box-item {
+			align-items: center;
+			background-color: $white;
+			box-shadow: $box-shadow-400;
+			display: flex;
+			padding: 48px 96px;
+
+			&:not(:first-child) {
+				margin-top: 16px;
+			}
+		}
+
+		.loyalty-box-art {
+			flex: 0 0 160px;
+			margin-right: 48px;
+		}
+
+		.loyalty-box-text {
+			flex: 1 1 auto;
+
+			.title {
+				@include font-size-h3;
+				margin-bottom: 16px;
+				text-transform: uppercase;
+			}
+
+			.text {
+				color: $color-text-lighter;
+
+				p {
+					margin-bottom: 0;
+				}
+
+				ol,
+				ul {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+}
+
+.loyalty-simulation {
+	@include padding-xy;
+	background-color: $color-two-500;
+
+	@at-root {
+		.loyalty-simulation-head {
+			margin-bottom: 48px;
+			text-align: center;
+
+			.heading {
+				@include font-size-h1;
+				color: $white;
+			}
+		}
+
+		.loyalty-simulation-form {
+			@include padding-x;
+			@include wrapper-x;
+			@include wrapper-x-300;
+			text-align: center;
+
+			.inputs {
+				display: flex;
+			}
+
+			.input {
+				border: 0;
+				flex: 1 1 0;
+
+				&:not(:first-child) {
+					margin-left: 16px;
+				}
+			}
+
+			.button {
+				margin-top: 48px;
+				padding-left: 48px;
+				padding-right: 48px;
+				text-transform: uppercase;
+			}
+		}
+
+		.loyalty-simulation-foot {
+			margin-top: 16px;
+
+			.note {
+				@include font-size-400;
+				@include wrapper-x;
+				@include wrapper-x-200;
+			}
+		}
+	}
+}
+
+.loyalty-welcome {
+	align-items: center;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	min-height: 480px;
 }
