@@ -66,4 +66,18 @@ jQuery(document).ready(function($) {
 		pageDots: false
 	});
 
+	$('.faq-item .question .toggle').on('click', function() {
+		var $parent = $(this).parents('.faq-item');
+		var $answer = $($parent).find('.answer');
+
+		if($parent.hasClass('is-toggled')) {
+			$parent.removeClass('is-toggled');
+			$answer.slideUp(200);
+		}
+		else {
+			$parent.addClass('is-toggled');
+			$answer.slideDown(200);
+		}
+	});
+
 });

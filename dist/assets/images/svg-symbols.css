@@ -73,6 +73,11 @@
   height: 28px;
 }
 
+.icon-minus {
+  width: 25px;
+  height: 25px;
+}
+
 .icon-parking {
   width: 27px;
   height: 27px;
@@ -86,6 +91,11 @@
 .icon-phone-check {
   width: 28px;
   height: 28px;
+}
+
+.icon-plus {
+  width: 25px;
+  height: 25px;
 }
 
 .icon-print {
