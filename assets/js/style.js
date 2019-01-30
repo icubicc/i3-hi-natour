@@ -526,4 +526,16 @@
 		});
 	}();
 
+	function pageTop() {
+		var header = document.getElementById('site-header');
+		var headerHeight = header.offsetHeight + 64;
+		//var myAccountHero = document.getElementById('myaccount-page-hero');
+
+		//myAccountHero.style.paddingTop = headerHeight + 'px';
+
+		//console.log(headerHeight);
+	}
+
+	window.onload = pageTop;
+
 })();

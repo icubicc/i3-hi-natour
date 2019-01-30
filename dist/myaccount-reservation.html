@@ -25,7 +25,7 @@
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
 
-	<body>
+	<body class="is-loading">
 		<div id="site-container" class="site-container">
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-inner wrapper">
@@ -59,9 +59,9 @@
 								</div>
 								<nav class="site-header-nav">
 									<ul class="items">
-										<li class="item"><a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
+										<li class="item"><a href="loyalty-program.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
 										<li class="item"><a href="#">Support</a></li>
-										<li class="item item-current"><a href="login.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a></li>
+										<li class="item item-current"><a href="myaccount-dashboard.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> My Account</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -82,7 +82,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href="loyalty-benefit-status.html">Benefits & Status</a></li>
+									<li class="item""><a href="loyalty-program.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -100,63 +100,47 @@
 
 <div id="site-content" class="site-content">
 
-    <div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-      <div class="page-container">
-        <div class="page-content plain-page-content">
-          <div class="inner wrapper">
-            <div class="login-page">
-              <div class="login-page-heading">
-                <h2 class="title">LOGIN</h2>
-              </div>
-              <div class="login-page-content">
-                <div class="login-form">
-                  <form class="form">
-                    <div class="form-text">
-                      <label class="label">Email address</label>
-                      <input type="text" class="input">
-                    </div>
-                    <div class="form-text">
-                      <label class="label">Password</label>
-                      <input type="text" class="input">
-                      <div class="remember-me">
-                        <input type="checkbox" name="remember_me" id="remember-me">
-                        <label for="remember-me" class="label">Remember me</label>
-                      </div>
-                    </div>
-                    <div class="social-login">
-                      <h2 class="social-login-heading">Using your <strong>social network profile</strong></h2>
-                      <div class="social-login-list">
-                        <div class="social-login-item">
-                          <a href="#" class="link">
-                            <img src="assets/images/logo-facebook.png" alt="">
-                          </a>
-                        </div>
-                        <div class="social-login-item">
-                          <a href="#" class="link">
-                              <img src="assets/images/logo-google.png" alt="">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-submit">
-                      <!-- <button class="button" type="submit">LOGIN</button> -->
-                      <a href="myaccount-dashboard.html" class="button">LOGIN</a>
-                      <a href="#" class="forgot-password">Forgotten your password?</a>
-                    </div>
-                  </form>
-                </div>
-                <div class="signup-link-section">
-                  <h2 class="heading">Not yet registered?</h2>
-                  <a href="signup.html" class="button">Sign Up</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<div class="myaccount-page">
+			<div id="myaccount-page-hero" class="myaccount-page-hero" style="background: url('assets/images/myaccount-bg.jpg');">
+			</div>
+			<div class="myaccount-page-content">
+				<div class="inner wrapper">
+					<div class="myaccount-page-container">
+						<div class="myaccount-user-preview">
+							<div class="avatar">
+								<span class="avatar-image" style="background: url('assets/images/avatar-placeholder.png');"></span>
+							</div>
+							<h1 class="name">Hello, John Doe</h1>
+							<span class="membership-status">CLASSIC STATUS</span>
+						</div>
+						<div class="myaccount-page-frame">
+							<div class="myaccount-nav">
+								<div class="tabs">
+									<a href="myaccount-dashboard.html" class="tab">MY DASHBOARD</a>
+									<a href="myaccount-reservation.html" class="tab is-current">MY RESERVATION</a>
+									<a href="myaccount-loyalty.html" class="tab">MY LOYALTY AREA AND MEMBERSHIP</a>
+									<a href="myaccount-setting.html" class="tab">MY PREFERENCES & PERSONAL INFORMATION</a>
+								</div>
+							</div>
+							<div class="myaccount-content">
+								<section class="section reservation">
+									<div class="section-heading">
+										<h3 class="title">MY RESERVATION</h3>
+									</div>
+									<div class="section-content">
 
-  </div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
 
 			<footer id="site-footer" class="site-footer" role="contentinfo">
 				<div class="site-footer-inner wrapper">
