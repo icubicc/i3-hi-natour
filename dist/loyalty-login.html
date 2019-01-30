@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -17,7 +18,9 @@
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#ffffff">
 
-		<script src="assets/js/modernizr.js"></script>
+		<!--build:js assets/js/modernizr.js -->
+		<script src="assets/js/vendor/modernizr.min.js"></script>
+		<!-- endbuild -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
@@ -79,7 +82,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-program.html">Benefits & Status</a></li>
+									<li class="item""><a href="loyalty-program.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -109,94 +112,110 @@
 										<div class="form-input-field">
 											<input type="text" id="input-login-email" class="input">
 										</div>
+									</div>
+									<div class="form-input js-form-input">
+										<label for="input-login-password" class="form-input-heading">Password</label>
+										<div class="form-input-field">
+											<input type="password" id="input-login-password" class="input">
 										</div>
-										<div class="form-input js-form-input">
-											<label for="input-login-password" class="form-input-heading">Password</label>
-											<div class="form-input-field">
-												<input type="password" id="input-login-password" class="input">
-										</div>
-												<div class="form-input-caption">
-													<input type="checkbox" id="input-login-remember" class="input">
-													<label for="input-login-remember" class="label">Remember me</label>
-												</div>
-											</div>
-											<button class="button button-loyalty">Login</button>
-											<a href="#" class="forgot">Forget your password?</a>
-										</div>
-										<div class="loyalty-form-foot">
-											<p>Not yet registered?</p>
-											<a href="#" class="button">Sign Up</a>
+										<div class="form-input-caption">
+											<input type="checkbox" id="input-login-remember" class="input">
+											<label for="input-login-remember" class="label">Remember me</label>
 										</div>
 									</div>
+									<button class="button button-loyalty">Login</button>
+									<a href="#" class="forgot">Forget your password?</a>
+								</div>
+								<div class="loyalty-form-foot">
+									<p>Not yet registered?</p>
+									<a href="#" class="button">Sign Up</a>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
 
+			</div>
+
+			<footer id="site-footer" class="site-footer" role="contentinfo">
+				<div class="site-footer-inner wrapper">
+
+					<div class="site-footer-main">
+						<div class="footer-left">
+							<div class="newsletter">
+								<label class="label">SIGN UP <strong>TO OUR NEWSLETTER</strong></label>
+								<a href="#" class="button">SUBSCRIBE</a>
+							</div>
+							<div class="social-media">
+								<ul class="list">
+									<li class="item"><a href="https://www.instagram.com/hotelindonesiagroupofficial/" target="_blank"><svg class="icon instagram" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-instagram"></use></svg></a></li>
+									<li class="item"><a href="https://www.facebook.com/hotelindonesiagroup/" target="_blank"><svg class="icon facebook" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-facebook"></use></svg></a></li>
+									<li class="item"><a href="https://twitter.com/official_HIG" target="_blank"><svg class="icon twitter" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-twitter"></use></svg></a></li>
+									<li class="item"><a href="https://www.linkedin.com/in/hotelindonesiagroup/" target="_blank"><img src="assets/images/linkedin-logo.png" alt=""></a></li>
+								</ul>
+							</div>
+							<div class="footer-logo">
+								<img src="assets/images/logo-bumn.svg" alt="">
+							</div>
+						</div>
+						<div class="footer-right">
+							<div class="footer-nav wide">
+								<div class="footer-nav-item">
+									<p class="heading">HELPFUL <strong>INFO</strong></p>
+									<ul class="list two-column">
+										<li class="item"><a href="#">News</a></li>
+										<li class="item"><a href="#">Contact Us</a></li>
+										<li class="item"><a href="#">Loyalty Programme</a></li>
+										<li class="item"><a href="#">Faq</a></li>
+										<li class="item"><a href="#">Careers</a></li>
+										<li class="item"><a href="#">About Us</a></li>
+									</ul>
+								</div>
+								<div class="footer-nav-item">
+									<p class="heading">WHAT'S <strong>HAPPENING</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">New Rooms</a></li>
+										<li class="item"><a href="#">New Hotels</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">New Rooms</a></li>
+										<li class="item"><a href="#">New Hotels</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 
-					<footer id="site-footer" class="site-footer" role="contentinfo">
-						<div class="site-footer-inner wrapper">
+					<div class="site-footer-attribution">
+						<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
+					</div>
 
-							<div class="site-footer-main">
-								<div class="footer-left">
-									<div class="newsletter">
-										<label class="label">SIGN UP <strong>TO OUR NEWSLETTER</strong></label>
-										<a href="#" class="button">SUBSCRIBE</a>
-									</div>
-									<div class="social-media">
-										<ul class="list">
-											<li class="item"><a href="https://www.instagram.com/hotelindonesiagroupofficial/" target="_blank"><svg class="icon instagram" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-instagram"></use></svg></a></li>
-											<li class="item"><a href="https://www.facebook.com/hotelindonesiagroup/" target="_blank"><svg class="icon facebook" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-facebook"></use></svg></a></li>
-											<li class="item"><a href="https://twitter.com/official_HIG" target="_blank"><svg class="icon twitter" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-twitter"></use></svg></a></li>
-											<li class="item"><a href="https://www.linkedin.com/in/hotelindonesiagroup/" target="_blank"><img src="assets/images/linkedin-logo.png" alt=""></a></li>
-										</ul>
-									</div>
-									<div class="footer-logo">
-										<img src="assets/images/logo-bumn.svg" alt="">
-							</div>
-									</div>
-									<div class="footer-right">
-										<div class="footer-nav wide">
-											<div class="footer-nav-item">
-												<p class="heading">HELPFUL <strong>INFO</strong></p>
-												<ul class="list two-column">
-													<li class="item"><a href="#">News</a></li>
-													<li class="item"><a href="#">Contact Us</a></li>
-													<li class="item"><a href="#">Loyalty Programme</a></li>
-													<li class="item"><a href="#">Faq</a></li>
-													<li class="item"><a href="#">Careers</a></li>
-													<li class="item"><a href="#">About Us</a></li>
-												</ul>
-											</div>
-											<div class="footer-nav-item">
-												<p class="heading">WHAT'S <strong>HAPPENING</strong></p>
-												<ul class="list">
-													<li class="item"><a href="#">New Rooms</a></li>
-													<li class="item"><a href="#">New Hotels</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="footer-nav">
-											<div class="footer-nav-item">
-												<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
-												<ul class="list">
-													<li class="item"><a href="#">New Rooms</a></li>
-													<li class="item"><a href="#">New Hotels</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
+				</div>
+			</footer>
+		</div> <!-- #site-container -->
 
-								<div class="site-footer-attribution">
-									<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
-								</div>
-
-							</div>
-					</footer>
-				</div> <!-- #site-container -->
-
-				<script src="assets/js/vendor.js"></script>
-				<script src="assets/js/bundle.js"></script>
+		<!--build:js assets/js/vendor.js -->
+		<script src="assets/js/vendor/svg4everybody.min.js"></script>
+		<script src="assets/js/vendor/stickyfill.min.js"></script>
+		<script src="assets/js/vendor/imagesloaded.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.ScrollToPlugin.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.debug.addIndicators.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.animation.gsap.min.js"></script>
+		<script src="assets/js/vendor/fluidvids.min.js"></script>
+		<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/vendor/flickity.min.js"></script>
+		<!-- endbuild -->
+		<!--build:js assets/js/bundle.js -->
+		<script src="assets/js/helper.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/style.js"></script>
+		<!-- endbuild -->
 	</body>
 </html> <!-- haunter owned! -->
