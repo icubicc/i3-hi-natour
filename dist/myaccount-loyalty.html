@@ -22,7 +22,7 @@
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
 
-	<body>
+	<body class="is-loading">
 		<div id="site-container" class="site-container">
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-inner wrapper">
@@ -56,9 +56,9 @@
 								</div>
 								<nav class="site-header-nav">
 									<ul class="items">
-										<li class="item item-current"><a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
+										<li class="item"><a href="loyalty-program.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
 										<li class="item"><a href="#">Support</a></li>
-										<li class="item"><a href="login.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a></li>
+										<li class="item item-current"><a href="myaccount-dashboard.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> My Account</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -79,7 +79,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-benefit-status.html">Benefits & Status</a></li>
+									<li class="item""><a href=" loyalty-program.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -96,107 +96,133 @@
 			</header>
 
 			<div id="site-content" class="site-content">
-				<div class="main-content" role="main" itemscope itemprop="mainContentOfPage">
-					<div class="loyalty-page-container">
-						<header class="loyalty-page-header">
-							<div class="loyalty-heroslider">
-								<div class="loyalty-heroslider-items">
-									<div class="loyalty-heroslider-item" style="background-image: url(assets/images/img-loyalty-heroslider-1.jpg)">
-										<div class="loyalty-heroslider-wrapper">
-											<div class="loyalty-heroslider-text">
-												<p class="title">Our Partners are Also Thinking of You</p>
-												<p class="subtitle">Choose your Holiday Experience – up to 25% off or $60 Hotel Credit</p>
-												<select name="input-partner" id="input-partner" class="input">
-													<option disabled selected>Choose a partner</option>
-												</select>
+
+				<div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<div class="myaccount-page">
+						<div id="myaccount-page-hero" class="myaccount-page-hero" style="background: url('assets/images/myaccount-bg.jpg');">
+						</div>
+						<div class="myaccount-page-content">
+							<div class="inner wrapper">
+								<div class="myaccount-page-container">
+									<div class="myaccount-user-preview">
+										<div class="avatar">
+											<span class="avatar-image" style="background: url('assets/images/avatar-placeholder.png');"></span>
+										</div>
+										<h1 class="name">Hello, John Doe</h1>
+										<span class="membership-status">CLASSIC STATUS</span>
+									</div>
+									<div class="myaccount-page-frame">
+										<div class="myaccount-nav">
+											<div class="tabs">
+												<a href="myaccount-dashboard.html" class="tab">MY DASHBOARD</a>
+												<a href="myaccount-reservation.html" class="tab">MY RESERVATION</a>
+												<a href="myaccount-loyalty.html" class="tab is-current">MY LOYALTY AREA AND MEMBERSHIP</a>
+												<a href="myaccount-personal-information.html" class="tab">MY PREFERENCES & PERSONAL INFORMATION</a>
+											</div>
+										</div>
+										<div class="myaccount-content">
+											<div class="myaccount-loyalty">
+												<section class="section membership">
+													<div class="section-heading">
+														<h3 class="title">MY account & membership</h3>
+													</div>
+													<div class="section-content">
+														<div class="loyaty-status-preview">
+															<div class="heading">
+																<h4 class="title">My Rewards Points Balance</h4>
+															</div>
+															<div class="content">
+																<div class="loyalty-point">
+																	<div class="loyalty-point-container">
+																		<p class="point">
+																			<span class="point-count">200</span>
+																			Reward Points Available
+																		</p>
+																		<p class="point-exp">Expiry date: <strong>17/12/2019</strong></p>
+																		<p class="text">Your points are valid for life as long as you stay at one of our hotels at least once a year.</p>
+																		<a href="#" class="redeem-link">USE MY REWARDS POINTS or EARN REWARDS POINTS</a>
+																	</div>
+																</div>
+																<div class="loyalty-card">
+																	<div class="loyalty-card-status">
+																		<span class="label">HIGH REWARDS LOYALTY</span>
+																		<span class="status">CLASSIC STATUS</span>
+																	</div>
+																	<div class="loyalty-progress">
+																		<span class="label">You're this close to a status upgrade:</span>
+																		<div class="progress-container">
+																			<span class="percentage">10%</span>
+																			<div class="bar">
+																				<span class="bar-fill" style="width: 10%;"></span>
+																			</div>
+																			<p class="desc"><strong>200/2000</strong> status points or <strong>1/10</strong> nights</p>
+																		</div>
+																	</div>
+																	<div class="loyalty-card-detail">
+																		<a href="#" class="button">VIEW MY LOYALTY CARD</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</section>
+												<section class="section membership">
+													<div class="section-heading">
+														<h3 class="title">MY EARNING & REDEEM HISTORY</h3>
+													</div>
+													<div class="section-content">
+														<div class="point-history">
+															<div class="point-history-table">
+																<div class="filter">
+																	<div class="filter-sort">
+																		<select class="input">
+																			<option value="">Filter by</option>
+																			<option>Earning</option>
+																			<option>Redeem</option>
+																		</select>
+																	</div>
+																</div>
+																<table class="table">
+																	<tr>
+																		<th>Date</th>
+																		<th>Description</th>
+																		<th>Point</th>
+																	</tr>
+																	<tr>
+																		<td>10/11/2018</td>
+																		<td>Earn points - 2 nights stay at Inna Parapat</td>
+																		<td><span class="point-value plus">+17</span></td>
+																	</tr>
+																	<tr>
+																		<td>09/15/2018</td>
+																		<td>Redeem points - Hotel transport from airport</td>
+																		<td><span class="point-value minus">-9</span></td>
+																	</tr>
+																	<tr>
+																		<td>10/11/2018</td>
+																		<td>Earn points - 1 nights stay at Inaya Bali</td>
+																		<td><span class="point-value plus">+24</span></td>
+																	</tr>
+																	<tr>
+																		<td>09/16/2017</td>
+																		<td>Redeem points - Hotel dining discounts</td>
+																		<td><span class="point-value minus">-9</span></td>
+																	</tr>
+																	<tr>
+																		<td>12/14/2017</td>
+																		<td>Earn points - 2 nights stay at Inna Parapat</td>
+																		<td><span class="point-value plus">+10</span></td>
+																	</tr>
+																</table>
+															</div>
+														</div>
+													</div>
+												</section>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</header>
-						<div class="loyalty-page-content">
-							<section class="section section-batik">
-								<div class="loyalty-usage">
-									<div class="loyalty-usage-head">
-										<h1 class="heading">Discover <strong>All Your Possibilites</strong></h1>
-									</div>
-									<div class="loyalty-usage-iconic">
-										<h2 class="heading">Use Your <strong>Reward Points with Our Partners</strong></h2>
-										<ul class="items">
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-airlines.svg"> <span class="label">Airlines</span></li>
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-cars.svg"> <span class="label">Cars</span></li>
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-railways.svg"> <span class="label">Railways</span></li>
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-social.svg"> <span class="label">Social Responsibility</span></li>
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-gastronomy.svg"> <span class="label">Gastronomy</span></li>
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-hotels.svg"> <span class="label">Hotels</span></li>
-											<li class="item"><img class="image" src="assets/images/figure-loyalty-benefits-shopping.svg"> <span class="label">Shopping</span></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-							<section class="section">
-								<div class="loyalty-partner">
-									<div class="loyalty-partner-head">
-										<h2 class="heading">Our <strong>Partners</strong></h2>
-									</div>
-									<div class="loyalty-partner-list">
-										<ul class="items">
-											<li class="item">
-												<img class="image" src="assets/images/partner-1.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-2.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-3.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-4.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-1.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-2.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-3.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-4.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-1.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-2.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-3.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-											<li class="item">
-												<img class="image" src="assets/images/partner-4.png">
-												<a href="#" class="button button-loyalty">Discover</a>
-											</li>
-										</ul>
-									</div>
-									<div class="loyalty-partner-foot">
-										<p class="more"><a href="#" class="link">View More</a></p>
-									</div>
-								</div>
-							</section>
 						</div>
 					</div>
 				</div>

@@ -83,11 +83,11 @@
 
 				.items {
 					display: flex;
-					flex-wrap: wrap;
 					align-items: center;
 
 					.item {
 						padding: 8px 24px;
+						float: left;
 
 						a {
 							display: block;
