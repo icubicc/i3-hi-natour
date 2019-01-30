@@ -40,6 +40,10 @@
 		font-weight: 700;
 	}
 
+	&.button-alt {
+		background-color: $color-two-500;
+	}
+
 	&.button-line {
 		background-color: transparent;
 		border-color: $color-one-500;
