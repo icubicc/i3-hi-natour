@@ -9,6 +9,14 @@
 		padding-top: 124px;
 		position: relative;
 
+		.hotel-hero-logo {
+			padding: 32px;
+			width: 100%;
+			max-width: 435px;
+			text-align: center;
+			background-color: rgba(#F9F9F9, 0.8);
+		}
+
     .hero-text {
 			text-align: center;
 			position: relative;
@@ -25,8 +33,7 @@
     }
 	}
 
-	.page-hero + .search-filter,
-	.home-page-hero + .search-filter {
+	.page-hero + .search-filter {
 		position: absolute;
 		margin-top: -48px;
 	}

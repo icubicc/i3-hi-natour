@@ -1,0 +1,138 @@
+<!-- @import variables -->
+<!-- $accommodation-nav: item item-current -->
+<!-- @import header -->
+
+<div id="site-content" class="site-content">
+
+    <div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+      <div class="page-container">
+        <div class="page-hero" style="background: url('assets/images/booking-room-hero.jpg')">
+          <div class="hero-text">
+            <div class="hero-text-container">
+              <h1 class="title">EXPERIENCE THE <strong>WONDERFUL INDONESIA WITH US</strong></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-step">
+          <div class="inner wrapper">
+            <div class="booking-step-container">
+              <div class="step">
+                <span class="step-number">1</span>
+                <span class="step-label">Room selection</span>
+              </div>
+              <div class="step">
+                <span class="step-number">2</span>
+                <span class="step-label">Booking Detail</span>
+              </div>
+              <div class="step is-current">
+                <span class="step-number">3</span>
+                <span class="step-label">Booking Information</span>
+              </div>
+              <div class="step">
+                <span class="step-number">4</span>
+                <span class="step-label">Finish</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-content with-filter">
+          <div class="inner wrapper">
+            <div class="booking-information">
+              <form class="form">
+                <section class="form-section information">
+                  <div class="form-section-heading">
+                    <h2 class="title">Your Booking Information</h2>
+                  </div>
+                  <div class="form-section-content">
+                    <h3 class="heading">Let us know who you are</h3>
+                    <div class="form-group">
+                      <div class="form-group-item form-text">
+                        <label class="label">First Name</label>
+                        <input type="text" name="book_firstname" class="input">
+                      </div>
+                      <div class="form-group-item form-text">
+                        <label class="label">Last Name</label>
+                        <input type="text" name="book_lastname" class="input">
+                      </div>
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Email</label>
+                      <input type="text" name="book_email" class="input">
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Mobile Phone</label>
+                      <input type="text" name="book_mobile_phone" class="input">
+                    </div>
+                    <div class="another-person-booking">
+                      <input type="checkbox" name="another_person" id="another-person">
+                      <label for="another-person" class="label">I'm making this booking for someone else.</label>
+                    </div>
+                    <div class="terms-condition">By proceeding with this booking, I agree to Hotel Indonesia Group <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></div>
+                  </div>
+                </section>
+                <section class="form-section payment-method">
+                  <div class="form-section-heading">
+                    <h2 class="title">Payment Method</h2>
+                  </div>
+                  <div class="form-section-content">
+                    <div class="heading">Your Payment</div>
+                    <div class="total">
+                      <span class="label">Amount to pay now</span>
+                      <span class="value">IDR 4.464.900</span>
+                    </div>
+                    <div class="payment-options">
+                      <div class="payment-option">
+                        <input type="radio" name="payment_method" id="credit-payment" checked>
+                        <label for="credit-payment" class="label">
+                          <span class="custom-radio"></span>
+                          Credit/Debit Card
+                        </label>
+                        <div class="desc">
+                          <div class="credit-card-logos">
+                            <img src="assets/images/mastercard-logo.png" alt="">
+                            <img src="assets/images/visa-logo.png" alt="">
+                            <img src="assets/images/jcb-logo.png" alt="">
+                            <img src="assets/images/ae-logo.png" alt="">
+                          </div>
+                          <p>By clicking "Confirm,"  I acknowledge reading the <a href="#">Terms & Conditions</a> and I agree to pay according to the terms stated.</p>
+                        </div>
+                      </div>
+                      <div class="payment-option">
+                        <input type="radio" name="payment_method" id="digital-payment">
+                        <label for="digital-payment" class="label">
+                          <span class="custom-radio"></span>
+                          Digital Payment
+                        </label>
+                        <div class="desc">
+                          <p>By clicking "Confirm,"  I acknowledge reading the <a href="#">Terms & Conditions</a> and I agree to pay according to the terms stated.</p>
+                        </div>
+                      </div>
+                      <div class="payment-option">
+                        <input type="radio" name="payment_method" id="bank-transfer-payment">
+                        <label for="bank-transfer-payment" class="label">
+                          <span class="custom-radio"></span>
+                          Bank Transfer
+                        </label>
+                        <div class="desc">
+                          <p>By clicking "Confirm,"  I acknowledge reading the <a href="#">Terms & Conditions</a> and I agree to pay according to the terms stated.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="form-action">
+                  <!-- <button class="button">Next Step <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-angle-right"></use></svg></button> -->
+                  <a href="booking-finish.html" class="button">Next Step <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-angle-right"></use></svg></a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- @import footer -->
