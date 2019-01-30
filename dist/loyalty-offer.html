@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -17,12 +18,14 @@
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#ffffff">
 
-		<script src="assets/js/modernizr.js"></script>
+		<!--build:js assets/js/modernizr.js -->
+		<script src="assets/js/vendor/modernizr.min.js"></script>
+		<!-- endbuild -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
 
-	<body class="is-loading">
+	<body>
 		<div id="site-container" class="site-container">
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-inner wrapper">
@@ -56,7 +59,7 @@
 								</div>
 								<nav class="site-header-nav">
 									<ul class="items">
-										<li class="item item-current"><a href="loyalty-program.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
+										<li class="item item-current"><a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
 										<li class="item"><a href="#">Support</a></li>
 										<li class="item"><a href="login.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a></li>
 									</ul>
@@ -79,7 +82,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-program.html">Benefits & Status</a></li>
+									<li class="item""><a href="loyalty-benefit-status.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item item-current"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -98,120 +101,124 @@
 			<div id="site-content" class="site-content">
 				<div class="main-content" role="main" itemscope itemprop="mainContentOfPage">
 					<div class="loyalty-page-container">
-						<header class="loyalty-page-header" style="background: url(assets/images/home-hero.jpg)">
+						<header class="loyalty-page-header">
 							<div class="loyalty-heroslider">
 								<div class="loyalty-heroslider-items">
-									<div class="loyalty-heroslider-item">
-										<p class="title">Holiday Break with Hotel Indonesia Group</p>
-										<p class="subtitle">Choose your Holiday Experience – up to 25% off or $60 Hotel Credit</p>
-										<a href="#" class="button">Discover More</a>
+									<div class="loyalty-heroslider-item" style="background-image: url(assets/images/img-loyalty-heroslider-1.jpg)">
+										<div class="loyalty-heroslider-wrapper">
+											<div class="loyalty-heroslider-text">
+												<p class="title">Holiday Break with Hotel Indonesia Group</p>
+												<p class="subtitle">Choose your Holiday Experience – up to 25% off or $60 Hotel Credit</p>
+												<a href="#" class="button button-loyalty">Discover More</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</header>
 						<div class="loyalty-page-content">
-							<section class="section">
+							<section class="section section-batik">
 								<div class="loyalty-highlight">
 									<div class="loyalty-highlight-items">
 										<div class="loyalty-highlight-item">
 											<div class="loyalty-highlight-photo">
-												<img class="image" src="http://placehold.it/1920x480/eeeeee/111111">
+												<img class="image" src="assets/images/img-loyalty-highlight-1.jpg">
 											</div>
-												<div class="loyalty-highlight-text">
-													<h2 class="title"><strong>January</strong> Promo</h2>
-													<p class="desc">Get 25% off discount by booking our hotels selections in Bali. The combination of spectacular beaches, warm hospitable people and a rich visual and cultural experience are some of the key reasons Bali is so popular with travellers of all types and ages. Bali has holiday experiences that cater for families, couples and even groups of friends.</p>
-												</div>
+											<div class="loyalty-highlight-text">
+												<h2 class="title"><strong>January</strong> Promo</h2>
+												<p class="desc">Get 25% off discount by booking our hotels selections in Bali. The combination of spectacular beaches, warm hospitable people and a rich visual and cultural experience are some of the key reasons Bali is so popular with travellers of all types and ages. Bali has holiday experiences that cater for families, couples and even groups of friends.</p>
 											</div>
 										</div>
 									</div>
+								</div>
 							</section>
 							<section class="section">
 								<div class="loyalty-offer">
 									<div class="loyalty-offer-head">
-										<h1 class="heading">Our Offers</h1>
+										<h1 class="heading">Our <strong>Offers</strong></h1>
 									</div>
 									<div class="loyalty-offer-items">
 										<div class="loyalty-offer-item">
 											<div class="loyalty-offer-photo">
-												<img class="image" src="http://placehold.it/640x360/eeeeee/111111">
+												<img class="image" src="assets/images/img-loyalty-currentoffers-ouroffers-1.jpg">
 											</div>
-												<div class="loyalty-offer-detail">
-													<h4 class="title">UP TO 40% OFF DURING THIS EXCLUSIVE 3-DAY SALE PLUS 5 MILLION POINTS UP FOR GRABS*</h4>
-													<p class="desc">Swap your Rewards points for some truly memorable moments by sharing some sporting action or a cultural event with the guest of your choice.</p>
-												</div>
-												<div class="loyalty-offer-action">
-													<a href="#" class="link">+ Find Out More</a>
-													<a href="#" class="link">Book Now</a>
-												</div>
+											<div class="loyalty-offer-detail">
+												<h4 class="title">UP TO 40% OFF DURING THIS EXCLUSIVE 3-DAY SALE PLUS 5 MILLION POINTS UP FOR GRABS*</h4>
+												<p class="desc">Swap your Rewards points for some truly memorable moments by sharing some sporting action or a cultural event with the guest of your choice.</p>
 											</div>
-											<div class="loyalty-offer-item">
-												<div class="loyalty-offer-photo">
-													<img class="image" src="http://placehold.it/640x360/eeeeee/111111">
+											<div class="loyalty-offer-action">
+												<a href="#" class="button button-loyalty2">+ Find Out More</a>
+												<a href="#" class="button button-loyalty">Book Now</a>
 											</div>
-													<div class="loyalty-offer-detail">
-														<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
-														<p class="desc">Save Up To 25%*</p>
-													</div>
-													<div class="loyalty-offer-action">
-														<a href="#" class="link">+ Find Out More</a>
-														<a href="#" class="link">Book Now</a>
-													</div>
-												</div>
-												<div class="loyalty-offer-item">
-													<div class="loyalty-offer-photo">
-														<img class="image" src="http://placehold.it/640x360/eeeeee/111111">
+										</div>
+										<div class="loyalty-offer-item">
+											<div class="loyalty-offer-photo">
+												<img class="image" src="assets/images/img-loyalty-currentoffers-ouroffers-2.jpg">
 											</div>
-														<div class="loyalty-offer-detail">
-															<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
-															<p class="desc">Enjoy exclusive benefits for all your car rentals booked by 30 November: X3 Rewards points, up to 15% off rentals and free additional driver.</p>
-														</div>
-														<div class="loyalty-offer-action">
-															<a href="#" class="link">+ Find Out More</a>
-															<a href="#" class="link">Book Now</a>
-														</div>
-													</div>
-													<div class="loyalty-offer-item">
-														<div class="loyalty-offer-photo">
-															<img class="image" src="http://placehold.it/640x360/eeeeee/111111">
+											<div class="loyalty-offer-detail">
+												<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
+												<p class="desc">Save Up To 25%*</p>
 											</div>
-															<div class="loyalty-offer-detail">
-																<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
-																<p class="desc">Get away for a weekend with 1300 destinations to choose from.
-																	Whether you travel with your partner, friends or family, you will be sure to find some incredible places for you all to explore.</p>
-															</div>
-															<div class="loyalty-offer-action">
-																<a href="#" class="link">+ Find Out More</a>
-																<a href="#" class="link">Book Now</a>
-															</div>
-														</div>
-														<div class="loyalty-offer-item">
-															<div class="loyalty-offer-photo">
-																<img class="image" src="http://placehold.it/640x360/eeeeee/111111">
+											<div class="loyalty-offer-action">
+												<a href="#" class="button button-loyalty2">+ Find Out More</a>
+												<a href="#" class="button button-loyalty">Book Now</a>
 											</div>
-																<div class="loyalty-offer-detail">
-																	<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
-																	<p class="desc">Enjoy unique moments in one of our Hotel Indonesia Group service.</p>
-																</div>
-																<div class="loyalty-offer-action">
-																	<a href="#" class="link">+ Find Out More</a>
-																	<a href="#" class="link">Book Now</a>
-																</div>
-															</div>
-															<div class="loyalty-offer-item">
-																<div class="loyalty-offer-photo">
-																	<img class="image" src="http://placehold.it/640x360/eeeeee/111111">
+										</div>
+										<div class="loyalty-offer-item">
+											<div class="loyalty-offer-photo">
+												<img class="image" src="assets/images/img-loyalty-currentoffers-ouroffers-3.jpg">
 											</div>
-																	<div class="loyalty-offer-detail">
-																		<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
-																		<p class="desc">Book in advance and save up to 25% on your holiday stay at Bali.</p>
-																	</div>
-																	<div class="loyalty-offer-action">
-																		<a href="#" class="link">+ Find Out More</a>
-																		<a href="#" class="link">Book Now</a>
-																	</div>
-																</div>
-															</div>
-														</div>
+											<div class="loyalty-offer-detail">
+												<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
+												<p class="desc">Enjoy exclusive benefits for all your car rentals booked by 30 November: X3 Rewards points, up to 15% off rentals and free additional driver.</p>
+											</div>
+											<div class="loyalty-offer-action">
+												<a href="#" class="button button-loyalty2">+ Find Out More</a>
+												<a href="#" class="button button-loyalty">Book Now</a>
+											</div>
+										</div>
+										<div class="loyalty-offer-item">
+											<div class="loyalty-offer-photo">
+												<img class="image" src="assets/images/img-loyalty-currentoffers-ouroffers-4.jpg">
+											</div>
+											<div class="loyalty-offer-detail">
+												<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
+												<p class="desc">Get away for a weekend with 1300 destinations to choose from.
+												Whether you travel with your partner, friends or family, you will be sure to find some incredible places for you all to explore.</p>
+											</div>
+											<div class="loyalty-offer-action">
+												<a href="#" class="button button-loyalty2">+ Find Out More</a>
+												<a href="#" class="button button-loyalty">Book Now</a>
+											</div>
+										</div>
+										<div class="loyalty-offer-item">
+											<div class="loyalty-offer-photo">
+												<img class="image" src="assets/images/img-loyalty-currentoffers-ouroffers-5.jpg">
+											</div>
+											<div class="loyalty-offer-detail">
+												<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
+												<p class="desc">Enjoy unique moments in one of our Hotel Indonesia Group service.</p>
+											</div>
+											<div class="loyalty-offer-action">
+												<a href="#" class="button button-loyalty2">+ Find Out More</a>
+												<a href="#" class="button button-loyalty">Book Now</a>
+											</div>
+										</div>
+										<div class="loyalty-offer-item">
+											<div class="loyalty-offer-photo">
+												<img class="image" src="assets/images/img-loyalty-currentoffers-ouroffers-6.jpg">
+											</div>
+											<div class="loyalty-offer-detail">
+												<h4 class="title">EARN MORE REWARDS WITH HOTEL INDONESIA GROUP</h4>
+												<p class="desc">Book in advance and save up to 25% on your holiday stay at Bali.</p>
+											</div>
+											<div class="loyalty-offer-action">
+												<a href="#" class="button button-loyalty2">+ Find Out More</a>
+												<a href="#" class="button button-loyalty">Book Now</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</section>
 						</div>
 					</div>
@@ -239,49 +246,65 @@
 							<div class="footer-logo">
 								<img src="assets/images/logo-bumn.svg" alt="">
 							</div>
-							</div>
-							<div class="footer-right">
-								<div class="footer-nav wide">
-									<div class="footer-nav-item">
-										<p class="heading">HELPFUL <strong>INFO</strong></p>
-										<ul class="list two-column">
-											<li class="item"><a href="#">News</a></li>
-											<li class="item"><a href="#">Contact Us</a></li>
-											<li class="item"><a href="#">Loyalty Programme</a></li>
-											<li class="item"><a href="#">Faq</a></li>
-											<li class="item"><a href="#">Careers</a></li>
-											<li class="item"><a href="#">About Us</a></li>
-										</ul>
-									</div>
-									<div class="footer-nav-item">
-										<p class="heading">WHAT'S <strong>HAPPENING</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">New Rooms</a></li>
-											<li class="item"><a href="#">New Hotels</a></li>
-										</ul>
-									</div>
+						</div>
+						<div class="footer-right">
+							<div class="footer-nav wide">
+								<div class="footer-nav-item">
+									<p class="heading">HELPFUL <strong>INFO</strong></p>
+									<ul class="list two-column">
+										<li class="item"><a href="#">News</a></li>
+										<li class="item"><a href="#">Contact Us</a></li>
+										<li class="item"><a href="#">Loyalty Programme</a></li>
+										<li class="item"><a href="#">Faq</a></li>
+										<li class="item"><a href="#">Careers</a></li>
+										<li class="item"><a href="#">About Us</a></li>
+									</ul>
 								</div>
-								<div class="footer-nav">
-									<div class="footer-nav-item">
-										<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">New Rooms</a></li>
-											<li class="item"><a href="#">New Hotels</a></li>
-										</ul>
-									</div>
+								<div class="footer-nav-item">
+									<p class="heading">WHAT'S <strong>HAPPENING</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">New Rooms</a></li>
+										<li class="item"><a href="#">New Hotels</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">New Rooms</a></li>
+										<li class="item"><a href="#">New Hotels</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-
-						<div class="site-footer-attribution">
-							<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
-						</div>
-
 					</div>
+
+					<div class="site-footer-attribution">
+						<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
+					</div>
+
+				</div>
 			</footer>
 		</div> <!-- #site-container -->
 
-		<script src="assets/js/vendor.js"></script>
-		<script src="assets/js/bundle.js"></script>
+		<!--build:js assets/js/vendor.js -->
+		<script src="assets/js/vendor/svg4everybody.min.js"></script>
+		<script src="assets/js/vendor/stickyfill.min.js"></script>
+		<script src="assets/js/vendor/imagesloaded.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.ScrollToPlugin.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.debug.addIndicators.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.animation.gsap.min.js"></script>
+		<script src="assets/js/vendor/fluidvids.min.js"></script>
+		<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/vendor/flickity.min.js"></script>
+		<!-- endbuild -->
+		<!--build:js assets/js/bundle.js -->
+		<script src="assets/js/helper.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/style.js"></script>
+		<!-- endbuild -->
 	</body>
 </html> <!-- haunter owned! -->

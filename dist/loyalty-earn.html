@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -17,12 +18,14 @@
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#ffffff">
 
-		<script src="assets/js/modernizr.js"></script>
+		<!--build:js assets/js/modernizr.js -->
+		<script src="assets/js/vendor/modernizr.min.js"></script>
+		<!-- endbuild -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
 
-	<body class="is-loading">
+	<body>
 		<div id="site-container" class="site-container">
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-inner wrapper">
@@ -56,7 +59,7 @@
 								</div>
 								<nav class="site-header-nav">
 									<ul class="items">
-										<li class="item item-current"><a href="loyalty-program.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
+										<li class="item item-current"><a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
 										<li class="item"><a href="#">Support</a></li>
 										<li class="item"><a href="login.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a></li>
 									</ul>
@@ -79,7 +82,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-program.html">Benefits & Status</a></li>
+									<li class="item""><a href="loyalty-benefit-status.html">Benefits & Status</a></li>
 									<li class="item item-current"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -102,7 +105,7 @@
 							<div class="loyalty-banner" style="background-image: url(assets/images/home-hero.jpg)"></div>
 						</header>
 						<div class="loyalty-page-content">
-							<section class="section">
+							<section class="section section-batik">
 								<div class="loyalty-earn">
 									<div class="loyalty-earn-head">
 										<h1 class="heading">Earn <strong>Points</strong></h1>
@@ -112,49 +115,49 @@
 											<div class="loyalty-box-items">
 												<div class="loyalty-box-item">
 													<div class="loyalty-box-art">
-														<img class="image" src="http://placehold.it/160x160/eeeeee/111111">
+														<img class="image" src="assets/images/figure-loyalty-earn-1.svg">
 													</div>
-														<div class="loyalty-box-text">
-															<h3 class="title">1. Booking Channels</h3>
-															<div class="text">
-																<p>Earn points by booking at one of the hotels participating in our programme through:</p>
-																<ul>
-																	<li>The AccorHotels.com site</li>
-																	<li>The AccorHotels app</li>
-																	<li>Our 17 brand sites</li>
-																	<li>Our Call Centre</li>
-																	<li>The reception desk in any of our hotels</li>
-																	<li>Travel agencies using a GDS connected to the AccorHotels reservation centre</li>
-																</ul>
-															</div>
+													<div class="loyalty-box-text">
+														<h3 class="title">1. Booking Channels</h3>
+														<div class="text">
+															<p>Earn points by booking at one of the hotels participating in our programme through:</p>
+															<ul>
+																<li>The AccorHotels.com site</li>
+																<li>The AccorHotels app</li>
+																<li>Our 17 brand sites</li>
+																<li>Our Call Centre</li>
+																<li>The reception desk in any of our hotels</li>
+																<li>Travel agencies using a GDS connected to the AccorHotels reservation centre</li>
+															</ul>
 														</div>
 													</div>
-													<div class="loyalty-box-item">
-														<div class="loyalty-box-art">
-															<img class="image" src="http://placehold.it/160x160/eeeeee/111111">
+												</div>
+												<div class="loyalty-box-item">
+													<div class="loyalty-box-art">
+														<img class="image" src="assets/images/figure-loyalty-earn-2.svg">
 													</div>
-															<div class="loyalty-box-text">
-																<h3 class="title">2. Stay</h3>
-																<div class="text">
-																	<p>From the economical to the most luxurious, our hotels welcome you worldwide. The number of points you earn is based on your stay: brand, participating hotel, number of nights. The higher your status, the more your loyalty is rewarded.</p>
-																</div>
-															</div>
+													<div class="loyalty-box-text">
+														<h3 class="title">2. Stay</h3>
+														<div class="text">
+															<p>From the economical to the most luxurious, our hotels welcome you worldwide. The number of points you earn is based on your stay: brand, participating hotel, number of nights. The higher your status, the more your loyalty is rewarded.</p>
 														</div>
-														<div class="loyalty-box-item">
-															<div class="loyalty-box-art">
-																<img class="image" src="http://placehold.it/160x160/eeeeee/111111">
 													</div>
-																<div class="loyalty-box-text">
-																	<h3 class="title">3. Accumulate</h3>
-																	<div class="text">
-																		<p>From the economical to the most luxurious, our hotels welcome you worldwide. The number of points you earn is based on your stay: brand, participating hotel, number of nights. The higher your status, the more your loyalty is rewarded.</p>
-																	</div>
-																</div>
-															</div>
+												</div>
+												<div class="loyalty-box-item">
+													<div class="loyalty-box-art">
+														<img class="image" src="assets/images/figure-loyalty-earn-3.svg">
+													</div>
+													<div class="loyalty-box-text">
+														<h3 class="title">3. Accumulate</h3>
+														<div class="text">
+															<p>From the economical to the most luxurious, our hotels welcome you worldwide. The number of points you earn is based on your stay: brand, participating hotel, number of nights. The higher your status, the more your loyalty is rewarded.</p>
 														</div>
 													</div>
 												</div>
 											</div>
+										</div>
+									</div>
+								</div>
 							</section>
 							<section class="section">
 								<div class="loyalty-simulation">
@@ -204,49 +207,65 @@
 							<div class="footer-logo">
 								<img src="assets/images/logo-bumn.svg" alt="">
 							</div>
-							</div>
-							<div class="footer-right">
-								<div class="footer-nav wide">
-									<div class="footer-nav-item">
-										<p class="heading">HELPFUL <strong>INFO</strong></p>
-										<ul class="list two-column">
-											<li class="item"><a href="#">News</a></li>
-											<li class="item"><a href="#">Contact Us</a></li>
-											<li class="item"><a href="#">Loyalty Programme</a></li>
-											<li class="item"><a href="#">Faq</a></li>
-											<li class="item"><a href="#">Careers</a></li>
-											<li class="item"><a href="#">About Us</a></li>
-										</ul>
-									</div>
-									<div class="footer-nav-item">
-										<p class="heading">WHAT'S <strong>HAPPENING</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">New Rooms</a></li>
-											<li class="item"><a href="#">New Hotels</a></li>
-										</ul>
-									</div>
+						</div>
+						<div class="footer-right">
+							<div class="footer-nav wide">
+								<div class="footer-nav-item">
+									<p class="heading">HELPFUL <strong>INFO</strong></p>
+									<ul class="list two-column">
+										<li class="item"><a href="#">News</a></li>
+										<li class="item"><a href="#">Contact Us</a></li>
+										<li class="item"><a href="#">Loyalty Programme</a></li>
+										<li class="item"><a href="#">Faq</a></li>
+										<li class="item"><a href="#">Careers</a></li>
+										<li class="item"><a href="#">About Us</a></li>
+									</ul>
 								</div>
-								<div class="footer-nav">
-									<div class="footer-nav-item">
-										<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">New Rooms</a></li>
-											<li class="item"><a href="#">New Hotels</a></li>
-										</ul>
-									</div>
+								<div class="footer-nav-item">
+									<p class="heading">WHAT'S <strong>HAPPENING</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">New Rooms</a></li>
+										<li class="item"><a href="#">New Hotels</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">New Rooms</a></li>
+										<li class="item"><a href="#">New Hotels</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-
-						<div class="site-footer-attribution">
-							<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
-						</div>
-
 					</div>
+
+					<div class="site-footer-attribution">
+						<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
+					</div>
+
+				</div>
 			</footer>
 		</div> <!-- #site-container -->
 
-		<script src="assets/js/vendor.js"></script>
-		<script src="assets/js/bundle.js"></script>
+		<!--build:js assets/js/vendor.js -->
+		<script src="assets/js/vendor/svg4everybody.min.js"></script>
+		<script src="assets/js/vendor/stickyfill.min.js"></script>
+		<script src="assets/js/vendor/imagesloaded.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.ScrollToPlugin.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.debug.addIndicators.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.animation.gsap.min.js"></script>
+		<script src="assets/js/vendor/fluidvids.min.js"></script>
+		<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/vendor/flickity.min.js"></script>
+		<!-- endbuild -->
+		<!--build:js assets/js/bundle.js -->
+		<script src="assets/js/helper.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/style.js"></script>
+		<!-- endbuild -->
 	</body>
 </html> <!-- haunter owned! -->

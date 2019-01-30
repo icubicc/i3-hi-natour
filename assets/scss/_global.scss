@@ -42,11 +42,16 @@
 
 	&.button-loyalty {
 		background-color: $color-two-500;
+		color: $color-two-700;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
 	}
 
 	&.button-loyalty2 {
-		background-color: #005473;
+		background-color: $color-loyalty-blue;
 		color: $white;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
 	}
 
 	&.button-line {

@@ -12,12 +12,129 @@
 
 			.section {
 
-				&.section-search {
-					padding-bottom: 32px;
-					margin-top: -56px;
-					position: relative;
-					z-index: 2;
+				&.section-batik {
+					background-image: url(../images/bg-batik.png);
+					background-size: 100% auto;
+					background-repeat: no-repeat;
+					padding-bottom: 64px;
+					padding-top: 64px;
 				}
+
+				&.section-top {
+					padding-top: 196px;
+				}
+			}
+		}
+	}
+}
+
+.loyalty-usage {
+
+	@at-root {
+		.loyalty-usage-head {
+			@include padding-x;
+			margin-bottom: 48px;
+			text-align: center;
+		}
+
+		.loyalty-usage-iconic {
+			@include padding-x;
+			background-color: $color-two-500;
+			color: $white;
+			padding-bottom: 64px;
+			padding-top: 64px;
+
+			.heading {
+				margin-bottom: 48px;
+				text-align: center;
+			}
+
+			.items {
+				@include column-items(-12px);
+				@include wrapper-x;
+				@include wrapper-x-400;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.item {
+				@include column-item(12px, 3);
+				align-items: center;
+				display: flex;
+			}
+
+			.image {
+				flex: 0 0 64px;
+				margin-right: 16px;
+			}
+
+			.label {
+				@include font-size-600;
+				letter-spacing: 0.05em;
+			}
+		}
+	}
+}
+
+.loyalty-partner {
+
+	@at-root {
+		.loyalty-partner-head {
+			@include padding-x;
+			margin-bottom: 48px;
+			text-align: center;
+
+			.heading {
+				@include font-size-h1;
+			}
+		}
+
+		.loyalty-partner-list {
+			background-color: $color-100;
+			box-shadow: 0 -4px 8px 0 rgba($color-800, 0.08);
+			padding-bottom: 64px;
+			padding-top: 64px;
+
+			.items {
+				@include column-items(-32px -16px);
+				@include padding-x;
+				@include wrapper-x;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.item {
+				@include column-item(32px 16px, 4);
+				text-align: center;
+			}
+
+			.image {
+				margin-bottom: 24px;
+			}
+
+			.button {
+				@include font-size-400;
+			}
+		}
+
+		.loyalty-partner-foot {
+			background-color: $color-100;
+			padding-bottom: 48px;
+			text-align: center;
+
+			.more {
+				@include padding-x;
+				@include wrapper-x;
+				@include wrapper-x-400;
+				border-top: 2px solid $color-border;
+				padding-top: 24px;
+			}
+
+			.link {
+				color: $color-text;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
 			}
 		}
 	}
@@ -300,11 +417,6 @@
 }
 
 .loyalty-earn {
-	background-image: url(../images/bg-batik.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	padding-bottom: 64px;
-	padding-top: 64px;
 
 	@at-root {
 		.loyalty-earn-head {
@@ -319,6 +431,28 @@
 		}
 
 		.loyalty-earn-step {
+			@include padding-x;
+			@include wrapper-x;
+			@include wrapper-x-400;
+		}
+	}
+}
+
+.loyalty-redeem {
+
+	@at-root {
+		.loyalty-redeem-head {
+			@include padding-x;
+			@include wrapper-x;
+			margin-bottom: 48px;
+			text-align: center;
+
+			.heading {
+				@include font-size-h1;
+			}
+		}
+
+		.loyalty-redeem-package {
 			@include padding-x;
 			@include wrapper-x;
 			@include wrapper-x-400;
@@ -366,6 +500,10 @@
 				ul {
 					padding-left: 20px;
 				}
+			}
+
+			.button {
+				margin-top: 24px;
 			}
 		}
 	}
@@ -425,11 +563,459 @@
 	}
 }
 
+.loyalty-slider {
+	background-color: $color-100;
+
+	@at-root {
+		.loyalty-slider-item {
+			background-position: center;
+			background-size: cover;
+		}
+
+		.loyalty-slider-wrapper {
+			@include padding-x;
+			@include wrapper-x;
+			@include wrapper-x-400;
+			padding-bottom: 64px;
+			padding-top: 64px;
+		}
+
+		.loyalty-slider-text {
+			background-color: rgba($color-loyalty-blue, 0.64);
+			color: $white;
+			max-width: 600px;
+			padding: 48px 96px;
+			text-align: center;
+
+			.title {
+				@include font-size-h1;
+				text-transform: uppercase;
+			}
+
+			.link {
+				color: $white;
+				font-weight: 700;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.loyalty-heroslider {
+	background-color: $color-600;
+
+	@at-root {
+		.loyalty-heroslider-item {
+			background-position: center;
+			background-size: cover;
+		}
+
+		.loyalty-heroslider-wrapper {
+			@include padding-x;
+			@include wrapper-x;
+			@include wrapper-x-400;
+			padding-bottom: 96px;
+			padding-top: 224px;
+		}
+
+		.loyalty-heroslider-text {
+			color: $white;
+			max-width: 480px;
+
+			.title {
+				@include font-size-h1;
+				font-weight: 700;
+			}
+
+			.subtitle {
+				letter-spacing: 0.05em;
+			}
+
+			.link {
+				color: $white;
+				font-weight: 700;
+				text-decoration: underline;
+			}
+
+			.input {
+				@include font-size-400;
+				color: $color-text;
+			}
+		}
+	}
+}
+
+.loyalty-highlight {
+	@include padding-x;
+	@include wrapper-x;
+	@include wrapper-x-400;
+
+	@at-root {
+		.loyalty-highlight-item {
+			background-color: $white;
+			box-shadow: $box-shadow-400;
+			border-bottom: 8px solid $color-two-500;
+		}
+
+		.loyalty-highlight-text {
+			padding: 64px 128px 96px;
+			text-align: center;
+
+			.title {
+				@include font-size-h1;
+				font-weight: 400;
+			}
+
+			.desc {
+				color: $color-text-light;
+			}
+		}
+	}
+}
+
+.loyalty-offer {
+	@include padding-x;
+	@include wrapper-x;
+	padding-bottom: 96px;
+	padding-top: 32px;
+
+	@at-root {
+		.loyalty-offer-head {
+			margin-bottom: 48px;
+			text-align: center;
+		}
+
+		.loyalty-offer-items {
+			@include column-items(-24px);
+			display: flex;
+			flex-wrap: wrap;
+			margin: -24px;
+		}
+
+		.loyalty-offer-item {
+			@include column-item(24px, 3);
+			background-color: $white;
+			border-bottom: 6px solid $color-two-500;
+			box-shadow: $box-shadow-400;
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 12px;
+		}
+
+		.loyalty-offer-photo {}
+
+		.loyalty-offer-detail {
+			padding: 32px;
+
+			.title {
+				@include font-size-h5;
+				margin-bottom: 16px;
+			}
+
+			.desc {
+				@include font-size-400;
+				color: $color-text-light;
+			}
+		}
+
+		.loyalty-offer-action {
+			display: flex;
+			margin-top: auto;
+
+			.button {
+				@include font-size-400;
+				flex: 1 1 50%;
+				padding-left: 16px;
+				padding-right: 16px;
+
+				&:not(:first-child) {
+					margin-left: 24px;
+				}
+			}
+		}
+	}
+}
+
+.loyalty-highpro {
+	@include padding-x;
+	@include wrapper-x;
+	@include wrapper-x-300;
+
+	@at-root {
+		.loyalty-highpro-head {
+			margin-bottom: 64px;
+			text-align: center;
+
+			.heading {
+				font-weight: 700;
+			}
+
+			.desc {
+				color: $color-text-light;
+			}
+		}
+
+		.loyalty-highpro-download {
+			align-items: center;
+			background-color: $color-300;
+			display: flex;
+			padding: 24px 48px;
+
+			.label {
+				flex: 1 1 auto;
+				letter-spacing: 0.05em;
+				margin-bottom: 0;
+			}
+
+			.button {
+				flex: 1 1 auto;
+				margin-left: 24px;
+				padding: 13px 24px;
+			}
+		}
+
+		.loyalty-highpro-upload {
+			margin-top: 48px;
+			text-align: center;
+
+			.label {
+				letter-spacing: 0.05em;
+				margin-bottom: 16px;
+			}
+
+			.button {
+				padding: 13px 80px;
+			}
+		}
+	}
+}
+
+.loyalty-hotel {
+
+	@at-root {
+		.loyalty-hotel-head {
+			margin-bottom: 64px;
+
+			.heading {
+				text-align: center;
+			}
+		}
+
+		.loyalty-hotel-list {
+			@include padding-x;
+			@include wrapper-x;
+			background-color: $white;
+			box-shadow: 0 -4px 8px 0 rgba($color-800, 0.08);
+			padding-bottom: 64px;
+			padding-top: 64px;
+
+			.items {
+				@include column-items(-12px);
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.item {
+				@include column-item(12px, 4);
+			}
+		}
+	}
+}
+
+.loyalty-join {
+	@include padding-x;
+	@include wrapper-x;
+
+	@at-root {
+		.loyalty-join-head {
+			border-bottom: 2px solid $color-border;
+			margin-bottom: 48px;
+			padding-bottom: 48px;
+			text-align: center;
+		}
+
+		.loyalty-join-form {
+			@include font-size-600;
+			@include wrapper-x;
+			@include wrapper-x-200;
+
+			.note {
+				@include font-size-500;
+				color: $color-text-light;
+
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+
+				a {
+					color: $color-text-light;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.loyalty-join-foot {
+			margin-top: 80px;
+		}
+
+		.loyalty-join-social {
+			text-align: center;
+
+			.title {
+				@include font-size-h2;
+				font-weight: 400;
+				margin-bottom: 32px;
+				text-transform: uppercase;
+			}
+
+			.button {
+				max-width: 360px;
+				padding: 13px 24px;
+				width: 100%;
+			}
+		}
+
+		.loyalty-join-login {
+			border-top: 2px solid $color-border;
+			margin-top: 48px;
+			padding-top: 48px;
+			text-align: center;
+
+			.title {
+				@include font-size-h2;
+				font-weight: 400;
+				margin-bottom: 32px;
+			}
+
+			.button {
+				max-width: 360px;
+				padding: 13px 24px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.loyalty-term {
+	@include padding-x;
+	@include wrapper-x;
+	@include wrapper-x-400;
+
+	@at-root {
+		.loyalty-term-head {
+			border-bottom: 2px solid $color-border;
+			margin-bottom: 48px;
+			padding-bottom: 48px;
+			text-align: center;
+		}
+
+		.loyalty-term-post {
+			@include font-size-600;
+		}
+	}
+}
+
 .loyalty-welcome {
 	align-items: center;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
+	color: $white;
 	display: flex;
 	justify-content: center;
 	min-height: 480px;
+	padding-top: 96px;
+
+	@at-root {
+		.loyalty-welcome-head {
+
+			.name {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.loyalty-onboard {
+
+	@at-root {
+		.loyalty-onboard-text {
+			text-align: center;
+
+			.text {
+				@include font-size-800;
+				font-weight: 400;
+				margin-bottom: 48px;
+			}
+
+			.program {
+				display: block;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			.button {
+				padding: 13px 32px;
+			}
+		}
+	}
+}
+
+.loyalty-form {
+	@include padding-x;
+	@include wrapper-x;
+
+	@at-root {
+		.loyalty-form-head {
+			border-bottom: 2px solid $color-border;
+			margin-bottom: 48px;
+			padding-bottom: 48px;
+			text-align: center;
+		}
+
+		.loyalty-form-body {
+			@include font-size-600;
+			@include wrapper-x;
+			@include wrapper-x-200;
+
+			.submit {
+				text-align: center;
+
+				.button {
+					@include font-size-500;
+					max-width: 360px;
+					padding: 13px 24px;
+					width: 100%;
+				}
+			}
+
+			.forgot {
+				@include font-size-500;
+				text-align: center;
+
+				.link {
+					color: $color-text;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.loyalty-form-foot {
+			border-top: 2px solid $color-border;
+			margin-top: 48px;
+			padding-top: 48px;
+			text-align: center;
+
+			.title {
+				@include font-size-h2;
+				font-weight: 400;
+				margin-bottom: 32px;
+			}
+
+			.button {
+				max-width: 360px;
+				padding: 13px 24px;
+				width: 100%;
+			}
+		}
+	}
 }
