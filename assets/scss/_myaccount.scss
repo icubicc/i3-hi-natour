@@ -1,0 +1,294 @@
+.myaccount-page {
+	background: url('../images/batik-bg.png') no-repeat;
+	background-position: 0 800px;
+	background-size: 100%;
+	padding-bottom: 48px;
+
+	.myaccount-page-hero {
+		min-height: 800px;
+		background-repeat: no-repeat !important;
+		background-position: top center !important;
+		background-size: cover !important;
+	}
+
+	.myaccount-page-content {
+		position: relative;
+
+		.myaccount-page-container {
+			margin-top: -600px;
+
+			.myaccount-user-preview {
+				text-align: center;
+				color: $white;
+				margin-bottom: 48px;
+
+				.avatar {
+					display: block;
+					width: 80px;
+					height: 80px;
+					border: 2px solid $white;
+					border-radius: 50%;
+					overflow: hidden;
+					margin: 0 auto 24px;
+					padding: 5px;
+
+					.avatar-image {
+						display: block;
+						width: 66px;
+						height: 66px;
+						border-radius: 50%;
+						background-color: $white;
+						background-position: center !important;
+						background-size: cover !important;
+					}
+				}
+
+				.name {
+					margin-bottom: 24px;
+				}
+
+				.membership-status {
+					display: inline-block;
+					padding: 6px 28px;
+					color: $white;
+					background-color: #1760B2;
+				}
+			}
+
+			.myaccount-page-frame {
+				box-shadow: 0 0 5px 2px rgba($black, 0.2);
+				background-color: $white;
+				position: relative;
+			}
+
+			.myaccount-nav {
+				.tabs {
+					list-style-type: none;
+					padding: 0;
+					display: flex;
+
+					.tab {
+						width: 25%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-align: center;
+						padding: 12px 24px;
+						font-size: 12px;
+						color: $white;
+						background-color: #202020;
+						text-decoration: none;
+						transition: all 0.2s ease-in-out;
+
+						&:hover {
+							background-color: #101010;
+						}
+
+						& + .tab {
+							border-left: 1px solid $white;
+						}
+
+						&.is-current {
+							background-color: $white;
+							color: $color-text;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+
+			.myaccount-content {
+				padding-top: 48px;
+				padding-bottom: 48px;
+				min-height: 380px;
+
+				.section {
+					&:not(:last-child) {
+						margin-bottom: 24px;
+					}
+
+					.section-heading {
+						padding: 8px 48px;
+						background-color: #FAFAFA;
+
+						.title {
+							text-transform: uppercase;
+						}
+					}
+
+					.section-content {
+						padding: 32px 48px;
+					}
+
+					&.search-filter {
+						width: 100%;
+
+						.search-filter-container {
+							.filter-content {
+								border: 1px solid #005473;
+								padding: 24px;
+
+								.form {
+									display: flex;
+									justify-content: space-between;
+									align-items: flex-end;
+
+									.filter-fields {
+										width: 100%;
+										display: flex;
+										flex-wrap: wrap;
+										margin: -8px;
+
+										.filter-field {
+											padding: 8px;
+											width: 25%;
+
+											.input {
+												width: 100%;
+												padding: 6px 8px;
+											}
+
+											select.input {
+												padding: 5px 24px 5px 8px;
+
+												option {
+													margin: 0;
+													padding: 0;
+												}
+											}
+										}
+									}
+
+									.filter-action {
+										padding-left: 16px;
+
+										.button {
+											background-color: #BC9764;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&.membership {
+						.loyaty-status-preview {
+							.heading {
+								margin-bottom: 12px;
+							}
+
+							.content {
+								display: flex;
+								margin: -16px;
+
+								.loyalty-card {
+									width: calc(50% - 32px);
+									margin: 16px;
+									padding: 24px;
+									border: 1px solid #7C174B;
+
+									.loyalty-card-status {
+										display: flex;
+										align-items: center;
+										justify-content: space-between;
+										margin-bottom: 24px;
+
+										.label {
+											font-size: 14px;
+											font-weight: 700;
+											text-transform: uppercase;
+										}
+
+										.status {
+											color: $white;
+											display: inline-block;
+											padding: 8px 28px;
+											background-color: #1760B2;
+											font-size: 14px;
+										}
+									}
+
+									.loyalty-card-image {
+										text-align: center;
+
+										img {
+											max-width: 289px;
+										}
+									}
+
+									.loyalty-card-detail {
+										text-align: center;
+										padding-top: 12px;
+
+										.link {
+											color: $color-text;
+											font-weight: 700;
+											text-transform: uppercase;
+											text-decoration: underline;
+											font-size: 14px;
+										}
+									}
+								}
+
+								.loyalty-point {
+									width: calc(50% - 32px);
+									margin: 16px;
+									background-color: #005473;
+									padding: 32px;
+									text-align: center;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									color: $white;
+
+									.loyalty-point-container {
+										.point {
+											font-size: 24px;
+											font-weight: 700;
+											margin-bottom: 12px;
+
+											.point-count {
+												font-size: 76px;
+												display: block;
+												line-height: 1;
+											}
+										}
+
+										.text {
+											margin-bottom: 32px;
+										}
+
+										.button {
+											width: 100%;
+											max-width: 280px;
+											background-color: #BC9764;
+											padding: 12px 24px;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&.help {
+						padding-left: 48px;
+						padding-right: 48px;
+
+						.section-content {
+							padding: 32px 0 0;
+							text-align: center;
+							border-top: 1px solid #1A1919;
+						}
+
+						.help-link {
+							font-weight: 700;
+							font-size: 24px;
+							color: $color-text;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

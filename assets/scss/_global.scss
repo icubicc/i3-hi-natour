@@ -40,8 +40,13 @@
 		font-weight: 700;
 	}
 
-	&.button-alt {
+	&.button-loyalty {
 		background-color: $color-two-500;
+	}
+
+	&.button-loyalty2 {
+		background-color: #005473;
+		color: $white;
 	}
 
 	&.button-line {
