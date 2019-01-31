@@ -1,13 +1,22 @@
 .page-container {
   .page-hero {
-    min-height: 640px;
+    min-height: 480px;
     background-size: cover !important;
     background-position: center !important;
     display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-top: 124px;
+		padding-left: 24px;
+		padding-right: 24px;
 		position: relative;
+
+		@include breakpoint(walker) {
+			min-height: 540px;
+		}
+
+		@include breakpoint(runner) {
+			min-height: 640px;
+		}
 
 		.hotel-hero-logo {
 			padding: 32px;
@@ -39,7 +48,8 @@
 	}
 
   .search-filter {
-    width: 100%;
+		width: 100%;
+		z-index: 8;
 
     .search-filter-container {
       .filter-head {
@@ -53,19 +63,17 @@
         padding: 12px 24px;
 
         .form {
-          display: flex;
           justify-content: space-between;
-          align-items: flex-end;
+					align-items: flex-end;
 
           .filter-fields {
-            width: 100%;
             display: flex;
             flex-wrap: wrap;
             margin: -8px;
 
             .filter-field {
               padding: 8px;
-              width: 25%;
+              width: 100%;
 
               .input {
                 width: 100%;
@@ -79,13 +87,38 @@
                   margin: 0;
                   padding: 0;
                 }
-              }
+							}
+
+							@include breakpoint(walker) {
+								width: 50%;
+							}
+
+							@include breakpoint(runner) {
+								width: 25%;
+							}
             }
           }
 
           .filter-action {
-            padding-left: 16px;
-          }
+						padding-top: 16px;
+
+						.button {
+							width: 100%;
+						}
+					}
+
+					@include breakpoint(walker) {
+						display: flex;
+
+						.filter-fields {
+							width: 100%;
+						}
+
+						.filter-action {
+							padding-top: 0;
+							padding-left: 16px;
+						}
+					}
         }
       }
     }
