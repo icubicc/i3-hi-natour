@@ -80,4 +80,8 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$('.mobile-menu-toggle').on('click', function() {
+		$('.mobile-menu').addClass('is-toggled');
+	});
+
 });
