@@ -88,4 +88,20 @@ jQuery(document).ready(function($) {
 		$('.mobile-menu').removeClass('is-toggled');
 	});
 
+	$('.menu-toggle').on('click', function() {
+		var $parent = $(this).parents('.item');
+		var menuChild = $parent.find('.menu-child');
+
+		if($parent.hasClass('is-toggled')) {
+			$parent.removeClass('is-toggled');
+			menuChild.slideUp(200);
+		}
+		else {
+			$parent.addClass('is-toggled');
+			menuChild.slideDown(200);
+		}
+
+		return false;
+	});
+
 });
