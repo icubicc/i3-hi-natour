@@ -587,6 +587,46 @@
 		.mobile-menu-nav {
 			.items {
 				.item {
+					.menu-child {
+						padding-left: 28px;
+						background-color: #292929;
+						padding-top: 8px;
+						padding-bottom: 8px;
+						display: none;
+
+						.item-child {
+							position: relative;
+
+							&:before {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 5px;
+								background: url('../images/icon-dropmenu.png') no-repeat;
+								background-size: cover;
+								width: 14px;
+								height: 14px;
+							}
+
+							a {
+								color: $white;
+								padding-top: 0;
+
+								transition: color 0.2s ease-in-out;
+
+								&:hover {
+									color: $color-one-500;
+								}
+							}
+
+							&.item-child-current {
+								a {
+									color: $color-one-500;
+								}
+							}
+						}
+					}
+
 					a {
 						display: flex;
 						justify-content: space-between;
@@ -596,6 +636,11 @@
 						transition: color 0.2s ease-in-out;
 
 						&:hover {
+							color: $color-one-500;
+						}
+
+						.icon {
+							display: inline-block;
 							color: $color-one-500;
 						}
 					}
