@@ -37,8 +37,15 @@
         position: relative;
 
         .title {
-          font-weight: 400;
-        }
+					font-weight: 400;
+					font-size: 24px;
+				}
+
+				@include breakpoint(walker) {
+					.title {
+						font-size: 32px;
+					}
+				}
       }
     }
 	}
