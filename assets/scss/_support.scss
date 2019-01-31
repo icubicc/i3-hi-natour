@@ -33,9 +33,13 @@
 				margin: -16px;
 
 				.help-topics-item {
-					width: calc(25% - 32px);
+					width: calc(50% - 32px);
 					text-align: center;
 					margin: 16px;
+
+					@include breakpoint(walker) {
+						width: calc(25% - 32px);
+					}
 
 					.topic-icon {
 						width: 110px;
@@ -84,11 +88,11 @@
 
 						.question {
 							display: flex;
-							justify-content: space-between;
 
 							.label {
 								padding: 16px 24px;
 								font-weight: 700;
+								width: calc(100% - 54px);
 							}
 
 							.toggle {
@@ -189,7 +193,10 @@
 
 			.contact-newsletter {
 				padding-top: 38px;
-				padding-left: 48px;
+
+				@include breakpoint(crawler) {
+					padding-left: 48px;
+				}
 
 				.subscribe-field {
 					display: flex;
@@ -202,7 +209,7 @@
 					}
 
 					.label {
-						padding-left: 12px;
+						padding-left: 16px;
 					}
 				}
 

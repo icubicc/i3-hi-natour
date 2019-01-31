@@ -530,17 +530,15 @@
 		var $page = document.getElementsByClassName('with-filter');
 		var $filter = document.getElementsByClassName('search-filter');
 
-		if($page.length > 0) {
+		if($page && $page.length > 0) {
 			$page = $page[0];
 		}
 
-		if($filter.length > 0) {
+		if($filter && $filter.length > 0) {
 			$filter = $filter[0];
 		}
 
-		if($page.length > 0) {
-			$page.style.paddingTop = $filter.offsetHeight + 'px';
-		}
+		$page.style.paddingTop = $filter.offsetHeight + 'px';
 	}
 
 	window.onload = pageWithFilter;
