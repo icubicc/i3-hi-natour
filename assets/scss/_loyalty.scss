@@ -145,9 +145,17 @@
 	background-size: cover;
 	background-position: center;
 	display: flex;
-	min-height: 640px;
-	padding-top: 80px;
+	min-height: 512px;
+	padding-top: 96px;
 	position: relative;
+
+	@include breakpoint(creeper) {
+		min-height: 560px;
+	}
+
+	@include breakpoint(walker) {
+		min-height: 640px;
+	}
 
 	&:empty {
 		min-height: 320px;
@@ -157,39 +165,62 @@
 		.loyalty-banner-text {
 			background-color: rgba(#331321, 0.4);
 			color: $white;
-			margin-left: 48px;
+			margin-left: 16px;
 			max-width: 640px;
-			padding: 48px 32px;
+			padding: 40px 24px;
 			position: relative;
+
+			@include breakpoint(creeper) {
+				margin-left: 24px;
+				padding: 48px 32px;
+			}
+
+			@include breakpoint(crawler) {
+				margin-left: 32px;
+			}
+
+			@include breakpoint(runner) {
+				margin-left: 48px;
+			}
 
 			&:before {
 				content: "";
-				position: absolute;
-				left: 0;
-				top: 0;
+				background-color: rgba(#63173C, 0.4);
 				bottom: 0;
-				width: 480px;
+				left: 0;
 				margin-top: -32px;
 				margin-bottom: -32px;
 				margin-left: -48px;
-				background-color: rgba(#63173C, 0.4);
+				max-width: 480px;
+				position: absolute;
+				width: 100%;
+				top: 0;
 			}
 
 			.title {
-				@include font-size-h2;
+				@include font-size-h3;
 				letter-spacing: 0.1em;
 				position: relative;
 				text-transform: uppercase;
+
+				@include breakpoint(creeper) {
+					@include font-size-h2;
+				}
 			}
 
 			.subtitle {
 				@include font-size-400;
 				border-top: 1px solid $white;
 				letter-spacing: 0.1em;
-				margin-top: 32px;
+				margin-top: 24px;
 				max-width: 400px;
-				padding-top: 32px;
+				padding-top: 24px;
 				position: relative;
+
+				@include breakpoint(creeper) {
+					margin-top: 32px;
+					padding-top: 32px;
+				}
 			}
 		}
 	}
@@ -212,10 +243,16 @@
 			@include wrapper-x-400;
 			background-color: $white;
 			box-shadow: $box-shadow-400;
-			padding: 32px;
+			margin-left: 16px;
+			margin-right: 16px;
+			padding: 24px;
 			position: relative;
 			text-align: center;
 			top: -96px;
+
+			@include breakpoint(creeper) {
+				padding: 32px;
+			}
 		}
 
 		.loyalty-desc-action {
@@ -252,7 +289,7 @@
 
 		.loyalty-desc-text {
 			@include font-size-600;
-			@include padding-x;
+			@include padding-x2;
 			@include wrapper-x;
 			@include wrapper-x-400;
 			color: $color-text-light;
@@ -272,7 +309,15 @@
 
 		@at-root {
 			.loyalty-benefit-video {
-				margin-bottom: 80px;
+				margin-bottom: 32px;
+
+				@include breakpoint(crawler) {
+					margin-bottom: 48px;
+				}
+
+				@include breakpoint(walker) {
+					margin-bottom: 80px;
+				}
 
 				.video {
 					width: 100%;
@@ -280,39 +325,77 @@
 			}
 
 			.loyalty-benefit-head {
-				margin-bottom: 80px;
+				margin-bottom: 48px;
+
+				@include breakpoint(creeper) {
+					margin-bottom: 64px;
+				}
+
+				@include breakpoint(crawler) {
+					margin-bottom: 80px;
+				}
 
 				.heading {
-					@include font-size-h1;
+					@include font-size-h2;
 					font-weight: 400;
 					text-align: center;
 					text-transform: uppercase;
+
+					@include breakpoint(crawler) {
+						@include font-size-h1;
+					}
 				}
 			}
 
 			.loyalty-benefit-items {
 				display: flex;
+				flex-wrap: wrap;
+				margin: -16px;
+
+				@include breakpoint(crawler) {
+					margin: -32px;
+				}
 			}
 
 			.loyalty-benefit-item {
 				flex: 1 1 33%;
-				padding: 0 32px;
+				padding: 16px;
 				text-align: center;
 
+				@include breakpoint(crawler) {
+					padding: 32px;
+				}
+
 				.art {
-					margin-bottom: 32px;
+					margin-bottom: 16px;
+
+					@include breakpoint(crawler) {
+						margin-bottom: 32px;
+					}
 				}
 
 				.benefit {
-					@include font-size-h1;
+					@include font-size-h3;
 					color: $color-two-500;
-					margin-bottom: 16px;
+					margin-bottom: 8px;
 					text-transform: uppercase;
+
+					@include breakpoint(crawler) {
+						@include font-size-h2;
+					}
+
+					@include breakpoint(runner) {
+						@include font-size-h1;
+						margin-bottom: 16px;
+					}
 				}
 
 				.desc {
-					@include font-size-600;
 					color: $color-text-light;
+
+					@include breakpoint(walker) {
+						@include font-size-600;
+					}
 				}
 			}
 		}
@@ -325,9 +408,13 @@
 	@include wrapper-x-400;
 	background-color: $color-bg-light;
 	box-shadow: $box-shadow-400;
-	margin-bottom: 96px;
-	padding-bottom: 48px;
+	padding-bottom: 96px;
 	padding-top: 48px;
+
+	@include breakpoint(jumper) {
+		margin-bottom: 96px;
+		padding-bottom: 48px;
+	}
 
 	@at-root {
 		.loyalty-status-section {
@@ -353,21 +440,57 @@
 	@at-root {
 		.loyalty-step-items {
 			display: flex;
+			flex-direction: column;
+
+			@include breakpoint(crawler) {
+				flex-direction: row;
+			}
 		}
 
 		.loyalty-step-item {
+			align-items: center;
 			background-color: $white;
 			border: 1px solid $color-200;
 			box-shadow: $box-shadow-300 inset;
-			flex: 1 1 33%;
-			padding: 32px;
+			display: flex;
+			padding: 16px;
+
+			@include breakpoint(crawler) {
+				flex-direction: column;
+			}
+
+			@include breakpoint(crawler) {
+				flex: 1 1 33%;
+				padding: 24px;
+			}
+
+			@include breakpoint(runner) {
+				padding: 32px;
+			}
 
 			&:not(:first-child) {
-				margin-left: 32px;
+				margin-top: 8px;
+
+				@include breakpoint(crawler) {
+					margin-left: 16px;
+					margin-top: 0;
+				}
+
+				@include breakpoint(walker) {
+					margin-left: 32px;
+				}
 			}
 
 			.art {
+				flex: 0 0 64px;
+				margin-bottom: 0;
+				margin-right: 16px;
 				text-align: center;
+
+				@include breakpoint(crawler) {
+					margin-bottom: 16px;
+					margin-right: 0;
+				}
 			}
 
 			.desc {
@@ -383,7 +506,10 @@
 		.loyalty-level-item {
 			@include wrapper-x;
 			@include wrapper-x-300;
-			display: flex;
+
+			@include breakpoint(crawler) {
+				display: flex;
+			}
 
 			&:not(:first-child) {
 				border-top: 2px solid $color-border;
@@ -393,16 +519,43 @@
 		}
 
 		.loyalty-level-photo {
-			flex: 0 1 240px;
-			margin-right: 48px;
+			margin-bottom: 16px;
+
+			@include breakpoint(crawler) {
+				flex: 0 0 256px;
+				margin-bottom: 0;
+				margin-right: 24px;
+			}
+
+			@include breakpoint(walker) {
+				margin-right: 32px;
+			}
+
+			@include breakpoint(runner) {
+				margin-right: 48px;
+			}
 		}
 
 		.loyalty-level-text {
+			@include font-size-400;
 			flex: 1 1 auto;
+			padding: 0 4px;
+
+			@include breakpoint(walker) {
+				padding: 0;
+			}
+
+			p {
+
+				&:not(:last-child) {
+					margin-bottom: 8px;
+				}
+			}
 
 			.title {
 				@include font-size-h2;
 				font-weight: 400;
+				margin-bottom: 16px;
 
 				strong {
 					text-transform: uppercase;
