@@ -348,24 +348,27 @@
 			.loyalty-benefit-items {
 				display: flex;
 				flex-wrap: wrap;
-				margin: -16px;
+				justify-content: center;
+				margin: -16px -8px;
 
-				@include breakpoint(crawler) {
-					margin: -32px;
+				@include breakpoint(creeper) {
+					margin: -24px;
 				}
 			}
 
 			.loyalty-benefit-item {
-				flex: 1 1 33%;
-				padding: 16px;
+				flex: 1 1 50%;
+				padding: 16px 8px;
 				text-align: center;
 
-				@include breakpoint(crawler) {
-					padding: 32px;
+				@include breakpoint(creeper) {
+					flex: 1 1 25%;
+					padding: 24px;
 				}
 
 				.art {
 					margin-bottom: 16px;
+					width: 96px;
 
 					@include breakpoint(crawler) {
 						margin-bottom: 32px;
@@ -381,18 +384,14 @@
 					@include breakpoint(crawler) {
 						@include font-size-h2;
 					}
-
-					@include breakpoint(runner) {
-						@include font-size-h1;
-						margin-bottom: 16px;
-					}
 				}
 
 				.desc {
+					@include font-size-400;
 					color: $color-text-light;
 
-					@include breakpoint(walker) {
-						@include font-size-600;
+					@include breakpoint(runner) {
+						@include font-size-500;
 					}
 				}
 			}
