@@ -536,12 +536,19 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background-color: rgba($black, 0.5);
 	z-index: 99;
 	visibility: hidden;
 	opacity: 0;
 	transition: all 0.2s ease-out;
-	overflow-y: auto;
+
+	.mobile-menu-background {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba($black, 0.5);
+	}
 
 	.mobile-menu-container {
 		width: 280px;
@@ -551,9 +558,14 @@
 		top: 0;
 		bottom: 0;
 		background-color: #000000;
-		padding: 32px 0;
 		transform: translateX(-280px);
 		transition: all 0.3s ease-out;
+		overflow-y: auto;
+
+		.inner {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
 
 		.myaccount-section {
 			border-bottom: 1px solid #292929;

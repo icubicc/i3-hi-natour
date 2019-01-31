@@ -84,4 +84,8 @@ jQuery(document).ready(function($) {
 		$('.mobile-menu').addClass('is-toggled');
 	});
 
+	$('.mobile-menu-background').on('click', function() {
+		$('.mobile-menu').removeClass('is-toggled');
+	});
+
 });
