@@ -1,8 +1,16 @@
 .home-page-hero {
-  min-height: 640px;
+  min-height: 480px;
   background-size: cover !important;
   background-position: center !important;
   position: relative;
+
+  @include breakpoint(walker) {
+    min-height: 540px;
+  }
+
+  @include breakpoint(runner) {
+    min-height: 640px;
+  }
 
   & + .search-filter {
     position: absolute;
@@ -24,7 +32,7 @@
 
     .hero-text-container {
       padding: 48px 32px;
-      margin-left: 48px;
+      margin-right: 48px;
       max-width: 600px;
       color: $white;
       background-color: rgba(#331321, 0.4);
@@ -36,7 +44,8 @@
         left: 0;
         top: 0;
         bottom: 0;
-        width: 480px;
+        width: 100%;
+        max-width: 480px;
         margin-top: -32px;
         margin-bottom: -32px;
         margin-left: -48px;
@@ -46,10 +55,21 @@
       .title {
         font-weight: 400;
         position: relative;
+        font-size: 24px;
       }
 
       .subtitle {
         position: relative;
+      }
+
+      @include breakpoint(crawler) {
+        margin-left: 48px;
+      }
+
+      @include breakpoint(walker) {
+        .title {
+          font-size: 32px;
+        }
       }
     }
   }

@@ -24,16 +24,31 @@
 	width: 100%;
 	z-index: 8;
 
+	.wrapper {
+		padding: 0;
+	}
+
+	@include breakpoint(flyer) {
+		.wrapper {
+			padding: 0 48px;
+		}
+	}
+
 	.site-header-container {
 
 		.site-header-frame {
 			background-color: #1A1919;
-			padding: 16px;
+			padding: 16px 0;
 		}
 
 		.header-top {
-			display: flex;
+			display: none;
 			justify-content: flex-end;
+			padding-right: 16px;
+
+			@include breakpoint(runner) {
+				display: flex;
+			}
 
 			.switch-widget {
 				display: flex;
@@ -65,20 +80,65 @@
 			}
 		}
 
+		.switch-widget-mobile {
+			width: 33.333333%;
+			display: flex;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			margin: -4px;
+			padding-right: 24px;
+
+			@include breakpoint(walker) {
+				padding-right: 32px;
+			}
+
+			@include breakpoint(runner) {
+				display: none;
+			}
+
+			.switch {
+				background-color: #525252;
+				padding: 3px;
+				display: flex;
+				border-radius: 4px;
+				margin: 4px;
+
+				.switch-option {
+					display: block;
+					font-size: 10px;
+					color: $white;
+					line-height: 1;
+					padding: 6px;
+					border-radius: 3px;
+					font-weight: 700;
+					text-decoration: none;
+
+					&.is-current {
+						background-color: $white;
+						color: #414141;
+					}
+				}
+			}
+		}
+
 		.header-main {
 			display: flex;
-			align-items: flex-end;
-			justify-content: center;
+			align-items: center;
 
 			.site-header-logo {
-				width: 100%;
-				max-width: 116px;
+				width: 33.333333%;
 				margin: 0 32px;
-				margin-top: -28px;
 				text-align: center;
+
+				.site-logo {
+					width: 100%;
+					display: inline-block;
+					max-width: 96px;
+				}
 			}
 
 			.site-header-nav {
+				display: none;
 				padding-bottom: 8px;
 
 				.items {
@@ -96,6 +156,7 @@
 							font-weight: 700;
 							text-decoration: none;
 							transition: all 0.2s ease-in-out;
+							font-size: 15px;
 						}
 
 						.icon {
@@ -116,6 +177,49 @@
 							}
 						}
 					}
+				}
+			}
+
+			.mobile-menu-toggle {
+				display: flex;
+				padding-left: 24px;
+				align-items: center;
+				color: $white;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: 700;
+				width: 33.333333%;
+
+				.icon {
+					margin-right: 12px;
+					font-size: 24px;
+				}
+
+				@include breakpoint(walker) {
+					padding-left: 32px;
+				}
+			}
+
+			@include breakpoint(runner) {
+				align-items: flex-end;
+				justify-content: center;
+
+				.site-header-nav {
+					display: block;
+				}
+
+				.site-header-logo {
+					width: 100%;
+					max-width: 116px;
+					margin-top: -28px;
+
+					.site-logo {
+						max-width: 116px;
+					}
+				}
+
+				.mobile-menu-toggle {
+					display: none;
 				}
 			}
 		}
