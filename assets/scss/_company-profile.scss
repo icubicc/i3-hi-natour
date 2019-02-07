@@ -1,0 +1,102 @@
+.company-profile-container {
+	.company-profile-about {
+		.inner {
+			padding-top: 16px;
+			padding-bottom: 64px;
+		}
+
+		.heading {
+			margin-bottom: 48px;
+			text-align: center;
+			font-weight: 400;
+		}
+	}
+
+	.company-profile-overview {
+		background-color: $white;
+
+		.inner {
+			padding-top: 48px;
+			padding-bottom: 48px;
+		}
+
+		.heading {
+			font-weight: 400;
+			margin-bottom: 48px;
+			text-align: center;
+		}
+
+		.company-profile-slider {
+			.slider-nav {
+				border-bottom: 1px solid #1A1919;
+				margin-bottom: 48px;
+
+				.wrapper {
+					display: flex;
+					justify-content: space-between;
+
+					.slider-nav-item {
+						padding-bottom: 32px;
+						position: relative;
+						text-align: center;
+
+						&:after {
+							content: '';
+							position: absolute;
+							display: inline-block;
+							bottom: -12px;
+							left: 50%;
+							margin-left: -14px;
+							width: 24px;
+							height: 24px;
+							border: 1px solid #7C174B;
+							border-radius: 50%;
+							background-color: $white;
+							box-shadow: inset 0 3px 2px rgba($black, 0.2);
+							visibility: hidden;
+						}
+
+						&.is-current {
+							font-weight: 700;
+							color: #7C174B;
+
+							&:after {
+								visibility: visible;
+							}
+						}
+					}
+				}
+			}
+
+			.slides {
+				box-shadow: 0 0 5px 2px rgba($black, 0.2);
+				padding: 0 48px;
+
+				.slide {
+					display: flex;
+
+					.slide-text {
+						width: 50%;
+						padding: 32px 48px;
+						display: flex;
+						align-items: center;
+
+						.slite-text-container {
+							.title {
+								font-weight: 400;
+							}
+
+							.text {
+								margin-bottom: 48px;
+							}
+						}
+					}
+
+					.slide-image {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

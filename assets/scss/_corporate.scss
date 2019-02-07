@@ -1,0 +1,49 @@
+.corporate-container {
+	.corporate-desc {
+		padding-top: 16px;
+		padding-bottom: 64px;
+		font-size: 18px;
+	}
+
+	.corporate-list {
+		.corporate-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 32px;
+			min-height: 320px;
+			position: relative;
+			background-position: center !important;
+			background-size: cover !important;
+			margin-bottom: 16px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba($black, 0.4);
+			}
+
+			.corporate-item-text {
+				text-align: center;
+				color: $white;
+				position: relative;
+
+				.button {
+					color: $white;
+					background-color: rgba(#020202, 0.7);
+					width: 100%;
+					max-width: 240px;
+					transition: all 0.3s ease-in-out;
+
+					&:hover {
+						background-color: rgba(#020202, 1);
+					}
+				}
+			}
+		}
+	}
+}

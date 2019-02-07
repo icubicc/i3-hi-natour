@@ -1,0 +1,52 @@
+.instagram-feed-container	{
+	.heading {
+		.title {
+			color: #7C174B;
+			display: flex;
+			align-items: center;
+
+			img {
+				margin-right: 24px;
+			}
+		}
+
+		margin-bottom: 80px;
+	}
+
+	.content {
+		.instagram-feed-list {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -12px;
+
+			.instagram-feed-item {
+				width: 33.333333%;
+				padding: 12px;
+
+				.link {
+					display: block;
+					background-position: center !important;
+					background-size: cover !important;
+				}
+
+				img {
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
+		}
+
+		.instagram-link {
+			padding-top: 32px;
+			margin-top: 48px;
+			border-top: 1px solid #414141;
+			text-transform: uppercase;
+			text-align: center;
+
+			.link {
+				color: #7C174B;
+				font-weight: 700;
+			}
+		}
+	}
+}
