@@ -72,6 +72,13 @@ jQuery(document).ready(function($) {
 		pageDots: false
 	});
 
+	$('.news-slider').find('.slides').flickity({
+		autoPlay: 5000,
+		imagesLoaded: true,
+		wrapAround: true,
+		prevNextButtons: false,
+	});
+
 	$('.faq-item .question .toggle').on('click', function() {
 		var $parent = $(this).parents('.faq-item');
 		var $answer = $($parent).find('.answer');
@@ -83,6 +90,20 @@ jQuery(document).ready(function($) {
 		else {
 			$parent.addClass('is-toggled');
 			$answer.slideDown(200);
+		}
+	});
+
+	$('.hotel-development-item .title .toggle').on('click', function() {
+		var $parent = $(this).parents('.hotel-development-item');
+		var $desc = $($parent).find('.desc');
+
+		if($parent.hasClass('is-toggled')) {
+			$parent.removeClass('is-toggled');
+			$desc.slideUp(200);
+		}
+		else {
+			$parent.addClass('is-toggled');
+			$desc.slideDown(200);
 		}
 	});
 

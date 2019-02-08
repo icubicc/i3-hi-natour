@@ -75,3 +75,44 @@
     }
   }
 }
+
+.promotion-detail-container {
+  .promotion-detail-heading {
+    text-align: center;
+    padding-bottom: 48px;
+  }
+
+  .promotion-detail-content {
+    background-color: #FAFAFA;
+    box-shadow: 0 2px 5px 2px rgba($black, 0.2);
+    border-bottom: 5px solid #7C174B;
+
+    .promotion-banner {
+      margin-bottom: 48px;
+    }
+
+    .search-filter {
+      margin-bottom: 48px;
+
+      .wrapper {
+        padding: 0;
+      }
+    }
+
+    .promotion-desc {
+      padding: 48px;
+      position: relative;
+      color: $color-text-light;
+      text-align: center;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 48px);
+        border-top: 1px solid #525252;
+        top: 0;
+        left: 24px;
+      }
+    }
+  }
+}
