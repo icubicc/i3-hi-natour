@@ -1,4 +1,4 @@
-.text-post {
+.wysiwyg-post {
 	@include clearfix;
 
 	h1,
@@ -22,6 +22,18 @@
 		+ ol,
 		+ ul {
 			margin-top: -16px;
+		}
+
+		a {
+			color: #7C174B;
+		}
+	}
+
+	ul, ol {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
 		}
 	}
 

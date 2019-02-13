@@ -1,0 +1,57 @@
+.career-container {
+	.career-form {
+		display: flex;
+		margin-bottom: 48px;
+		padding-bottom: 48px;
+		border-bottom: 1px solid #1A1919;
+
+		.career-form-section {
+
+			.heading {
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+
+			&.job-description {
+				width: 50%;
+				padding-right: 48px;
+
+				ol, ul {
+					padding-left: 18px;
+
+					li {
+						&:not(:last-child) {
+							margin-bottom: 24px;
+						}
+					}
+				}
+			}
+
+			&.apply-form {
+				width: 50%;
+
+				.form {
+					.form-submit {
+						text-align: right;
+
+						.button {
+							text-transform: uppercase;
+							color: $white;
+							background-color: #7C174B;
+							width: 100%;
+							max-width: 180px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.career-requirement {
+		.wysiwyg-post {
+			ol, ul {
+				padding-left: 18px;
+			}
+		}
+	}
+}

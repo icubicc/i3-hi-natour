@@ -79,6 +79,41 @@ jQuery(document).ready(function($) {
 		prevNextButtons: false,
 	});
 
+	$('.responsibility-slider').find('.slides').flickity({
+		autoPlay: 5000,
+		imagesLoaded: true,
+		wrapAround: true,
+		prevNextButtons: false,
+	});
+
+	$('.director-slider').find('.slides').flickity({
+		imagesLoaded: true,
+		groupCells: true,
+		contain: true,
+		pageDots: false
+	});
+
+	var companySlider = $('.company-profile-slider').find('.slides').flickity({
+		imagesLoaded: true,
+		wrapAround: false,
+		prevNextButtons: true,
+		pageDots: false
+	});
+
+	if($('.company-profile-slider').length > 0) {
+		companySliderData = companySlider.data('flickity');
+
+		function companySliderStatus() {
+			var slideStatus = $('.slider-nav .slider-nav-item');
+			var currentSlider = companySliderData.selectedIndex;
+
+			slideStatus.removeClass('is-current');
+			slideStatus.eq(currentSlider).addClass('is-current');
+		}
+		companySliderStatus();
+		companySlider.on( 'select.flickity', companySliderStatus );
+	}
+
 	$('.faq-item .question .toggle').on('click', function() {
 		var $parent = $(this).parents('.faq-item');
 		var $answer = $($parent).find('.answer');

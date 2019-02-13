@@ -526,22 +526,26 @@
 		});
 	}();
 
-	function pageWithFilter() {
-		var $page = document.getElementsByClassName('with-filter');
-		var $filter = document.getElementsByClassName('search-filter');
+	var $page = document.getElementsByClassName('with-filter');
 
-		if($page && $page.length > 0) {
-			$page = $page[0];
+	if($page.length > 0) {
+		function pageWithFilter() {
+			var $page = document.getElementsByClassName('with-filter');
+			var $filter = document.getElementsByClassName('search-filter');
+
+			if($page && $page.length > 0) {
+				$page = $page[0];
+			}
+
+			if($filter && $filter.length > 0) {
+				$filter = $filter[0];
+			}
+
+			$page.style.paddingTop = $filter.offsetHeight + 'px';
 		}
 
-		if($filter && $filter.length > 0) {
-			$filter = $filter[0];
-		}
-
-		$page.style.paddingTop = $filter.offsetHeight + 'px';
+		window.onload = pageWithFilter;
+		window.addEventListener("resize", pageWithFilter);
 	}
-
-	window.onload = pageWithFilter;
-	window.addEventListener("resize", pageWithFilter);
 
 })();

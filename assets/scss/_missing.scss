@@ -1,0 +1,29 @@
+.missing-container {
+
+	.inner {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+
+	.missing-content {
+		max-width: 480px;
+		margin: 0 auto;
+		text-align: center;
+
+		img {
+			display: block;
+			margin-bottom: 38px;
+		}
+
+		.title {
+			font-size: 54px;
+			padding-top: 20px;
+			border-top: 3px solid #7C174B;
+			margin-bottom: 12px;
+		}
+
+		.subtitle {
+			font-size: 14px;
+		}
+	}
+}

@@ -39,6 +39,9 @@
 						padding-bottom: 32px;
 						position: relative;
 						text-align: center;
+						transition: all 0.2s ease-in-out;
+						font-weight: 700;
+						color: $color-text-light;
 
 						&:after {
 							content: '';
@@ -57,7 +60,6 @@
 						}
 
 						&.is-current {
-							font-weight: 700;
 							color: #7C174B;
 
 							&:after {
@@ -70,10 +72,23 @@
 
 			.slides {
 				box-shadow: 0 0 5px 2px rgba($black, 0.2);
-				padding: 0 48px;
+
+				.flickity-prev-next-button {
+					background-color: transparent;
+
+					&.previous {
+						left: 12px;
+					}
+
+					&.next {
+						right: 12px;
+					}
+				}
 
 				.slide {
 					display: flex;
+					width: 100%;
+					padding: 0 64px 0 48px;
 
 					.slide-text {
 						width: 50%;
@@ -84,6 +99,7 @@
 						.slite-text-container {
 							.title {
 								font-weight: 400;
+								text-transform: uppercase;
 							}
 
 							.text {
@@ -94,6 +110,81 @@
 
 					.slide-image {
 						width: 50%;
+					}
+				}
+			}
+		}
+	}
+
+	.company-directors {
+		.company-directors-list {
+			.company-directors-item {
+				background-color: $white;
+				box-shadow: 0 0 5px 2px rgba($black, 0.2);
+				display: flex;
+
+				&.right {
+					flex-direction: row-reverse;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 32px;
+				}
+
+				.director-slider {
+					width: 50%;
+					padding: 24px 0;
+
+					.slides {
+
+						.flickity-prev-next-button {
+							background-color: transparent;
+
+							.arrow {
+								fill: $white;
+							}
+
+							&.previous {
+								left: 0;
+							}
+
+							&.next {
+								right: 0;
+							}
+						}
+
+						.slide {
+							width: 50%;
+
+							.slide-text {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								padding: 24px;
+								background: linear-gradient(to top, black, transparent);
+								color: $white;
+								font-size: 14px;
+
+								.name {
+									margin-bottom: 4px;
+								}
+							}
+						}
+					}
+				}
+
+				.director-text {
+					width: 50%;
+					padding: 48px;
+
+					.heading {
+						text-transform: uppercase;
+						font-weight: 400;
+					}
+
+					.desc {
+						font-weight: 14px;
 					}
 				}
 			}

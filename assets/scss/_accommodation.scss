@@ -253,7 +253,7 @@
       margin-bottom: 32px;
     }
 
-    .text-post {
+    .wysiwyg-post {
       color: #868686;
     }
   }
@@ -670,6 +670,7 @@
       .news-heading {
         text-align: center;
         margin-bottom: 48px;
+        text-transform: uppercase;
       }
 
       .news-content {

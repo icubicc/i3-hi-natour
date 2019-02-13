@@ -1,0 +1,59 @@
+.procurement-container {
+	.inner {
+		display: flex;
+	}
+
+	.procurement-section {
+		width: 50%;
+
+		.heading {
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+
+		&.procurement-desc {
+			padding-right: 48px;
+
+			.wysiwyg-post {
+				ul, ol {
+					padding-left: 18px;
+				}
+			}
+		}
+
+		&.procurement-form {
+			.form {
+				.form-submit {
+					text-align: right;
+
+					.button {
+						text-transform: uppercase;
+						color: #FFFFFF;
+						background-color: #7C174B;
+						width: 100%;
+						max-width: 180px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.procurement-tender {
+	background-color: #7C174B;
+	color: #FFFFFF;
+	text-align: center;
+
+	.inner {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.title {
+		margin-bottom: 12px;
+	}
+
+	.button {
+		text-transform: uppercase;
+	}
+}
