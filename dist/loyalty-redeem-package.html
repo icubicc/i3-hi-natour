@@ -22,7 +22,7 @@
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
 
-	<body class="is-loading">
+	<body>
 		<div id="site-container" class="site-container">
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-inner wrapper">
@@ -57,9 +57,9 @@
 								</div>
 								<nav class="site-header-nav">
 									<ul class="items">
-										<li class="item"><a href="loyalty-program.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
+										<li class="item item-current"><a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
 										<li class="item"><a href="support.html">Support</a></li>
-										<li class="item item-current"><a href="myaccount-dashboard.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> My Account</a></li>
+										<li class="item"><a href="login.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a></li>
 									</ul>
 								</nav>
 								<div class="switch-widget-mobile">
@@ -90,9 +90,9 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-program.html">Benefits & Status</a></li>
+									<li class="item""><a href=" loyalty-benefit-status.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
-									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
+									<li class="item item-current"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
 									<li class="item"><a href="loyalty-highpro.html">High Pro</a></li>
 									<li class="item"><a href="loyalty-hotel.html">List of Participating Hotels</a></li>
@@ -112,15 +112,15 @@
 				<div class="mobile-menu-container">
 					<div class="inner">
 						<div class="myaccount-section">
-							<a href="myaccount-dashboard.html" class="link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> My Account</a>
+							<a href="login.html" class="link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a>
 						</div>
 						<nav class="mobile-menu-nav">
 							<ul class="items">
 								<li class="item">
 									<a href="accommodation.html">
-											Accommodation
-											<svg class="icon menu-toggle" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-angle-down"></use></svg>
-										</a>
+										Accommodation
+										<svg class="icon menu-toggle" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-angle-down"></use></svg>
+									</a>
 									<ul class="menu-child">
 										<li class="item-child"><a href="accommodation-stars.html">By Stars</a></li>
 										<li class="item-child"><a href="accommodation-destination.html">By Destination</a></li>
@@ -130,15 +130,15 @@
 								<li class="item"><a href="#">My Reservation</a></li>
 							</ul>
 							<ul class="items">
-								<li class="item">
+								<li class="item item-current">
 									<a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">
-											Loyalty Program
-											<svg class="icon menu-toggle" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-angle-down"></use></svg>
-										</a>
+										Loyalty Program
+										<svg class="icon menu-toggle" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-angle-down"></use></svg>
+									</a>
 									<ul class="menu-child">
 										<li class="item-child"><a href="loyalty-benefit-status.html">Benefits & Status</a></li>
 										<li class="item-child"><a href="loyalty-earn.html">Earns Points</a></li>
-										<li class="item-child"><a href="loyalty-redeem.html">Redeem Points</a></li>
+										<li class="item-child item-child-current"><a href="loyalty-redeem.html">Redeem Points</a></li>
 										<li class="item-child"><a href="loyalty-offer.html">Current Offers</a></li>
 										<li class="item-child"><a href="loyalty-highpro.html">High Pro</a></li>
 										<li class="item-child"><a href="loyalty-hotel.html">List of Participating Hotels</a></li>
@@ -154,154 +154,102 @@
 			</div>
 
 			<div id="site-content" class="site-content">
-
-				<div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-					<div class="myaccount-page">
-						<div id="myaccount-page-hero" class="myaccount-page-hero" style="background: url('assets/images/myaccount-bg.jpg');">
-						</div>
-						<div class="myaccount-page-content">
-							<div class="inner wrapper">
-								<div class="myaccount-page-container">
-									<div class="myaccount-user-preview">
-										<div class="avatar">
-											<span class="avatar-image" style="background: url('assets/images/avatar-placeholder.png');"></span>
-										</div>
-										<h1 class="name">Hello, John Doe</h1>
-										<span class="membership-status">CLASSIC STATUS</span>
+				<div class="main-content" role="main" itemscope itemprop="mainContentOfPage">
+					<div class="loyalty-page-container">
+						<header class="loyalty-page-header">
+							<div class="loyalty-banner" style="background-image: url(assets/images/home-hero.jpg)"></div>
+						</header>
+						<div class="loyalty-page-content">
+							<section class="section section-batik">
+								<div class="loyalty-redeem">
+									<div class="loyalty-redeem-head with-icon">
+										<img class="image" src="assets/images/redeem-head-package.svg">
+										<h1 class="heading"><strong>PACKAGE</strong></h1>
 									</div>
-									<div class="myaccount-page-frame">
-										<div class="myaccount-nav">
-											<div class="tabs">
-												<a href="myaccount-dashboard.html" class="tab">MY DASHBOARD</a>
-												<a href="myaccount-reservation.html" class="tab">MY RESERVATION</a>
-												<a href="myaccount-loyalty.html" class="tab is-current">MY LOYALTY AREA AND MEMBERSHIP</a>
-												<a href="myaccount-personal-information.html" class="tab">MY PREFERENCES & PERSONAL INFORMATION</a>
-											</div>
-										</div>
-										<div class="myaccount-content">
-											<div class="myaccount-loyalty">
-												<section class="section membership">
-													<div class="section-heading">
-														<h3 class="title">MY LOYALTY MEMBERSHIP</h3>
-													</div>
-													<div class="section-content">
-														<div class="loyaty-status-preview">
-															<div class="heading">
-																<h4 class="title">My Rewards Points Balance</h4>
+									<div class="loyalty-redeem-content">
+										<div class="inner wrapper">
+											<div class="redeem-list-container">
+												<div class="list column-2">
+													<div class="item">
+														<div class="meta">
+															<p class="package-name">INAYA PUTRI BALI
+																Superior Room</p>
+															<p class="package-desc">Superior room with double bed ready to serve you in Bali</p>
+															<p class="point-cost"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-point"></use></svg> 16246 Points</p>
+															<a href="#" class="button">CHoose  & REDEEM</a>
+														</div>
+														<div class="image">
+															<img src="assets/images/loyalty-package-1.jpg" alt="">
+														</div>
+														</div>
+														<div class="item">
+															<div class="meta">
+																<p class="package-name">PATRA BALI Superior Room </p>
+																<p class="package-desc">Superior room with double bed ready to serve you in Bali</p>
+																<p class="point-cost"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-point"></use></svg> 5246 Points</p>
+																<a href="#" class="button">CHoose  & REDEEM</a>
 															</div>
-															<div class="content">
-																<div class="loyalty-point">
-																	<div class="loyalty-point-container">
-																		<p class="point">
-																			<span class="point-count">200</span>
-																			Reward Points Available
-																		</p>
-																		<p class="point-exp">Expiry date: <strong>17/12/2019</strong></p>
-																		<p class="text">Your points are valid for life as long as you stay at one of our hotels at least once a year.</p>
-																		<a href="#" class="redeem-link">USE MY REWARDS POINTS or EARN REWARDS POINTS</a>
-																	</div>
+															<div class="image">
+																<img src="assets/images/loyalty-package-2.jpg" alt="">
+														</div>
+															</div>
+															<div class="item">
+																<div class="meta">
+																	<p class="package-name">INAYA BALI BEACH Deluxe Room</p>
+																	<p class="package-desc">Superior room with double bed ready to serve you in Bali</p>
+																	<p class="point-cost"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-point"></use></svg> 12460 Points</p>
+																	<a href="#" class="button">CHoose  & REDEEM</a>
 																</div>
-																<div class="loyalty-card">
-																	<div class="loyalty-card-status">
-																		<span class="label">HIGH REWARDS LOYALTY</span>
-																		<span class="status">CLASSIC STATUS</span>
+																<div class="image">
+																	<img src="assets/images/loyalty-package-3.jpg" alt="">
+														</div>
+																</div>
+																<div class="item">
+																	<div class="meta">
+																		<p class="package-name">INAYA BALI BEACH Deluxe Room</p>
+																		<p class="package-desc">Superior room with double bed ready to serve you in Bali</p>
+																		<p class="point-cost"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-point"></use></svg> 1246 Points</p>
+																		<a href="#" class="button">CHoose  & REDEEM</a>
 																	</div>
-																	<div class="loyalty-progress">
-																		<span class="label">You're this close to a status upgrade:</span>
-																		<div class="progress-container">
-																			<span class="percentage">10%</span>
-																			<div class="bar">
-																				<span class="bar-fill" style="width: 10%;"></span>
+																	<div class="image">
+																		<img src="assets/images/loyalty-package-1.jpg" alt="">
+														</div>
+																	</div>
+																	<div class="item">
+																		<div class="meta">
+																			<p class="package-name">INNA TERETES Deluxe Sea View</p>
+																			<p class="package-desc">Superior room with double bed ready to serve you in Bali</p>
+																			<p class="point-cost"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-point"></use></svg> 10460 Points</p>
+																			<a href="#" class="button">CHoose  & REDEEM</a>
+																		</div>
+																		<div class="image">
+																			<img src="assets/images/loyalty-package-3.jpg" alt="">
+														</div>
+																		</div>
+																		<div class="item">
+																			<div class="meta">
+																				<p class="package-name">PATRA SEMARANG HOTEL Deluxe Room</p>
+																				<p class="package-desc">Superior room with double bed ready to serve you in Bali</p>
+																				<p class="point-cost"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-point"></use></svg> 12046 Points</p>
+																				<a href="#" class="button">CHoose  & REDEEM</a>
 																			</div>
-																			<p class="desc"><strong>200/2000</strong> status points or <strong>1/10</strong> nights</p>
+																			<div class="image">
+																				<img src="assets/images/loyalty-package-1.jpg" alt="">
+														</div>
+																			</div>
+																		</div>
+																		<div class="view-more">
+																			<a href="#" class="link">View More</a>
 																		</div>
 																	</div>
-																	<div class="loyalty-card-detail">
-																		<a href="myaccount-loyalty-card.html" class="button">VIEW MY LOYALTY CARD</a>
-																	</div>
 																</div>
 															</div>
 														</div>
-													</div>
-												</section>
-												<section class="section point-history">
-													<div class="section-heading">
-														<h3 class="title">MY EARNING & REDEEM HISTORY</h3>
-														<p class="missing-point">Missing points? <a href="#popup-missing-point" class="link js-popup-link">Contact Us</a></p>
-													</div>
-													<div class="section-content">
-														<div class="point-history-table">
-															<div class="filter">
-																<div class="filter-sort">
-																	<select class="input">
-																		<option value="">Filter by</option>
-																		<option>Earning</option>
-																		<option>Redeem</option>
-																	</select>
-																</div>
-															</div>
-															<table class="table">
-																<tr>
-																	<th>Date</th>
-																	<th>Description</th>
-																	<th>Point</th>
-																</tr>
-																<tr>
-																	<td>10/11/2018</td>
-																	<td>Earn points - 2 nights stay at Inna Parapat</td>
-																	<td><span class="point-value plus">+17</span></td>
-																</tr>
-																<tr>
-																	<td>09/15/2018</td>
-																	<td>Redeem points - Hotel transport from airport</td>
-																	<td><span class="point-value minus">-9</span></td>
-																</tr>
-																<tr>
-																	<td>10/11/2018</td>
-																	<td>Earn points - 1 nights stay at Inaya Bali</td>
-																	<td><span class="point-value plus">+24</span></td>
-																</tr>
-																<tr>
-																	<td>09/16/2017</td>
-																	<td>Redeem points - Hotel dining discounts</td>
-																	<td><span class="point-value minus">-9</span></td>
-																</tr>
-																<tr>
-																	<td>12/14/2017</td>
-																	<td>Earn points - 2 nights stay at Inna Parapat</td>
-																	<td><span class="point-value plus">+10</span></td>
-																</tr>
-															</table>
-														</div>
-													</div>
-												</section>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							</section>
 						</div>
 					</div>
 				</div>
 
-			</div>
-
-			<!-- popup-missing-point -->
-			<div id="popup-missing-point" class="popup-inline mfp-hide popup-missing-point">
-				<div class="popup-header">
-					<h1 class="title">Got a missing points?</h1>
-					<p class="subtitle">Just upload your receipt here</p>
-				</div>
-				<div class="popup-content">
-					<form class="form">
-						<div class="form-text">
-							<input type="file">
-			</div>
-							<div class="form-submit">
-								<button class="button">Upload</button>
-							</div>
-					</form>
-				</div>
 			</div>
 
 			<footer id="site-footer" class="site-footer" role="contentinfo">

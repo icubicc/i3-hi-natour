@@ -35,7 +35,7 @@
 									<div class="section-content">
 										<div class="information-list">
 											<div class="information-item">
-												<a href="#" class="edit-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
+												<a href="#popup-birthdate" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
 												<p class="title">John Doe</p>
 												<div class="list">
 													<div class="item">
@@ -43,17 +43,17 @@
 														<span class="value"></span>
 													</div>
 													<div class="item">
-														<span class="label">Date of birth:Language:</span>
+														<span class="label">Language:</span>
 														<span class="value">English</span>
 													</div>
 												</div>
 											</div>
 											<div class="information-item">
-												<a href="#" class="edit-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
+												<a href="#popup-password" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
 												<p class="title">Password</p>
 											</div>
 											<div class="information-item">
-												<a href="#" class="edit-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
+												<a href="#popup-personal-contact" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
 												<p class="title">MY PERSONAL CONTACT</p>
 												<div class="list">
 													<div class="item">
@@ -67,7 +67,7 @@
 												</div>
 											</div>
 											<div class="information-item">
-												<a href="#" class="edit-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
+												<a href="#popup-address" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
 												<p class="title">MY ADDRESS</p>
 												<div class="list">
 													<div class="item">
@@ -87,6 +87,147 @@
 		</div>
 	</div>
 
+</div>
+
+<!-- popup-birthdate -->
+<div id="popup-birthdate" class="popup-inline mfp-hide popup-birthdate">
+	<div class="popup-header">
+		<h1 class="title">John Doe</h1>
+		<p class="subtitle">To change your name, please contact Customer Care.</p>
+	</div>
+	<div class="popup-content">
+		<form class="form">
+			<div class="form-text">
+				<label class="label">Date of birth:</label>
+				<div class="select-group">
+					<select class="input">
+						<option value="">Day</option>
+					</select>
+					<select class="input">
+						<option value="">Month</option>
+					</select>
+					<select class="input">
+						<option value="">Year</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-text">
+				<label class="label">Date of birth:</label>
+				<select class="input">
+					<option value="">English</option>
+				</select>
+			</div>
+			<div class="form-submit">
+				<button class="button">Save</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- popup-password -->
+<div id="popup-password" class="popup-inline mfp-hide popup-password">
+	<div class="popup-header">
+		<h1 class="title">Password</h1>
+	</div>
+	<div class="popup-content">
+		<form class="form">
+			<div class="form-text">
+				<label class="label">Old Password</label>
+				<input type="password" class="input">
+			</div>
+			<div class="form-text">
+				<label class="label">New Password</label>
+				<input type="password" class="input">
+			</div>
+			<div class="form-submit">
+				<button class="button">Save</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- popup-personal-contact -->
+<div id="popup-personal-contact" class="popup-inline mfp-hide popup-personal-contact">
+	<div class="popup-content">
+		<form class="form">
+			<section class="section email">
+				<h1 class="section-heading">My Personal Information</h1>
+				<div class="form-text">
+					<label class="label">Personal Email Address</label>
+					<input type="text" class="input">
+				</div>
+				<div class="form-text">
+					<label class="label">Business Email Address</label>
+					<input type="text" class="input">
+				</div>
+			</section>
+			<section class="section phone">
+				<h1 class="section-heading">My Mobile Number</h1>
+				<div class="form-text">
+					<label class="label">Personal Mobile</label>
+					<input type="text" class="input">
+				</div>
+				<div class="form-text">
+					<label class="label">Business Mobile</label>
+					<input type="text" class="input">
+				</div>
+				<div class="form-text">
+					<label class="label">Home Landline</label>
+					<input type="text" class="input">
+				</div>
+				<div class="form-text">
+					<label class="label">Bussiness Landline</label>
+					<input type="text" class="input">
+				</div>
+			</section>
+			<div class="form-submit">
+				<button class="button">Save</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- popup-personal-contact -->
+<div id="popup-address" class="popup-inline mfp-hide popup-address">
+	<div class="popup-header">
+		<h1 class="title">My address</h1>
+	</div>
+	<div class="popup-content">
+		<form class="form">
+			<div class="form-text">
+				<label class="label">Home address</label>
+				<div class="input-group">
+						<input type="password" class="input">
+						<input type="password" class="input">
+				</div>
+			</div>
+			<div class="form-text">
+				<label class="label">Bussiness address</label>
+				<div class="input-group">
+						<input type="password" class="input">
+						<input type="password" class="input">
+				</div>
+			</div>
+			<div class="form-text">
+				<label class="label">Billing address</label>
+				<div class="input-group">
+						<input type="password" class="input">
+						<input type="password" class="input">
+				</div>
+			</div>
+			<div class="form-checkbox">
+				<input type="checkbox" class="input">
+				<label class="label">I would prefer to be contacted at my business address</label>
+			</div>
+			<div class="form-checkbox">
+				<input type="checkbox" class="input">
+				<label class="label">My billing address is the same</label>
+			</div>
+			<div class="form-submit">
+				<button class="button">Save</button>
+			</div>
+		</form>
+	</div>
 </div>
 
 <!-- @import footer -->

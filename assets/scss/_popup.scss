@@ -1,4 +1,15 @@
 .popup-inline {
 	background-color: $white;
 	padding: 32px;
+	position: relative;
+}
+
+button.mfp-close {
+	background-color: transparent;
+	color: $black !important;
+	right: 12px;
+
+	&:hover {
+		background-color: transparent;
+	}
 }

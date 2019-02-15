@@ -269,6 +269,116 @@
 								}
 							}
 						}
+
+						.loyaty-status-card {
+							display: flex;
+							margin: -12px;
+
+							.status {
+								width: 50%;
+								padding: 12px;
+
+								.status-heading {
+									margin-bottom: 18px;
+								}
+
+								.status-content {
+									border: 1px solid #BC9764;
+									padding: 24px;
+									display: flex;
+									min-height: 240px;
+
+									.card-image {
+										width: 50%;
+									}
+
+									.card-desc {
+										width: 50%;
+										padding-left: 20px;
+
+										.membership-name {
+											font-size: 14px;
+											text-transform: uppercase;
+											margin-bottom: 8px;
+											font-weight: 700;
+										}
+
+										.membership-status {
+											display: inline-block;
+											padding: 6px 28px;
+											color: #fff;
+											background-color: #1760B2;
+											text-transform: uppercase;
+											margin-bottom: 24px;
+										}
+
+										.card-number {
+											font-size: 14px;
+										}
+									}
+
+									.loyalty-progress {
+										width: 50%;
+										text-align: center;
+										padding-top: 12px;
+										margin-bottom: 24px;
+										padding-right: 24px;
+
+										.label {
+											display: block;
+											margin-bottom: 18px;
+											font-size: 14px;
+										}
+
+										.progress-container {
+											.percentage {
+												font-size: 14px;
+												font-weight: 700;
+												display: inline-block;
+												margin-bottom: 12px;
+											}
+
+											.bar {
+												background-color: #BCBCBC;
+												position: relative;
+												overflow: hidden;
+												border-radius: 12px;
+												height: 12px;
+												text-align: left;
+
+												.bar-fill {
+													display: inline-block;
+													position: absolute;
+													height: 100%;
+													border-radius: 12px;
+													background-color: #005473;
+												}
+											}
+
+											.desc {
+												padding-top: 12px;
+												font-size: 14px;
+											}
+										}
+									}
+
+									.loyalty-history {
+										width: 50%;
+										padding-left: 24px;
+										border-left: 1px solid $color-text-light;
+										font-size: 12px;
+
+										.label {
+											margin-bottom: 8px;
+										}
+
+										.value {
+											font-weight: 700;
+										}
+									}
+								}
+							}
+						}
 					}
 
 					&.help {
@@ -695,6 +805,25 @@
 				}
 
 				.point-history {
+					.section-heading {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						.title {
+							margin-bottom: 0;
+						}
+
+						.missing-point {
+							.link {
+								font-weight: 700;
+								color: $white;
+								color: $color-text;
+								text-decoration: underline;
+							}
+						}
+					}
+
 					.point-history-table {
 						.filter {
 							display: flex;
@@ -733,6 +862,238 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+.popup-missing-point {
+	max-width: 768px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+
+	.popup-header {
+		margin-bottom: 24px;
+		.title {
+			margin-bottom: 8px;
+		}
+	}
+
+	.popup-content {
+		.form {
+			.form-submit {
+				.button {
+					text-transform: uppercase;
+					background-color: #BC9764;
+				}
+			}
+		}
+	}
+}
+
+.popup-birthdate {
+	max-width: 768px;
+	margin: 0 auto;
+	text-align: center;
+
+	.popup-header {
+		margin-bottom: 24px;
+		.title {
+			margin-bottom: 8px;
+		}
+	}
+
+	.popup-content {
+		.form {
+			.form-text {
+				display: flex;
+				align-items: center;
+
+				.label {
+					padding-right: 24px;
+					font-weight: 700;
+					margin-bottom: 0;
+					width: 100%;
+					max-width: 180px;
+					text-align: left;
+				}
+
+				.select-group {
+					width: 100%;
+					display: flex;
+					margin: -4px;
+
+					.input {
+						width: calc(33.333333% - 8px);
+						margin: 4px;
+					}
+				}
+			}
+
+			.form-submit {
+				.button {
+					text-transform: uppercase;
+					color: $color-text;
+					background-color: #BC9764;
+					width: 100%;
+					max-width: 180px;
+				}
+			}
+		}
+	}
+}
+
+.popup-password {
+	max-width: 768px;
+	margin: 0 auto;
+	text-align: center;
+
+	.popup-header {
+		margin-bottom: 24px;
+		.title {
+			margin-bottom: 8px;
+		}
+	}
+
+	.popup-content {
+		.form {
+			.form-text {
+				display: flex;
+				align-items: center;
+
+				.label {
+					padding-right: 24px;
+					font-weight: 700;
+					margin-bottom: 0;
+					width: 100%;
+					max-width: 180px;
+					text-align: left;
+				}
+			}
+
+			.form-submit {
+				.button {
+					text-transform: uppercase;
+					color: $color-text;
+					background-color: #BC9764;
+					width: 100%;
+					max-width: 180px;
+				}
+			}
+		}
+	}
+}
+
+.popup-personal-contact {
+	max-width: 768px;
+	margin: 0 auto;
+	text-align: center;
+
+	.popup-content {
+		.form {
+			.section {
+				margin-bottom: 32px;
+
+				.section-heading {
+					margin-bottom: 32px;
+				}
+
+				.form-text {
+					display: flex;
+					align-items: center;
+
+					.label {
+						padding-right: 24px;
+						font-weight: 700;
+						margin-bottom: 0;
+						width: 100%;
+						max-width: 180px;
+						text-align: left;
+					}
+				}
+
+				&.email {
+					.form-text {
+						.label {
+							max-width: 240px;
+						}
+					}
+				}
+			}
+
+			.form-submit {
+				.button {
+					text-transform: uppercase;
+					color: $color-text;
+					background-color: #BC9764;
+					width: 100%;
+					max-width: 180px;
+				}
+			}
+		}
+	}
+}
+
+.popup-address {
+	max-width: 768px;
+	margin: 0 auto;
+	text-align: center;
+
+	.popup-header {
+		margin-bottom: 24px;
+		.title {
+			margin-bottom: 8px;
+		}
+	}
+
+	.popup-content {
+		.form {
+			.form-text {
+				display: flex;
+
+				.label {
+					padding-right: 24px;
+					font-weight: 700;
+					margin-bottom: 0;
+					width: 100%;
+					max-width: 180px;
+					text-align: left;
+					padding-top: 4px;
+				}
+
+				.input-group {
+					width: 100%;
+
+					.input {
+						&:not(:last-child) {
+							margin-bottom: 8px;
+						}
+					}
+				}
+			}
+
+			.form-checkbox {
+				.label {
+					text-align: left;
+					display: inline-block;
+					padding-left: 12px;
+					padding-right: 0;
+				}
+
+				margin-bottom: 12px;
+			}
+
+			.form-submit {
+				padding-top: 24px;
+
+				.button {
+					text-transform: uppercase;
+					color: $color-text;
+					background-color: #BC9764;
+					width: 100%;
+					max-width: 180px;
 				}
 			}
 		}

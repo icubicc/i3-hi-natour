@@ -20,6 +20,10 @@
 					padding-top: 64px;
 				}
 
+				&.zero-bottom {
+					padding-bottom: 0;
+				}
+
 				&.section-top {
 					padding-top: 196px;
 				}
@@ -596,6 +600,16 @@
 			@include wrapper-x;
 			margin-bottom: 48px;
 			text-align: center;
+
+			&.with-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.heading {
+					padding-left: 24px;
+				}
+			}
 
 			.heading {
 				@include font-size-h1;

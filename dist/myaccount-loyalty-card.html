@@ -174,62 +174,59 @@
 											<div class="tabs">
 												<a href="myaccount-dashboard.html" class="tab">MY DASHBOARD</a>
 												<a href="myaccount-reservation.html" class="tab">MY RESERVATION</a>
-												<a href="myaccount-loyalty.html" class="tab">MY LOYALTY AREA AND MEMBERSHIP</a>
-												<a href="myaccount-personal-information.html" class="tab is-current">MY PREFERENCES & PERSONAL INFORMATION</a>
+												<a href="myaccount-loyalty.html" class="tab is-current">MY LOYALTY AREA AND MEMBERSHIP</a>
+												<a href="myaccount-personal-information.html" class="tab">MY PREFERENCES & PERSONAL INFORMATION</a>
 											</div>
 										</div>
 										<div class="myaccount-content">
-											<section class="section personal-information">
-												<div class="section-heading">
-													<h3 class="title">MY CONTACT PREFERENCES</h3>
-												</div>
-												<div class="section-content">
-													<div class="information-list">
-														<div class="information-item">
-															<a href="#popup-birthdate" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
-															<p class="title">John Doe</p>
-															<div class="list">
-																<div class="item">
-																	<span class="label">Date of birth:</span>
-																	<span class="value"></span>
-																</div>
-																<div class="item">
-																	<span class="label">Language:</span>
-																	<span class="value">English</span>
-																</div>
-															</div>
-														</div>
-														<div class="information-item">
-															<a href="#popup-password" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
-															<p class="title">Password</p>
-														</div>
-														<div class="information-item">
-															<a href="#popup-personal-contact" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
-															<p class="title">MY PERSONAL CONTACT</p>
-															<div class="list">
-																<div class="item">
-																	<span class="label">Personal Email Address</span>
-																	<span class="value">john.doe@gmail.com</span>
-																</div>
-																<div class="item">
-																	<span class="label">Personal Mobile</span>
-																	<span class="value">+62-813 850898</span>
-																</div>
-															</div>
-														</div>
-														<div class="information-item">
-															<a href="#popup-address" class="edit-link js-popup-link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-pencil"></use></svg></a>
-															<p class="title">MY ADDRESS</p>
-															<div class="list">
-																<div class="item">
-																	<span class="label">Home Address</span>
-																	<span class="value">Jakarta, Indonesia</span>
-																</div>
-															</div>
-														</div>
+											<div class="myaccount-loyalty">
+												<section class="section membership">
+													<div class="section-heading">
+														<h3 class="title">MY LOYALTY MEMBERSHIP</h3>
 													</div>
-												</div>
-											</section>
+													<div class="section-content">
+														<div class="loyaty-status-card">
+															<div class="status card">
+																<div class="status-heading">
+																	<h4 class="title">My Loyalty Card</h4>
+																</div>
+																<div class="status-content">
+																	<div class="card-image">
+																		<img src="assets/images/img-loyalty-level-reward.png" alt="">
+														</div>
+																		<div class="card-desc">
+																			<p class="membership-name">HIGH Pro Membership</p>
+																			<span class="membership-status">Classic Status</span>
+																			<p class="card-number">Card no: <strong>30810311389398AY</strong></p>
+																		</div>
+																	</div>
+																</div>
+																<div class="status progress">
+																	<div class="status-heading">
+																		<h4 class="title">My Status</h4>
+																	</div>
+																	<div class="status-content">
+																		<div class="loyalty-progress">
+																			<span class="label">You're this close to a status upgrade:</span>
+																			<div class="progress-container">
+																				<span class="percentage">10%</span>
+																				<div class="bar">
+																					<span class="bar-fill" style="width: 10%;"></span>
+																				</div>
+																				<p class="desc"><strong>365 days left</strong> to reach your goal</p>
+																			</div>
+																		</div>
+																		<div class="loyalty-history">
+																			<p class="label">Since 2019-01-01, you have accumulated :</p>
+																			<p class="value">200/2000 Status points 1/10 nights</p>
+																			<p class="desc">You have until 2019-12-31 to reach your goal by completing eligible stays in our hotels. Your Status points and Eligible Nights counters are reset to zero at the start of each year.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+												</section>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -240,143 +237,20 @@
 
 			</div>
 
-			<!-- popup-birthdate -->
-			<div id="popup-birthdate" class="popup-inline mfp-hide popup-birthdate">
+			<!-- popup-missing-point -->
+			<div id="popup-missing-point" class="popup-inline mfp-hide popup-missing-point">
 				<div class="popup-header">
-					<h1 class="title">John Doe</h1>
-					<p class="subtitle">To change your name, please contact Customer Care.</p>
+					<h1 class="title">Got a missing points?</h1>
+					<p class="subtitle">Just upload your receipt here</p>
 				</div>
 				<div class="popup-content">
 					<form class="form">
 						<div class="form-text">
-							<label class="label">Date of birth:</label>
-							<div class="select-group">
-								<select class="input">
-									<option value="">Day</option>
-								</select>
-								<select class="input">
-									<option value="">Month</option>
-								</select>
-								<select class="input">
-									<option value="">Year</option>
-								</select>
+							<input type="file">
+			</div>
+							<div class="form-submit">
+								<button class="button">Upload</button>
 							</div>
-						</div>
-						<div class="form-text">
-							<label class="label">Date of birth:</label>
-							<select class="input">
-								<option value="">English</option>
-							</select>
-						</div>
-						<div class="form-submit">
-							<button class="button">Save</button>
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<!-- popup-password -->
-			<div id="popup-password" class="popup-inline mfp-hide popup-password">
-				<div class="popup-header">
-					<h1 class="title">Password</h1>
-				</div>
-				<div class="popup-content">
-					<form class="form">
-						<div class="form-text">
-							<label class="label">Old Password</label>
-							<input type="password" class="input">
-			</div>
-							<div class="form-text">
-								<label class="label">New Password</label>
-								<input type="password" class="input">
-			</div>
-								<div class="form-submit">
-									<button class="button">Save</button>
-								</div>
-					</form>
-				</div>
-			</div>
-
-			<!-- popup-personal-contact -->
-			<div id="popup-personal-contact" class="popup-inline mfp-hide popup-personal-contact">
-				<div class="popup-content">
-					<form class="form">
-						<section class="section email">
-							<h1 class="section-heading">My Personal Information</h1>
-							<div class="form-text">
-								<label class="label">Personal Email Address</label>
-								<input type="text" class="input">
-				</div>
-								<div class="form-text">
-									<label class="label">Business Email Address</label>
-									<input type="text" class="input">
-				</div>
-						</section>
-						<section class="section phone">
-							<h1 class="section-heading">My Mobile Number</h1>
-							<div class="form-text">
-								<label class="label">Personal Mobile</label>
-								<input type="text" class="input">
-				</div>
-								<div class="form-text">
-									<label class="label">Business Mobile</label>
-									<input type="text" class="input">
-				</div>
-									<div class="form-text">
-										<label class="label">Home Landline</label>
-										<input type="text" class="input">
-				</div>
-										<div class="form-text">
-											<label class="label">Bussiness Landline</label>
-											<input type="text" class="input">
-				</div>
-						</section>
-						<div class="form-submit">
-							<button class="button">Save</button>
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<!-- popup-personal-contact -->
-			<div id="popup-address" class="popup-inline mfp-hide popup-address">
-				<div class="popup-header">
-					<h1 class="title">My address</h1>
-				</div>
-				<div class="popup-content">
-					<form class="form">
-						<div class="form-text">
-							<label class="label">Home address</label>
-							<div class="input-group">
-								<input type="password" class="input">
-								<input type="password" class="input">
-				</div>
-							</div>
-							<div class="form-text">
-								<label class="label">Bussiness address</label>
-								<div class="input-group">
-									<input type="password" class="input">
-									<input type="password" class="input">
-				</div>
-								</div>
-								<div class="form-text">
-									<label class="label">Billing address</label>
-									<div class="input-group">
-										<input type="password" class="input">
-										<input type="password" class="input">
-				</div>
-									</div>
-									<div class="form-checkbox">
-										<input type="checkbox" class="input">
-										<label class="label">I would prefer to be contacted at my business address</label>
-									</div>
-									<div class="form-checkbox">
-										<input type="checkbox" class="input">
-										<label class="label">My billing address is the same</label>
-									</div>
-									<div class="form-submit">
-										<button class="button">Save</button>
-									</div>
 					</form>
 				</div>
 			</div>

@@ -1,0 +1,51 @@
+.loyalty-redeem-payment {
+	.redeem-desc {
+		text-align: center;
+		max-width: 860px;
+		margin:  0 auto 64px;
+	}
+
+	.redeem-howto {
+		background-color: #BC9764;
+
+		.inner {
+			padding-top: 48px;
+			padding-bottom: 48px;
+		}
+
+		.heading {
+			color: $white;
+			text-align: center;
+			text-transform: none;
+			font-weight: 700;
+			margin-bottom: 48px;
+		}
+
+		.howto-list {
+			display: flex;
+			margin: -16px;
+
+			.howto-item {
+				width: calc(50% - 32px);
+				margin: 16px;
+				text-align: center;
+				color: $white;
+				background-color: #005473;
+				padding: 32px;
+
+				.value {
+					margin-bottom: 32px;
+				}
+
+				.logo {
+					max-width: 80px;
+					margin-bottom: 32px;
+				}
+
+				.title {
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+}
