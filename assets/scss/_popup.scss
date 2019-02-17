@@ -1,7 +1,11 @@
 .popup-inline {
 	background-color: $white;
-	padding: 32px;
+	padding: 24px;
 	position: relative;
+
+	@include breakpoint(crawler) {
+		padding: 32px;
+	}
 }
 
 button.mfp-close {
