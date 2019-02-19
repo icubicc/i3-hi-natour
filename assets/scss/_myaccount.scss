@@ -73,12 +73,13 @@
 						align-items: center;
 						justify-content: center;
 						text-align: center;
-						padding: 12px 24px;
-						font-size: 12px;
+						padding: 12px;
+						font-size: 10px;
 						color: $white;
 						background-color: #202020;
 						text-decoration: none;
 						transition: all 0.2s ease-in-out;
+						overflow-x: auto;
 
 						&:hover {
 							background-color: #101010;
@@ -92,6 +93,11 @@
 							background-color: $white;
 							color: $color-text;
 							font-weight: 700;
+						}
+
+						@include breakpoint(walker) {
+							font-size: 12px;
+							padding: 12px 24px;
 						}
 					}
 				}
@@ -108,16 +114,32 @@
 					}
 
 					.section-heading {
-						padding: 12px 48px;
+						padding: 12px 24px;
 						background-color: #FAFAFA;
 
 						.title {
 							text-transform: uppercase;
 						}
+
+						@include breakpoint(walker) {
+							padding: 12px 32px;
+						}
+
+						@include breakpoint(runner) {
+							padding: 12px 48px;
+						}
 					}
 
 					.section-content {
-						padding: 32px 48px;
+						padding: 32px 24px;
+
+						@include breakpoint(walker) {
+							padding: 32px;
+						}
+
+						@include breakpoint(runner) {
+							padding: 32px 48px;
+						}
 					}
 
 					&.search-filter {
@@ -129,19 +151,21 @@
 								padding: 24px;
 
 								.form {
-									display: flex;
 									justify-content: space-between;
 									align-items: flex-end;
 
 									.filter-fields {
-										width: 100%;
 										display: flex;
 										flex-wrap: wrap;
 										margin: -8px;
 
+										@include breakpoint(walker) {
+											width: 100%;
+										}
+
 										.filter-field {
 											padding: 8px;
-											width: 25%;
+											width: 100%;
 
 											.input {
 												width: 100%;
@@ -160,10 +184,33 @@
 									}
 
 									.filter-action {
-										padding-left: 16px;
+										padding-top: 16px;
 
 										.button {
 											background-color: #BC9764;
+										}
+									}
+
+									@include breakpoint(walker) {
+										display: flex;
+
+										.filter-fields {
+											.filter-field {
+												width: 50%;
+											}
+										}
+
+										.filter-action {
+											padding-left: 16px;
+											padding-top: 0;
+										}
+									}
+
+									@include breakpoint(runner) {
+										.filter-fields {
+											.filter-field {
+												width: 25%;
+											}
 										}
 									}
 								}
@@ -178,17 +225,15 @@
 							}
 
 							.content {
-								display: flex;
-								margin: -16px;
+								margin: 0 -16px -16px;
 
 								.loyalty-card {
-									width: calc(50% - 32px);
+									width: calc(100% - 32px);
 									margin: 16px;
 									padding: 24px;
 									border: 1px solid #7C174B;
 
 									.loyalty-card-status {
-										display: flex;
 										align-items: center;
 										justify-content: space-between;
 										margin-bottom: 24px;
@@ -197,6 +242,8 @@
 											font-size: 14px;
 											font-weight: 700;
 											text-transform: uppercase;
+											display: block;
+											margin-bottom: 12px;
 										}
 
 										.status {
@@ -205,6 +252,14 @@
 											padding: 8px 28px;
 											background-color: #1760B2;
 											font-size: 14px;
+										}
+
+										@include breakpoint(crawler) {
+											display: flex;
+
+											.label {
+												margin-bottom: 0;
+											}
 										}
 									}
 
@@ -231,7 +286,7 @@
 								}
 
 								.loyalty-point {
-									width: calc(50% - 32px);
+									width: calc(100% - 32px);
 									margin: 16px;
 									background-color: #005473;
 									padding: 32px;
@@ -267,15 +322,27 @@
 										}
 									}
 								}
+
+								@include breakpoint(runner) {
+									display: flex;
+									margin: -16px;
+
+									.loyalty-card {
+										width: calc(50% - 32px);
+									}
+
+									.loyalty-point {
+										width: calc(50% - 32px);
+									}
+								}
 							}
 						}
 
 						.loyaty-status-card {
-							display: flex;
 							margin: -12px;
 
 							.status {
-								width: 50%;
+								width: 100%;
 								padding: 12px;
 
 								.status-heading {
@@ -284,16 +351,16 @@
 
 								.status-content {
 									border: 1px solid #BC9764;
-									padding: 24px;
-									display: flex;
+									padding: 16px;
 									min-height: 240px;
 
 									.card-image {
-										width: 50%;
+										width: 100%;
+										margin-bottom: 24px;
 									}
 
 									.card-desc {
-										width: 50%;
+										width: 100%;
 										padding-left: 20px;
 
 										.membership-name {
@@ -318,11 +385,10 @@
 									}
 
 									.loyalty-progress {
-										width: 50%;
+										width: 100%;
 										text-align: center;
 										padding-top: 12px;
 										margin-bottom: 24px;
-										padding-right: 24px;
 
 										.label {
 											display: block;
@@ -363,9 +429,7 @@
 									}
 
 									.loyalty-history {
-										width: 50%;
-										padding-left: 24px;
-										border-left: 1px solid $color-text-light;
+										width: 100%;
 										font-size: 12px;
 
 										.label {
@@ -376,14 +440,57 @@
 											font-weight: 700;
 										}
 									}
+
+									@include breakpoint(crawler) {
+										padding: 24px;
+										display: flex;
+
+										.card-image {
+											width: 50%;
+											margin-bottom: 0;
+										}
+
+										.card-desc {
+											width: 50%;
+										}
+
+										.loyalty-progress {
+											width: 50%;
+											padding-right: 24px;
+										}
+
+										.loyalty-history {
+											width: 50%;
+											padding-left: 24px;
+											border-left: 1px solid $color-text-light;
+										}
+									}
+								}
+							}
+
+							@include breakpoint(runner) {
+								display: flex;
+
+								.status {
+									width: 50%;
 								}
 							}
 						}
 					}
 
 					&.help {
-						padding-left: 48px;
-						padding-right: 48px;
+						padding-left: 24px;
+						padding-right: 24px;
+
+						@include breakpoint(walker) {
+							padding-left: 32px;
+							padding-right: 32px;
+						}
+
+						@include breakpoint(runner) {
+							padding-left: 48px;
+							padding-right: 48px;
+						}
 
 						.section-content {
 							padding: 32px 0;
@@ -401,25 +508,36 @@
 
 					&.reservation {
 						.section-heading {
-							display: flex;
 							align-items: center;
 							justify-content: space-between;
 
 							.title {
-								margin-bottom: 0;
+								margin-bottom: 12px;
 							}
 
 							.reservation-history-link {
 								font-weight: 700;
 								color: $color-text;
 							}
+
+							@include breakpoint(crawler) {
+								display: flex;
+
+								.title {
+									margin-bottom: 0;
+								}
+							}
 						}
 
 						.reservation-search {
 							background-color: #414141;
-							padding: 32px;
+							padding: 24px;
 							color: $white;
 							border-bottom: 5px solid #BC9764;
+
+							@include breakpoint(crawler) {
+								padding: 32px;
+							}
 
 							.heading {
 								color: $white;
@@ -436,10 +554,12 @@
 
 								.fields {
 									display: flex;
+									flex-wrap: wrap;
+									align-items: flex-end;
 									margin: -8px;
 
 									.field {
-										width: 33.333333%;
+										width: 100%;
 										padding: 8px;
 
 										.label {
@@ -453,17 +573,23 @@
 											width: 100%;
 										}
 									}
+
+									@include breakpoint(walker) {
+										.field {
+											width: 33.333333%;
+										}
+									}
 								}
 
 								.action {
 									padding-top: 32px;
-									display: flex;
 									align-items: flex-end;
 									justify-content: space-between;
 
 									.notes {
 										font-size: 14px;
 										padding-right: 48px;
+										margin-bottom: 24px;
 									}
 
 									.submit {
@@ -475,6 +601,14 @@
 											padding: 12px 32px;
 											background-color: #BC9764;
 											text-transform: uppercase;
+										}
+									}
+
+									@include breakpoint(crawler) {
+										display: flex;
+
+										.notes {
+											margin-bottom: 0;
 										}
 									}
 								}
@@ -530,7 +664,6 @@
 										}
 
 										.detail-head {
-											display: flex;
 											justify-content: space-between;
 											align-items: flex-end;
 											margin-bottom: 18px;
@@ -545,6 +678,7 @@
 											.checkin-date {
 												display: flex;
 												align-items: center;
+												margin-bottom: 12px;
 
 												.icon {
 													display: inline-block;
@@ -562,28 +696,38 @@
 													}
 												}
 											}
+
+											@include breakpoint(walker) {
+												display: flex;
+
+												.checkin-date {
+													margin-bottom: 0;
+												}
+											}
 										}
 
 										.detail-content {
-											display: flex;
 											box-shadow: 0 0 5px 2px rgba($black, 0.2);
 											border-left: 5px solid #BC9764;
 											background-color: $white;
+											display: flex;
 
 											.number {
 												padding: 12px;
-												font-size: 20px;
+												font-size: 16px;
 												font-weight: 700;
-												display: flex;
 												align-items: center;
+												display: none;
 											}
 
 											.image {
 												max-width: 420px;
+												display: none;
 											}
 
 											.meta {
-												padding: 32px 32px 32px 48px;
+												width: 100%;
+												padding: 24px;
 
 												.meta-section {
 													&:not(:last-child) {
@@ -603,13 +747,12 @@
 
 														.occupancy-list {
 															list-style-type: none;
-															display: flex;
 															flex-wrap: wrap;
 															width: 100%;
 															padding: 0;
 
 															.occupancy-item {
-																width: 50%;
+																width: 100%;
 																position: relative;
 																padding-left: 24px;
 																padding-right: 12px;
@@ -626,6 +769,14 @@
 																	background-color: #BC9764;
 																	left: 0;
 																	top: 8px;
+																}
+															}
+
+															@include breakpoint(crawler) {
+																display: flex;
+
+																.occupancy-item {
+																	width: 50%;
 																}
 															}
 														}
@@ -647,6 +798,26 @@
 															color: #005473;
 														}
 													}
+												}
+
+												@include breakpoint(runner) {
+													padding: 32px 32px 32px 48px;
+												}
+											}
+
+											@include breakpoint(crawler) {
+												.number {
+													display: flex;
+												}
+											}
+
+											@include breakpoint(walker) {
+												.image {
+													display: block;
+												}
+
+												.number {
+													font-size: 20px;
 												}
 											}
 										}
@@ -684,10 +855,10 @@
 						.information-list {
 							display: flex;
 							flex-wrap: wrap;
-
+							margin: -12px;
 
 							.information-item {
-								width: calc(33.333333% - 24px);
+								width: calc(100% - 24px);
 								margin: 12px;
 								border: 1px solid #BC9764;
 								padding: 24px;
@@ -721,6 +892,24 @@
 											display: block;
 										}
 									}
+								}
+							}
+
+							@include breakpoint(walker) {
+								.information-item {
+									width: calc(50% - 24px);
+								}
+							}
+
+							@include breakpoint(runner) {
+								.information-item {
+									width: calc(33.333333% - 24px);
+								}
+							}
+
+							@include breakpoint(runner) {
+								.information-item {
+									width: calc(33.333333% - 24px);
 								}
 							}
 						}
@@ -806,12 +995,11 @@
 
 				.point-history {
 					.section-heading {
-						display: flex;
 						align-items: center;
 						justify-content: space-between;
 
 						.title {
-							margin-bottom: 0;
+							margin-bottom: 12px;
 						}
 
 						.missing-point {
@@ -820,6 +1008,14 @@
 								color: $white;
 								color: $color-text;
 								text-decoration: underline;
+							}
+						}
+
+						@include breakpoint(walker) {
+							display: flex;
+
+							.title {
+								margin-bottom: 0;
 							}
 						}
 					}
@@ -831,17 +1027,30 @@
 							margin-bottom: 24px;
 						}
 
+						.table-wrapper {
+							overflow-x: auto;
+						}
+
 						.table {
 							background-color: #F7F7F7;
 							border: none;
+							min-width: 480px;
 
 							th, td {
-								padding: 12px 18px;
+								padding: 12px;
+
+								@include breakpoint(crawler) {
+									padding: 12px 18px;
+								}
 							}
 
 							th {
 								border-bottom: 1px solid $black;
 								border-top: none;
+
+								&:last-child {
+									text-align: right;
+								}
 							}
 
 							td {
@@ -849,7 +1058,9 @@
 								color: #747474;
 
 								.point-value {
+									display: block;
 									font-weight: 700;
+									text-align: right;
 
 									&.plus {
 										color: #2A9304;
@@ -908,26 +1119,43 @@
 	.popup-content {
 		.form {
 			.form-text {
-				display: flex;
 				align-items: center;
+				text-align: left;
 
 				.label {
 					padding-right: 24px;
 					font-weight: 700;
-					margin-bottom: 0;
 					width: 100%;
 					max-width: 180px;
 					text-align: left;
 				}
 
 				.select-group {
-					width: 100%;
 					display: flex;
+					flex-wrap: wrap;
 					margin: -4px;
 
 					.input {
-						width: calc(33.333333% - 8px);
+						width: calc(100% - 8px);
 						margin: 4px;
+					}
+
+					@include breakpoint(crawler) {
+						width: 100%;
+					}
+
+					@include breakpoint(walker) {
+						.input {
+							width: calc(33.333333% - 8px);
+						}
+					}
+				}
+
+				@include breakpoint(crawler) {
+					display: flex;
+
+					.label {
+						margin-bottom: 0;
 					}
 				}
 			}
@@ -960,16 +1188,23 @@
 	.popup-content {
 		.form {
 			.form-text {
-				display: flex;
 				align-items: center;
+				text-align: left;
 
 				.label {
 					padding-right: 24px;
 					font-weight: 700;
-					margin-bottom: 0;
 					width: 100%;
 					max-width: 180px;
 					text-align: left;
+				}
+
+				@include breakpoint(crawler) {
+					display: flex;
+
+					.label {
+						margin-bottom: 0;
+					}
 				}
 			}
 
@@ -1001,16 +1236,23 @@
 				}
 
 				.form-text {
-					display: flex;
 					align-items: center;
+					text-align: left;
 
 					.label {
 						padding-right: 24px;
 						font-weight: 700;
-						margin-bottom: 0;
 						width: 100%;
 						max-width: 180px;
 						text-align: left;
+					}
+
+					@include breakpoint(crawler) {
+						display: flex;
+
+						.label {
+							margin-bottom: 0;
+						}
 					}
 				}
 
@@ -1051,12 +1293,11 @@
 	.popup-content {
 		.form {
 			.form-text {
-				display: flex;
+				text-align: left;
 
 				.label {
 					padding-right: 24px;
 					font-weight: 700;
-					margin-bottom: 0;
 					width: 100%;
 					max-width: 180px;
 					text-align: left;
@@ -1070,6 +1311,14 @@
 						&:not(:last-child) {
 							margin-bottom: 8px;
 						}
+					}
+				}
+
+				@include breakpoint(crawler) {
+					display: flex;
+
+					.label {
+						margin-bottom: 0;
 					}
 				}
 			}

@@ -1,0 +1,5 @@
+19.02.19
++ update style.css
++ update script.js, cari comment "Update 19.02.19" dan "Update 19.02.19 (replace yang lama)",
++ news-single.html
++ corporate-responsibility-single.html

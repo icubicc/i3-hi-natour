@@ -1,10 +1,7 @@
 .procurement-container {
-	.inner {
-		display: flex;
-	}
 
 	.procurement-section {
-		width: 50%;
+		width: 100%;
 
 		.heading {
 			font-weight: 400;
@@ -12,7 +9,7 @@
 		}
 
 		&.procurement-desc {
-			padding-right: 48px;
+			margin-bottom: 48px;
 
 			.wysiwyg-post {
 				ul, ol {
@@ -34,6 +31,21 @@
 						max-width: 180px;
 					}
 				}
+			}
+		}
+	}
+
+	@include breakpoint(runner) {
+		.inner {
+			display: flex;
+		}
+
+		.procurement-section {
+			width: 50%;
+
+			&.procurement-desc {
+				padding-right: 48px;
+				margin-bottom: 0;
 			}
 		}
 	}

@@ -1,11 +1,11 @@
 .career-container {
 	.career-form {
-		display: flex;
 		margin-bottom: 48px;
 		padding-bottom: 48px;
 		border-bottom: 1px solid #1A1919;
 
 		.career-form-section {
+			width: 100%;
 
 			.heading {
 				text-transform: uppercase;
@@ -13,8 +13,7 @@
 			}
 
 			&.job-description {
-				width: 50%;
-				padding-right: 48px;
+				margin-bottom: 48px;
 
 				ol, ul {
 					padding-left: 18px;
@@ -28,8 +27,6 @@
 			}
 
 			&.apply-form {
-				width: 50%;
-
 				.form {
 					.form-submit {
 						text-align: right;
@@ -42,6 +39,19 @@
 							max-width: 180px;
 						}
 					}
+				}
+			}
+		}
+
+		@include breakpoint(runner) {
+			display: flex;
+
+			.career-form-section {
+				width: 50%;
+
+				&.job-description {
+					padding-right: 48px;
+					margin-bottom: 0;
 				}
 			}
 		}

@@ -46,10 +46,22 @@ jQuery(document).ready(function($) {
 		pageDots: false
 	});
 
+	//Update 19.02.19 (replace yang lama)
 	$('.js-destination-slider').find('.slides').flickity({
 		imagesLoaded: true,
 		wrapAround: false,
+		pageDots: false,
+		draggable: false,
 		//prevNextButtons: false,
+	});
+
+	//Update 19.02.19
+	$('.js-destination-inner-slider').flickity({
+		imagesLoaded: true,
+		wrapAround: false,
+		prevNextButtons: false,
+		groupCells: true,
+		contain: true,
 	});
 
 	$('.js-promotion-slider').find('.slides').flickity({
@@ -165,5 +177,9 @@ jQuery(document).ready(function($) {
 
 		return false;
 	});
+
+	// $('iframe').load(function () {
+	// 	$('iframe').height($('iframe').contents().height());
+	// });
 
 });

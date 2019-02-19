@@ -29,6 +29,10 @@
 		}
 	}
 
+	img + p {
+		margin-top: 24px;
+	}
+
 	ul, ol {
 		li {
 			&:not(:last-child) {

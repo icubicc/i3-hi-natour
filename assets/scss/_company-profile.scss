@@ -2,13 +2,18 @@
 	.company-profile-about {
 		.inner {
 			padding-top: 16px;
-			padding-bottom: 64px;
 		}
 
 		.heading {
 			margin-bottom: 48px;
 			text-align: center;
 			font-weight: 400;
+		}
+
+		@include breakpoint(walker) {
+			.inner {
+				padding-bottom: 64px;
+			}
 		}
 	}
 
@@ -33,15 +38,17 @@
 
 				.wrapper {
 					display: flex;
+					align-items: center;
 					justify-content: space-between;
 
 					.slider-nav-item {
-						padding-bottom: 32px;
+						padding: 0 12px 32px;
 						position: relative;
 						text-align: center;
 						transition: all 0.2s ease-in-out;
 						font-weight: 700;
 						color: $color-text-light;
+						font-size: 12px;
 
 						&:after {
 							content: '';
@@ -66,6 +73,14 @@
 								visibility: visible;
 							}
 						}
+
+						@include breakpoint(crawler) {
+							font-size: 14px;
+						}
+
+						@include breakpoint(walker) {
+							font-size: 16px;
+						}
 					}
 				}
 			}
@@ -75,24 +90,56 @@
 
 				.flickity-prev-next-button {
 					background-color: transparent;
+					top: 25%;
+					height: 24px;
+					width: 24px;
 
 					&.previous {
-						left: 12px;
+						left: 4px;
 					}
 
 					&.next {
-						right: 12px;
+						right: 4px;
+					}
+				}
+
+				@include breakpoint(creeper) {
+					.flickity-prev-next-button {
+						top: 35%;
+					}
+				}
+
+				@include breakpoint(walker) {
+					.flickity-prev-next-button {
+						top: 50%;
+
+						&.previous {
+							left: 12px;
+						}
+
+						&.next {
+							right: 12px;
+						}
+					}
+				}
+
+				@include breakpoint(runner) {
+					.flickity-prev-next-button {
+						height: 40px;
+						width: 40px;
 					}
 				}
 
 				.slide {
 					display: flex;
+					flex-direction: column-reverse;
+					flex-wrap: wrap;
 					width: 100%;
-					padding: 0 64px 0 48px;
+					padding: 0 32px;
 
 					.slide-text {
-						width: 50%;
-						padding: 32px 48px;
+						width: 100%;
+						padding: 32px 0;
 						display: flex;
 						align-items: center;
 
@@ -109,7 +156,23 @@
 					}
 
 					.slide-image {
-						width: 50%;
+						width: 100%;
+						text-align: center;
+					}
+
+					@include breakpoint(walker) {
+						padding: 0 64px 0 48px;
+						flex-direction: row;
+
+						.slide-text {
+							width: 50%;
+							padding: 32px 48px;
+						}
+
+						.slide-image {
+							width: 50%;
+							text-align: right;
+						}
 					}
 				}
 			}
@@ -122,6 +185,7 @@
 				background-color: $white;
 				box-shadow: 0 0 5px 2px rgba($black, 0.2);
 				display: flex;
+				flex-wrap: wrap;
 
 				&.right {
 					flex-direction: row-reverse;
@@ -132,13 +196,14 @@
 				}
 
 				.director-slider {
-					width: 50%;
-					padding: 24px 0;
+					width: 100%;
 
 					.slides {
 
 						.flickity-prev-next-button {
 							background-color: transparent;
+							width: 24px;
+							height: 24px;
 
 							.arrow {
 								fill: $white;
@@ -153,8 +218,15 @@
 							}
 						}
 
+						@include breakpoint(creeper) {
+							.flickity-prev-next-button {
+								width: 40px;
+								height: 40px;
+							}
+						}
+
 						.slide {
-							width: 50%;
+							width: 100%;
 
 							.slide-text {
 								position: absolute;
@@ -170,13 +242,17 @@
 									margin-bottom: 4px;
 								}
 							}
+
+							@include breakpoint(creeper) {
+								width: 50%;
+							}
 						}
 					}
 				}
 
 				.director-text {
-					width: 50%;
-					padding: 48px;
+					width: 100%;
+					padding: 24px;
 
 					.heading {
 						text-transform: uppercase;
@@ -185,6 +261,29 @@
 
 					.desc {
 						font-weight: 14px;
+					}
+				}
+
+				@include breakpoint(crawler) {
+					.director-text {
+						padding: 32px;
+					}
+				}
+
+				@include breakpoint(walker) {
+					.director-text {
+						padding: 48px;
+					}
+				}
+
+				@include breakpoint(runner) {
+					.director-slider {
+						width: 50%;
+						padding: 24px 0;
+					}
+
+					.director-text {
+						width: 50%;
 					}
 				}
 			}

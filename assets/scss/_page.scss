@@ -327,3 +327,14 @@
 		width: 24px;
 	}
 }
+
+.post-page {
+	.post-head {
+		margin-bottom: 32px;
+
+		.date {
+			margin-bottom: 8px;
+			color: $color-text-light;
+		}
+	}
+}

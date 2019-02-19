@@ -41,8 +41,12 @@
         }
 
         .slide-text {
-          padding: 48px 64px;
+          padding: 48px;
           text-align: center;
+
+          @include breakpoint(crawler) {
+            padding: 48px 64px;
+          }
 
           .heading {
             font-weight: 400;
