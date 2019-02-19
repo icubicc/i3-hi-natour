@@ -3,3 +3,5 @@
 + update script.js, cari comment "Update 19.02.19" dan "Update 19.02.19 (replace yang lama)",
 + news-single.html
 + corporate-responsibility-single.html
++ update html accomodation-destination.html (slider di dalam slider);
++ yg di slider company profile, location link nya ke "accomodation-destination.html"
