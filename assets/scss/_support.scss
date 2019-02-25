@@ -189,32 +189,29 @@
 						font-weight: 700;
 					}
 				}
-			}
 
-			.contact-newsletter {
-				padding-top: 38px;
+				.contact-form-newsletter {
+					margin-bottom: 32px;
 
-				@include breakpoint(crawler) {
-					padding-left: 48px;
-				}
+					.subscribe-field {
+						display: flex;
+						align-items: flex-start;
+						margin-bottom: 12px;
+						font-size: 18px;
 
-				.subscribe-field {
-					display: flex;
-					align-items: center;
-					margin-bottom: 12px;
-					font-size: 18px;
+						input[type="checkbox"] {
+							transform: scale(1.5);
+							margin-top: 6px;
+						}
 
-					input[type="checkbox"] {
-						transform: scale(1.5);
+						.label {
+							padding-left: 16px;
+						}
 					}
 
-					.label {
-						padding-left: 16px;
+					.privacy-policy {
+						font-size: 14px;
 					}
-				}
-
-				.privacy-policy {
-					font-size: 14px;
 				}
 			}
 		}

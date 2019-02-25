@@ -5,3 +5,7 @@
 + corporate-responsibility-single.html
 + update html accommodation-destination.html (slider di dalam slider);
 + yg di slider company profile, location link nya ke "accommodation-destination.html"
+
+25.02.19
++ tambah button logout di myaccoutn
++ update html, checkbox dipindah ke dalam form
