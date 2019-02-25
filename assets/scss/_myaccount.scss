@@ -53,6 +53,22 @@
 					color: $white;
 					background-color: #1760B2;
 				}
+
+				.button-logout {
+					color: $white;
+					background-color: #990606;
+					display: block;
+					max-width: 132px;
+					margin: 0 auto;
+					margin-top: 16px;
+					padding: 4px 24px;
+					transition: all 0.2s ease-in-out;
+					font-weight: 400;
+
+					&:hover {
+						background-color: #6d0303;
+					}
+				}
 			}
 
 			.myaccount-page-frame {
