@@ -129,24 +129,57 @@
       }
       .filter-content {
         background-color: #414141;
-        padding: 12px 24px;
+        padding: 12px 24px 18px;
 
         .form {
           justify-content: space-between;
 					align-items: flex-end;
 
           .filter-fields {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -8px;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: flex-end;
+						margin: -8px;
+
+						@include breakpoint(runner) {
+							flex-wrap: nowrap;
+						}
 
             .filter-field {
-              padding: 8px;
-              width: 100%;
+							padding: 8px;
+							width: 100%;
+
+							@include breakpoint(walker) {
+								width: 33.333333%;
+							}
+
+							@include breakpoint(runner) {
+								width: auto;
+							}
+
+							.label {
+								color: $white;
+								display: block;
+								margin-bottom: 4px;
+							}
 
               .input {
-                width: 100%;
-                padding: 6px 8px;
+								padding: 6px 8px;
+								width: 100%;
+
+								@include breakpoint(runner) {
+									&.input-hotel {
+										max-width: 280px;
+									}
+
+									&.input-qty {
+										width: 70px;
+									}
+
+									&.input-promo {
+										max-width: 148px;
+									}
+								}
               }
 
               select.input {
@@ -157,19 +190,11 @@
                   padding: 0;
                 }
 							}
-
-							@include breakpoint(walker) {
-								width: 50%;
-							}
-
-							@include breakpoint(runner) {
-								width: 25%;
-							}
             }
           }
 
           .filter-action {
-						padding-top: 16px;
+						padding-top: 18px;
 
 						.button {
 							width: 100%;
