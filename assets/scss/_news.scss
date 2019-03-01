@@ -193,19 +193,17 @@
 
 			.list-row {
 				.item-row {
-					display: flex;
 
 					&:not(:last-child) {
 						margin-bottom: 32px;
 					}
 
 					.image {
-
+						width: 100%;
+						margin-bottom: 16px;
 					}
 
 					.meta {
-						padding-left: 48px;
-
 						.date {
 							margin-bottom: 8px;
 							color: #7C174B;
@@ -218,6 +216,19 @@
 						.button {
 							background-color: #7C174B;
 							color: $white;
+						}
+					}
+
+					@include breakpoint(walker) {
+						display: flex;
+
+						.image {
+							width: 45%;
+							margin-bottom: 0;
+						}
+
+						.meta {
+							padding-left: 48px;
 						}
 					}
 				}

@@ -235,3 +235,162 @@
 		}
 	}
 }
+
+.corporate-responsibility-container {
+	.corporate-responsibility-list {
+		padding: 48px 0 0;
+		border-top: 1px solid #414141;
+		margin-bottom: 48px;
+
+		.corporate-responsibility-list-heading {
+			justify-content: space-between;
+			margin-bottom: 48px;
+
+			.heading {
+				margin-bottom: 24px;
+
+				.title {
+					margin-bottom: 12px;
+					font-weight: 400;
+					text-transform: uppercase;
+				}
+
+				.link {
+					text-transform: uppercase;
+					color: #7C174B;
+				}
+			}
+
+			.search {
+				width: 100%;
+				max-width: 280px;
+
+				.search-container {
+					display: flex;
+
+					.input {
+						width: 100%;
+						padding: 6px 12px;
+					}
+
+					.button {
+						background-color: #7C174B;
+						color: $white;
+						padding: 4px 16px;
+						font-size: 19px;
+						line-height: 1;
+					}
+				}
+			}
+
+			@include breakpoint(walker) {
+				display: flex;
+
+				.heading {
+					padding-right: 48px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.corporate-responsibility-list-content {
+			.list {
+				flex-wrap: wrap;
+				margin: -16px;
+
+				.item {
+					width: 100%;
+					padding: 16px;
+
+					.link {
+						text-decoration: none;
+						display: block;
+					}
+
+					.date {
+						margin-bottom: 8px;
+						color: #7C174B;
+					}
+
+					.title {
+						color: $color-text;
+						margin-bottom: 12px;
+					}
+
+					.desc {
+						font-size: 14px;
+						color: $color-text;
+					}
+
+					&:hover {
+						.title {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				@include breakpoint(walker) {
+					display: flex;
+
+					.item {
+						width: 50%;
+					}
+				}
+			}
+
+			.list-row {
+				.item-row {
+
+					&:not(:last-child) {
+						margin-bottom: 32px;
+					}
+
+					.image {
+						width: 100%;
+						margin-bottom: 16px;
+					}
+
+					.meta {
+						.date {
+							margin-bottom: 8px;
+							color: #7C174B;
+						}
+
+						.title {
+							margin-bottom: 12px;
+						}
+
+						.button {
+							background-color: #7C174B;
+							color: $white;
+						}
+					}
+
+					@include breakpoint(walker) {
+						display: flex;
+
+						.image {
+							width: 45%;
+							margin-bottom: 0;
+						}
+
+						.meta {
+							padding-left: 48px;
+						}
+					}
+				}
+			}
+
+			.view-more {
+				text-align: center;
+				padding-top: 48px;
+
+				.link {
+					font-weight: 700;
+					text-transform: uppercase;
+					color: $color-text;
+				}
+			}
+		}
+	}
+}
