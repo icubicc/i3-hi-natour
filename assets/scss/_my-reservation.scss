@@ -43,6 +43,21 @@
 					font-size: 14px;
 				}
 
+				.field {
+					width: 100%;
+
+					.label {
+						display: block;
+						margin-bottom: 8px;
+						font-weight: 700;
+						font-size: 14px;
+					}
+
+					.input {
+						width: 100%;
+					}
+				}
+
 				.fields {
 					display: flex;
 					flex-wrap: wrap;
@@ -50,19 +65,7 @@
 					margin: -8px;
 
 					.field {
-						width: 100%;
 						padding: 8px;
-
-						.label {
-							display: block;
-							margin-bottom: 8px;
-							font-weight: 700;
-							font-size: 14px;
-						}
-
-						.input {
-							width: 100%;
-						}
 					}
 
 					@include breakpoint(walker) {
