@@ -2,13 +2,17 @@
 	.accommodation-facility-hero {
 		background-size: cover !important;
 		background-position: center !important;
-		min-height: 480px;
-		padding: 32px 32px 80px;
+		min-height: 400px;
+		padding: 32px 32px 104px;
 		text-align: center;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: relative;
+
+		@include breakpoint(creeper) {
+			min-height: 480px;
+		}
 
 		&:before {
 			content: '';
@@ -28,12 +32,31 @@
 
 			.title {
 				font-weight: 400;
-				font-size: 64px;
+				font-size: 32px;
 			}
 
 			.subtitle {
 				margin: 0;
-				font-size: 24px;
+			}
+
+			@include breakpoint(creeper) {
+				.title {
+					font-size: 48px;
+				}
+
+				.subtitle {
+					font-size: 18px;
+				}
+			}
+
+			@include breakpoint(walker) {
+				.title {
+					font-size: 64px;
+				}
+
+				.subtitle {
+					font-size: 24px;
+				}
 			}
 		}
 	}
@@ -44,12 +67,24 @@
 
 		.description {
 			margin-top: -80px;
-			margin-bottom: 64px;
+			margin-bottom: 48px;
+
+			@include breakpoint(walker) {
+				margin-bottom: 64px;
+			}
 
 			.description-container {
-				padding: 48px;
+				padding: 24px;
 				box-shadow: 0 0 5px 2px rgba($black, 0.2);
 				background-color: $white;
+
+				@include breakpoint(creeper) {
+					padding: 32px;
+				}
+
+				@include breakpoint(walker) {
+					padding: 48px;
+				}
 
 				.description-heading {
 					text-align: center;
@@ -85,12 +120,15 @@
 
 					.slides {
 						.flickity-prev-next-button {
+							height: 32px;
+							width: 32px;
+
 							&.previous {
-								left: 24px;
+								left: 8px;
 							}
 
 							&.next {
-								right: 24px;
+								right: 8px;
 							}
 
 							&:hover {
@@ -100,6 +138,31 @@
 							.arrow {
 								fill: $white;
 							}
+
+							@include breakpoint(crawler) {
+								height: 40px;
+								width: 40px;
+							}
+
+							@include breakpoint(walker) {
+								&.previous {
+									left: 16px;
+								}
+
+								&.next {
+									right: 16px;
+								}
+							}
+
+							@include breakpoint(runner) {
+								&.previous {
+									left: 24px;
+								}
+
+								&.next {
+									right: 24px;
+								}
+							}
 						}
 						.flickity-page-dots {
 							bottom: 0;
@@ -107,10 +170,15 @@
 							padding: 12px 0;
 
 							.dot {
-								width: 16px;
-								height: 16px;
+								width: 12px;
+								height: 12px;
 								border: 2px solid $white;
 								margin: 0 6px;
+
+								@include breakpoint(crawler) {
+									width: 16px;
+									height: 16px;
+								}
 
 								&.is-selected {
 									background-color: $white;

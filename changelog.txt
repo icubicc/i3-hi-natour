@@ -16,3 +16,15 @@
 05.03.19
 + update myaccount-reservation.html dan my-reservation.html
 + update style.css
+
+11.03.19
++ update style.css
++ update style.js
++ update script.js, cari comment "Tommy 11.03.19"
++ accommodation-room.html
++ accommodation-cafe.html
++ accommodation-meeting.html
++ notes:
+	+ fixed news all & corporate responsibility all style
+	+ fixed filter style in myaccount
+	+ change input date font color in filter

@@ -1,0 +1,229 @@
+.accommodation-room {
+	.accommodation-room-hero {
+		background-size: cover !important;
+		background-position: center !important;
+		min-height: 300px;
+		padding: 0 32px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		@include breakpoint(creeper) {
+			min-height: 380px;
+		}
+
+		.hero-logo {
+			background-color: rgba(#F9F9F9, 0.8);
+			width: 100%;
+			max-width: 400px;
+			padding: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.accommodation-room-content {
+		.room-detail {
+			padding: 48px 0;
+
+			.description {
+				max-width: 680px;
+				margin: 0 auto;
+
+				.description-heading {
+					margin-bottom: 32px;
+					text-align: center;
+				}
+
+				.action {
+					text-align: center;
+					padding-top: 32px;
+				}
+			}
+
+			.facilities {
+				margin-top: 48px;
+				padding-top: 12px;
+				border-top: 1px solid $color-text-light;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				.facilities-sections {
+					width: 100%;
+					padding: 24px;
+
+					.section {
+						&:not(:last-child) {
+							margin-bottom: 32px;
+						}
+
+						ul {
+							list-style-type: none;
+							padding: 0;
+
+							li {
+								position: relative;
+								padding-left: 32px;
+								color: $color-text-light;
+
+								&:not(:last-child) {
+									margin-bottom: 12px;
+								}
+
+								&:before {
+									content: '';
+									display: block;
+									position: absolute;
+									left: 0;
+									top: 7px;
+									width: 9px;
+									height: 9px;
+									border-radius: 50%;
+									background-color: #7C174B;
+								}
+							}
+						}
+					}
+
+					.room-facility {
+						padding: 24px;
+						border: 1px solid #868686;
+						width: 100%;
+
+						.heading {
+							font-weight: 400;
+						}
+
+						ul {
+							padding: 0;
+							list-style-type: none;
+
+							li {
+								display: flex;
+
+								span {
+									display: block;
+
+									&.facility-icon {
+										font-size: 24px;
+									}
+
+									&.facility-label {
+										padding-left: 20px;
+										color: $color-text-light;
+										padding-top: 7px;
+									}
+								}
+							}
+						}
+					}
+
+					@include breakpoint(walker) {
+						width: 50%;
+
+						.room-facility {
+							margin-left: auto;
+							max-width: 400px;
+						}
+					}
+				}
+			}
+		}
+		.room-gallery {
+			padding: 48px 0;
+			box-shadow: inset 0 4px 5px rgba($black, 0.2);
+
+			.room-gallery-heading {
+				margin-bottom: 32px;
+				text-align: center;
+
+				.title {
+					font-weight: 400;
+				}
+			}
+
+			.room-gallery-content {
+				.room-gallery-slider {
+					border-bottom: 5px solid #7C174B;
+
+					.slides {
+						.flickity-prev-next-button {
+							height: 32px;
+							width: 32px;
+
+							&.previous {
+								left: 8px;
+							}
+
+							&.next {
+								right: 8px;
+							}
+
+							&:hover {
+								background-color: transparent;
+							}
+
+							.arrow {
+								fill: $white;
+							}
+
+							@include breakpoint(crawler) {
+								height: 40px;
+								width: 40px;
+							}
+
+							@include breakpoint(walker) {
+								&.previous {
+									left: 16px;
+								}
+
+								&.next {
+									right: 16px;
+								}
+							}
+
+							@include breakpoint(runner) {
+								&.previous {
+									left: 24px;
+								}
+
+								&.next {
+									right: 24px;
+								}
+							}
+						}
+						.flickity-page-dots {
+							bottom: 0;
+							background-color: rgba($black, 0.6);
+							padding: 12px 0;
+
+							.dot {
+								width: 12px;
+								height: 12px;
+								border: 2px solid $white;
+								margin: 0 6px;
+
+								@include breakpoint(crawler) {
+									width: 16px;
+									height: 16px;
+								}
+
+								&.is-selected {
+									background-color: $white;
+								}
+							}
+						}
+
+						.slide {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

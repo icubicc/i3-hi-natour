@@ -13,9 +13,9 @@
 	svg4everybody();
 
 	// preload images
-	imagesLoaded(document.querySelector('#site-container'), function() {
-		document.body.classList.remove('is-loading');
-	});
+	// imagesLoaded(document.querySelector('#site-container'), function() {
+	// 	document.body.classList.remove('is-loading');
+	// });
 
 	// sticky polyfill
 	const stickyElements = document.getElementsByClassName('js-sticky');
@@ -548,18 +548,36 @@
 		window.addEventListener("resize", pageWithFilter);
 	}
 
-	function accommodationHero() {
+	function accommodationFacilityHero() {
 		var header = document.getElementById('site-header');
-		var accommodationHero = document.getElementById('accommodation-facility-hero');
+		var accommodationFacilityHero = document.getElementById('accommodation-facility-hero');
 
-		if(accommodationHero != null) {
-			accommodationHero.style.paddingTop = header.offsetHeight + 'px';
+		if(accommodationFacilityHero != null) {
+			accommodationFacilityHero.style.paddingTop = (header.offsetHeight + 24) + 'px';
 		}
 	}
 
-	accommodationHero();
+	function accommodationRoomHero() {
+		var header = document.getElementById('site-header');
+		var accommodationRoomHero = document.getElementById('accommodation-room-hero');
+		var heroHeight = accommodationRoomHero.offsetHeight;
+		var heroLogo = document.getElementById('hero-logo');
 
-	window.onload = accommodationHero;
-	window.onresize = accommodationHero;
+		if(accommodationRoomHero != null) {
+			accommodationRoomHero.style.paddingTop = (header.offsetHeight) + 'px';
+			heroLogo.style.minHeight = (heroHeight - header.offsetHeight) + 'px';
+		}
+	}
+
+	// Run Functions
+	function run() {
+		accommodationFacilityHero();
+		accommodationRoomHero();
+	}
+
+	run();
+
+	window.onload = run;
+	window.onresize = run;
 
 })();

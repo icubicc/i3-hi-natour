@@ -162,6 +162,10 @@
 						width: 100%;
 
 						.search-filter-container {
+							.filter-head {
+								margin-bottom: 12px;
+							}
+
 							.filter-content {
 								border: 1px solid #005473;
 								padding: 24px;
@@ -173,19 +177,51 @@
 									.filter-fields {
 										display: flex;
 										flex-wrap: wrap;
+										align-items: flex-end;
 										margin: -8px;
 
-										@include breakpoint(walker) {
-											width: 100%;
+										@include breakpoint(runner) {
+											flex-wrap: nowrap;
 										}
 
 										.filter-field {
 											padding: 8px;
 											width: 100%;
 
+											@include breakpoint(walker) {
+												width: 33.333333%;
+											}
+
+											@include breakpoint(runner) {
+												width: auto;
+											}
+
+											a {
+												color: $color-text;
+											}
+
+											.label {
+												display: block;
+												margin-bottom: 4px;
+											}
+
 											.input {
-												width: 100%;
 												padding: 6px 8px;
+												width: 100%;
+
+												@include breakpoint(runner) {
+													&.input-hotel {
+														max-width: 280px;
+													}
+
+													&.input-qty {
+														width: 70px;
+													}
+
+													&.input-promo {
+														max-width: 148px;
+													}
+												}
 											}
 
 											select.input {
@@ -200,9 +236,10 @@
 									}
 
 									.filter-action {
-										padding-top: 16px;
+										padding-top: 18px;
 
 										.button {
+											width: 100%;
 											background-color: #BC9764;
 										}
 									}
@@ -211,22 +248,12 @@
 										display: flex;
 
 										.filter-fields {
-											.filter-field {
-												width: 50%;
-											}
+											width: 100%;
 										}
 
 										.filter-action {
-											padding-left: 16px;
 											padding-top: 0;
-										}
-									}
-
-									@include breakpoint(runner) {
-										.filter-fields {
-											.filter-field {
-												width: 25%;
-											}
+											padding-left: 16px;
 										}
 									}
 								}
@@ -283,6 +310,7 @@
 										text-align: center;
 
 										img {
+											width: 100%;
 											max-width: 289px;
 										}
 									}

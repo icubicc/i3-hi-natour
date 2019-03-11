@@ -182,8 +182,13 @@ jQuery(document).ready(function($) {
 	// 	$('iframe').height($('iframe').contents().height());
 	// });
 
+	// Tommy 11.03.19
 	$('.js-gallery-slider').find('.slides').flickity({
 		imagesLoaded: true,
 	});
+	$('.js-room-gallery-slider').find('.slides').flickity({
+		imagesLoaded: true,
+	});
+	// End Tommy 11.03.19
 
 });
