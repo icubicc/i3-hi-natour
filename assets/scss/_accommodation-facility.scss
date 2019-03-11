@@ -1,0 +1,129 @@
+.accommodation-facility {
+	.accommodation-facility-hero {
+		background-size: cover !important;
+		background-position: center !important;
+		min-height: 480px;
+		padding: 32px 32px 80px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			background-color: rgba($black, 0.3);
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			position: absolute;
+		}
+
+		.hero-text {
+			color: $white;
+			max-width: 800px;
+			position: relative;
+
+			.title {
+				font-weight: 400;
+				font-size: 64px;
+			}
+
+			.subtitle {
+				margin: 0;
+				font-size: 24px;
+			}
+		}
+	}
+
+	.accommodation-facility-content {
+		position: relative;
+		padding-bottom: 48px;
+
+		.description {
+			margin-top: -80px;
+			margin-bottom: 64px;
+
+			.description-container {
+				padding: 48px;
+				box-shadow: 0 0 5px 2px rgba($black, 0.2);
+				background-color: $white;
+
+				.description-heading {
+					text-align: center;
+					margin-bottom: 32px;
+
+					.title {
+						font-weight: 400;
+					}
+				}
+
+				.description-content {
+					.action {
+						padding-top: 32px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.gallery {
+			.gallery-heading {
+				margin-bottom: 32px;
+				text-align: center;
+
+				.title {
+					font-weight: 400;
+				}
+			}
+
+			.gallery-content {
+				.gallery-slider {
+					border-bottom: 5px solid #7C174B;
+
+					.slides {
+						.flickity-prev-next-button {
+							&.previous {
+								left: 24px;
+							}
+
+							&.next {
+								right: 24px;
+							}
+
+							&:hover {
+								background-color: transparent;
+							}
+
+							.arrow {
+								fill: $white;
+							}
+						}
+						.flickity-page-dots {
+							bottom: 0;
+							background-color: rgba($black, 0.6);
+							padding: 12px 0;
+
+							.dot {
+								width: 16px;
+								height: 16px;
+								border: 2px solid $white;
+								margin: 0 6px;
+
+								&.is-selected {
+									background-color: $white;
+								}
+							}
+						}
+
+						.slide {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
