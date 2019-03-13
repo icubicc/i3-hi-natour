@@ -4,7 +4,7 @@
 	background-color: $color-one-500;
 	border: 1px solid transparent;
 	border-radius: 0;
-	color: #1A1919;
+	color: $color-text-dark;
 	font-weight: 700;
 	display: inline-block;
 	line-height: inherit;
@@ -21,14 +21,14 @@
 
 	&:hover,
 	&:focus {
-		background-color: $color-one-600;
-		color: #1A1919;
+		background-color: $color-one-400;
+		color: $color-text-dark;
 		outline: 0;
 		text-decoration: none;
 	}
 
 	&:active {
-		background-color: $color-one-600;
+		background-color: $color-one-400;
 	}
 
 	&.button-small {
@@ -41,7 +41,7 @@
 	}
 
 	&.button-loyalty {
-		background-color: $color-two-500;
+		background-color: $color-loyalty-gold;
 		color: $color-two-700;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;

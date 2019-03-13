@@ -5,8 +5,14 @@
 		text-transform: uppercase;
 
 		.title {
+			color: $color-text-dark;
 			font-weight: 400;
 			margin-bottom: 12px;
+		}
+
+		.subtitle {
+			@include font-size-400;
+			color: $color-text-light;
 		}
 	}
 
@@ -92,7 +98,7 @@
 
 	.news-list {
 		padding: 48px 0 0;
-		border-top: 1px solid #414141;
+		border-top: 1px solid $color-border-dark;
 		margin-bottom: 48px;
 
 		.news-list-heading {
@@ -103,14 +109,14 @@
 				margin-bottom: 24px;
 
 				.title {
-					margin-bottom: 12px;
+					margin-bottom: 4px;
 					font-weight: 400;
 					text-transform: uppercase;
 				}
 
 				.link {
+					color: $color-two-500;
 					text-transform: uppercase;
-					color: #7C174B;
 				}
 			}
 
@@ -161,13 +167,15 @@
 					}
 
 					.date {
-						margin-bottom: 8px;
-						color: #7C174B;
+						@include font-size-400;
+						margin-bottom: 4px;
+						color: $color-text-light;
+						text-transform: uppercase;
 					}
 
 					.title {
-						color: $color-text;
-						margin-bottom: 12px;
+						color: $color-two-500;
+						margin-bottom: 8px;
 					}
 
 					.desc {
@@ -250,7 +258,7 @@
 
 	.featured-video {
 		padding: 48px 0;
-		border-top: 1px solid #414141;
+		border-top: 1px solid $color-border-dark;
 
 		.featured-video-heading {
 			margin-bottom: 48px;
@@ -258,12 +266,12 @@
 			.title {
 				font-weight: 400;
 				text-transform: uppercase;
-				margin-bottom: 12px;
+				margin-bottom: 4px;
 			}
 
 			.link {
 				text-transform: uppercase;
-				color: #7C174B;
+				color: $color-two-500;
 			}
 		}
 

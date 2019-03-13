@@ -139,14 +139,14 @@
 						display: flex;
 						flex-wrap: wrap;
 						align-items: flex-end;
-						margin: -8px;
+						margin: -6px;
 
 						@include breakpoint(runner) {
 							flex-wrap: nowrap;
 						}
 
             .filter-field {
-							padding: 8px;
+							padding: 6px;
 							width: 100%;
 
 							@include breakpoint(walker) {
@@ -168,7 +168,8 @@
 							}
 
               .input {
-								padding: 6px 8px;
+								border-color: transparent;
+								padding: 7px 8px;
 								width: 100%;
 
 								@include breakpoint(runner) {
@@ -187,7 +188,7 @@
               }
 
               select.input {
-                padding: 5px 24px 5px 8px;
+                padding: 7px 24px 7px 8px;
 
                 option {
                   margin: 0;
@@ -201,6 +202,8 @@
 						padding-top: 18px;
 
 						.button {
+							padding-bottom: 7px;
+							padding-top: 7px;
 							width: 100%;
 						}
 					}
@@ -244,7 +247,8 @@
 
 		.page-content-heading {
 			text-align: center;
-			margin-bottom: 54px;
+			margin-bottom: 16px;
+			margin-top: 32px;
 
 			.title {
 				font-weight: 400;
@@ -255,6 +259,7 @@
 		.section {
 			.section-heading {
 				text-align: center;
+				margin-top: 16px;
 				margin-bottom: 48px;
 
 				.title {

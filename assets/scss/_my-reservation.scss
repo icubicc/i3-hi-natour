@@ -10,6 +10,9 @@
 	}
 
 	.reservation-content {
+		@include wrapper-x;
+		@include wrapper-x-300;
+
 		.reservation-content-heading {
 			padding: 24px 0;
 			background-color: #BCBCBC;
@@ -110,8 +113,9 @@
 		}
 
 		.reservation-notes {
-			padding-top: 32px;
-			font-size: 14px;
+			@include font-size-400;
+			color: $color-text-light;
+			padding-top: 16px;
 		}
 
 		.reservation-history {

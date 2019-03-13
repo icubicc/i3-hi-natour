@@ -1,24 +1,27 @@
 .instagram-feed-container	{
 	.heading {
-		.title {
-			color: #7C174B;
-			display: flex;
-			align-items: center;
-			font-size: 24px;
-
-			img {
-				margin-right: 24px;
-			}
-		}
-
 		margin-bottom: 48px;
+		margin-top: 16px;
 
 		@include breakpoint(crawler) {
-			.title {
-				font-size: 32px;
+			margin-bottom: 64px;
+		}
+
+		.title {
+			@include font-size-h2;
+			align-items: center;
+			color: $color-text-dark;
+			display: flex;
+			justify-content: center;
+
+			@include breakpoint(crawler) {
+				@include font-size-h1;
 			}
 
-			margin-bottom: 64px;
+			img {
+				height: 40px;
+				margin-right: 16px;
+			}
 		}
 	}
 
@@ -46,24 +49,22 @@
 			}
 
 			@include breakpoint(crawler) {
-				margin: -12px;
 
 				.instagram-feed-item {
 					width: 33.333333%;
-					padding: 12px;
 				}
 			}
 		}
 
 		.instagram-link {
-			padding-top: 32px;
-			margin-top: 48px;
-			border-top: 1px solid #414141;
+			padding-top: 24px;
+			margin-top: 32px;
+			border-top: 1px solid $color-border-dark;
 			text-transform: uppercase;
 			text-align: center;
 
 			.link {
-				color: #7C174B;
+				color: $color-two-500;
 				font-weight: 700;
 			}
 		}

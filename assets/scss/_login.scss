@@ -1,9 +1,12 @@
 .login-page {
+  margin: 0 auto;
+  max-width: 640px;
+
   .login-page-heading {
     text-align: center;
-    padding-bottom: 48px;
+    padding-bottom: 40px;
     margin-bottom: 32px;
-    border-bottom: 1px solid #414141;
+    border-bottom: 1px solid $color-border-dark;
 
     .title {
       text-transform: uppercase;
@@ -66,7 +69,7 @@
 
         .form-submit {
           text-align: center;
-          padding-top: 48px;
+          padding-top: 32px;
 
           .button {
             width: 100%;

@@ -5,11 +5,11 @@
   position: relative;
 
   @include breakpoint(walker) {
-    min-height: 540px;
+    min-height: 512px;
   }
 
   @include breakpoint(runner) {
-    min-height: 640px;
+    min-height: 576px;
   }
 
   & + .search-filter {
@@ -93,7 +93,7 @@
       box-shadow: 0 0 5px rgba($black, 0.2);
       transform: scale(1);
       position: relative;
-      background-color: #414141;
+      background-color: $color-700;
       transition: all 0.2s ease-out;
       display: flex;
       flex-direction: column;
@@ -129,16 +129,23 @@
       }
 
       .learn-more {
+        @include font-size-300;
+        background-color: $color-800;
+        color: $color-500;
         display: block;
-        color: $white;
-        text-transform: uppercase;
-        background-color: #1A1919;
-        padding: 12px;
-        font-size: 14px;
         margin-top: auto;
+        padding: 12px;
+        text-transform: uppercase;
+        transition: all 0.2s ease-out;
 
         @include breakpoint(creeper) {
           padding: 12px 24px;
+        }
+
+        &:hover,
+        &:focus {
+          color: $white;
+          text-decoration: none;
         }
       }
     }

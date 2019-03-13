@@ -12,18 +12,17 @@
 
 		img {
 			display: block;
-			margin-bottom: 38px;
+			margin-bottom: 48px;
 		}
 
 		.title {
-			font-size: 54px;
-			padding-top: 20px;
-			border-top: 3px solid #7C174B;
+			@include font-size-900;
+			border-top: 4px solid $color-two-500;
+			color: $color-text-dark;
+			font-weight: 700;
+			letter-spacing: -0.02em;
+			padding-top: 32px;
 			margin-bottom: 12px;
-		}
-
-		.subtitle {
-			font-size: 14px;
 		}
 	}
 }
