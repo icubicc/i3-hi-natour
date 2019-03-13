@@ -1,6 +1,6 @@
 .login-page {
-  margin: 0 auto;
-  max-width: 640px;
+  @include wrapper-x;
+  @include wrapper-x-200;
 
   .login-page-heading {
     text-align: center;

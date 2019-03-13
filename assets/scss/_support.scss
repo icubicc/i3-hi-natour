@@ -167,9 +167,7 @@
 
 		.contact-us {
 			.contact-us-heading {
-				padding-bottom: 32px;
-				margin-bottom: 48px;
-				border-bottom: 5px solid #7C174B;
+				margin-bottom: 32px;
 				text-align: center;
 
 				.title {
@@ -179,6 +177,8 @@
 			}
 
 			.contact-form {
+				@include wrapper-x;
+				@include wrapper-x-300;
 				padding: 32px;
 				color: $white;
 				background-color: #414141;

@@ -3,6 +3,11 @@
 		padding-top: 16px;
 		padding-bottom: 64px;
 		font-size: 18px;
+
+		.wrapper {
+			@include wrapper-x;
+			@include wrapper-x-300;
+		}
 	}
 
 	.corporate-list {
@@ -32,15 +37,25 @@
 				color: $white;
 				position: relative;
 
+				.title {
+					margin-bottom: 8px;
+				}
+
+				.subtitle {
+					margin-bottom: 32px;
+				}
+
 				.button {
 					color: $white;
-					background-color: rgba(#020202, 0.7);
-					width: 100%;
+					background-color: rgba($color-800, 0.8);
 					max-width: 240px;
+					padding-bottom: 9px;
+					padding-top: 9px;
 					transition: all 0.3s ease-in-out;
+					width: 100%;
 
 					&:hover {
-						background-color: rgba(#020202, 1);
+						background-color: rgba($color-800, 1);
 					}
 				}
 			}

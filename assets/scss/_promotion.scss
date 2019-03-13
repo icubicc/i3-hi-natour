@@ -9,13 +9,13 @@
     right: 0;
     position: absolute;
     background-color: $white;
-    box-shadow: inset 0 5px 5px rgba($black, 0.2);
+    box-shadow: inset 0 4px 8px rgba($black, 0.08);
     height: 240px;
   }
 
   .promotion-slider-container {
     background-color: #F9FAF9;
-    box-shadow: 0 0 5px 2px rgba($black, 0.2);
+    box-shadow: 0 0 4px 2px rgba($black, 0.04), $box-shadow-400;
     border-bottom: 8px solid #7C174B;
     position: relative;
 

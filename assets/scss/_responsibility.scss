@@ -92,7 +92,7 @@
 
 	.responsibility-list {
 		padding: 48px 0 0;
-		border-top: 1px solid #414141;
+		border-top: 1px solid $color-border-dark;
 
 		.responsibility-list-heading {
 			justify-content: space-between;
@@ -102,7 +102,7 @@
 				margin-bottom: 24px;
 
 				.title {
-					margin-bottom: 12px;
+					margin-bottom: 4px;
 					font-weight: 400;
 					text-transform: uppercase;
 				}
@@ -160,13 +160,15 @@
 					}
 
 					.date {
-						margin-bottom: 8px;
-						color: #7C174B;
+						@include font-size-400;
+						color: $color-text-light;
+						margin-bottom: 4px;
+						text-transform: uppercase;
 					}
 
 					.title {
-						color: $color-text;
-						margin-bottom: 12px;
+						color: $color-two-500;
+						margin-bottom: 8px;
 					}
 
 					.desc {
@@ -239,7 +241,7 @@
 .corporate-responsibility-container {
 	.corporate-responsibility-list {
 		padding: 48px 0 0;
-		border-top: 1px solid #414141;
+		border-top: 1px solid $color-border-dark;
 		margin-bottom: 48px;
 
 		.corporate-responsibility-list-heading {

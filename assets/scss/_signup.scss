@@ -1,9 +1,12 @@
 .signup-page {
+  @include wrapper-x;
+  @include wrapper-x-200;
+
   .signup-page-heading {
     text-align: center;
     padding-bottom: 48px;
     margin-bottom: 32px;
-    border-bottom: 1px solid #414141;
+    border-bottom: 1px solid $color-border-dark;
 
     .title {
       font-weight: 400;
@@ -139,7 +142,7 @@
     }
 
     .login-link-section {
-      border-top: 1px solid #414141;
+      border-top: 1px solid $color-border-dark;
       padding: 48px 0;
       text-align: center;
 
