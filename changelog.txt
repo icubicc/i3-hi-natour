@@ -28,3 +28,8 @@
 	+ fixed news all & corporate responsibility all style
 	+ fixed filter style in myaccount
 	+ change input date font color in filter
+
+	14.03.19
+	+ update style.css
+	+ tambah halaman promotion-by-month.html
+	+ tambah halaman support-single.html

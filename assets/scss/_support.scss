@@ -1,4 +1,33 @@
 .support-page-container {
+
+	.page-hero {
+		min-height: 320px;
+
+		@include breakpoint(crawler) {
+			min-height: 480px;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba($black, 0.4);
+		}
+
+		.hero-text {
+
+			.title {
+				font-weight: 400;
+				text-transform: uppercase;
+				color: $white;
+			}
+		}
+	}
+
 	.support-page-heading {
 		margin-bottom: 48px;
 		text-align: center;
@@ -11,6 +40,89 @@
 	.support-banner {
 		max-width: 1425px;
 		margin: 0 auto;
+	}
+
+	.support-header {
+		border-bottom: 1px solid $color-text-light;
+		padding-bottom: 48px;
+
+		.inner {
+			align-items: center;
+
+			@include breakpoint(runner) {
+				display: flex;
+			}
+		}
+
+		.support-header-back,
+		.support-header-blank {
+			width: 100%;
+
+			@include breakpoint(runner) {
+				width: 25%;
+			}
+		}
+
+		.support-header-back {
+			.link {
+				color: $color-text-light;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				font-weight: 700;
+				padding-bottom: 24px;
+
+				@include breakpoint(runner) {
+					padding-bottom: 0;
+				}
+
+				&:hover {
+					color: $color-text;
+				}
+
+				.icon {
+					margin-right: 8px;
+					color: $color-two-500;
+				}
+			}
+		}
+
+		.support-header-text {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@include breakpoint(runner) {
+				width: 50%;
+			}
+
+			.image {
+				width: 80px;
+				height: 80px;
+				padding: 8px;
+				border: 2px solid #292831;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				@include breakpoint(runner) {
+					width: 110px;
+					height: 110px;
+				}
+			}
+
+			.label {
+				font-size: $font-size-600;
+				padding-left: 24px;
+				font-weight: 700;
+
+				@include breakpoint(crawler) {
+					font-size: $font-size-700;
+				}
+			}
+		}
 	}
 
 	.support-page {
@@ -56,6 +168,17 @@
 						font-weight: 700;
 						color: #7C174B;
 						text-transform: uppercase;
+						transition: color 0.2s ease-in-out;
+					}
+
+					.link {
+						text-decoration: none;
+
+						&:hover {
+							.topic-label {
+								color: $color-text-light;
+							}
+						}
 					}
 				}
 			}
@@ -78,6 +201,7 @@
 				margin: 0 auto;
 				max-width: 1024px;
 				padding: 24px;
+				background-color: $white;
 
 				.faq-list {
 					.faq-item {
@@ -219,6 +343,69 @@
 
 					.privacy-policy {
 						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.support-footer {
+ border-top: 1px solid $color-text-light;
+ padding-top: 48px;
+
+ .help-topics {
+		.heading {
+			font-weight: 400;
+			text-align: center;
+			margin-bottom: 64px;
+		}
+
+		.help-topics-list {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -16px;
+
+			.help-topics-item {
+				width: calc(50% - 32px);
+				text-align: center;
+				margin: 16px;
+
+				@include breakpoint(walker) {
+					width: calc(25% - 32px);
+				}
+
+				.topic-icon {
+					width: 110px;
+					height: 110px;
+					border: 2px solid #292831;
+					border-radius: 50%;
+					margin: 0 auto 24px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.topic-label {
+					font-weight: 700;
+					color: #7C174B;
+					text-transform: uppercase;
+					transition: color 0.2s ease-in-out;
+				}
+
+				.link {
+					text-decoration: none;
+
+					&:hover {
+						.topic-label {
+							color: $color-text-light;
+						}
+					}
+				}
+
+				&.is-current {
+					.topic-label {
+						color: $color-text-light;
 					}
 				}
 			}

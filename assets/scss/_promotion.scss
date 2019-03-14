@@ -22,7 +22,7 @@
     .slides {
 
       .flickity-prev-next-button {
-        top: 77%;
+        top: 68%;
 
         &.previous {
           left: 12px;
@@ -62,7 +62,6 @@
       .flickity-page-dots {
         bottom: 0;
         position: relative;
-        padding-top: 48px;
         padding-bottom: 54px;
 
         .dot {
@@ -117,6 +116,21 @@
         top: 0;
         left: 24px;
       }
+    }
+  }
+}
+
+.section.section-promotion-month {
+  .inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .section-heading {
+    margin-top: 0;
+
+    .title {
+      font-weight: 400 !important;
     }
   }
 }
