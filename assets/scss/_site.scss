@@ -676,3 +676,31 @@
 		}
 	}
 }
+
+.notification {
+	display: block;
+	padding: 16px 20px;
+	background-color: $white;
+	margin-bottom: 24px;
+	border-left: 5px solid $color-info-dark;
+	box-shadow: $box-shadow-400;
+	font-size: $font-size-400;
+
+	p {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	ul, ol {
+		padding-left: 16px;
+	}
+
+	&.success {
+		border-left-color: $color-success-dark;
+	}
+
+	&.error {
+		border-left-color: $color-alert-dark;
+	}
+}

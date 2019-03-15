@@ -33,3 +33,7 @@
 	+ update style.css
 	+ tambah halaman promotion-by-month.html
 	+ tambah halaman support-single.html
+
+	15.03.19
+	+ update style.css
+	+ style notification (contoh ada di halaman login.html)

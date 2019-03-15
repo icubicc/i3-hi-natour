@@ -554,7 +554,7 @@
 		var accommodationFacilityHero = document.getElementById('accommodation-facility-hero');
 
 		if(accommodationFacilityHero != null) {
-			accommodationFacilityHero.style.paddingTop = (header.offsetHeight + 24) + 'px';
+			accommodationFacilityHero.style.paddingTop = (header.offsetHeight + 48) + 'px';
 		}
 	}
 
