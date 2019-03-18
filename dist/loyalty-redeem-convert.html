@@ -169,7 +169,11 @@
 											<div class="frame-content">
 												<h2 class="title">Tukar 20 Poin dengan 1 Lucky Draw</h2>
 												<p class="desc">Pemenang Lucky Draw akan diumumkan pada tanggal 10 Desember 2019</p>
-												<a href="#" class="button">REDEEM 20 POINTS</a>
+												<form action="http://icubic.xyz/demo/hin/public/loyalty/convert-point-lucky-draw" method="post">
+													<input type="text" name="lucky_point" value="1" class="input lucky-point">
+													<input type="text" name="redeem_point" value="10" data-conversion="10" class="input is-disabled input-redeem-point">
+													<button class="button" type="submit">REDEEM</button>
+												</form>
 												<p class="disclaimer">*Dengan menekan tombol Tukar, berarti Anda telah menyetujui
 													Syarat dan Ketentuan dari Royalto</p>
 											</div>
@@ -189,7 +193,16 @@
 							<div class="footer-left">
 								<div class="newsletter">
 									<label class="label">SIGN UP <strong>TO OUR NEWSLETTER</strong></label>
-									<a href="#" class="button">SUBSCRIBE</a>
+
+									<!-- 18.03.19 -->
+									<div class="newsletter-form">
+										<form class="form">
+											<input type="text" class="input" placeholder="Your Email">
+											<a href="#" class="button">SUBSCRIBE</a>
+										</form>
+									</div>
+									<!-- 18.03.19 -->
+
 								</div>
 								<div class="social-media">
 									<ul class="list">

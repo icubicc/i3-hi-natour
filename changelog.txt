@@ -37,3 +37,7 @@
 	15.03.19
 	+ update style.css
 	+ style notification (contoh ada di halaman login.html)
+
+	18.03.19
+	+ update style.css
+	+ update html newsletter di footer, cari comment "18.03.19"

@@ -291,6 +291,19 @@
 			.newsletter {
 				margin-bottom: 24px;
 
+				.newsletter-form {
+					.input {
+						width: 100%;
+						margin-bottom: 4px;
+						color: $color-text;
+						padding: 6px 8px;
+
+						@include breakpoint(crawler) {
+							max-width: 240px;
+						}
+					}
+				}
+
 				.label {
 					display: block;
 					margin-bottom: 12px;

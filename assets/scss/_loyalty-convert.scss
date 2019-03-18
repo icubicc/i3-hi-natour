@@ -25,9 +25,30 @@
 			}
 
 			.button {
-				margin-bottom: 24px;
+				width: calc(100% - 8px);
 				background-color: #BC9764;
-				padding: 16px 24px;
+				padding: 8px 24px;
+				margin: 4px;
+
+				@include breakpoint(crawler) {
+					width: calc(33.333333% - 8px);
+				}
+			}
+
+			form {
+				display: flex;
+				flex-wrap: wrap;
+				margin: -4px;
+				margin-bottom: 24px;
+
+				.input {
+					width: calc(100% - 8px);
+					margin: 4px;
+
+					@include breakpoint(crawler) {
+						width: calc(33.333333% - 8px);
+					}
+				}
 			}
 
 			.disclaimer {
