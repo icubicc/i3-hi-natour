@@ -41,3 +41,7 @@
 	18.03.19
 	+ update style.css
 	+ update html newsletter di footer, cari comment "18.03.19"
+
+	18.03.19 II
+	+ update style.css
+	+ update html convert point, cari "add label 18.03.19"

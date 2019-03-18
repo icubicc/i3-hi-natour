@@ -24,29 +24,44 @@
 				font-size: 20px;
 			}
 
-			.button {
-				width: calc(100% - 8px);
-				background-color: #BC9764;
-				padding: 8px 24px;
-				margin: 4px;
-
-				@include breakpoint(crawler) {
-					width: calc(33.333333% - 8px);
-				}
-			}
-
 			form {
 				display: flex;
 				flex-wrap: wrap;
-				margin: -4px;
+				align-items: flex-end;
+				margin: -6px;
 				margin-bottom: 24px;
 
-				.input {
-					width: calc(100% - 8px);
-					margin: 4px;
+				.form-text {
+					width: calc(100% - 12px);
+					margin: 6px;
+					text-align: left;
 
 					@include breakpoint(crawler) {
-						width: calc(33.333333% - 8px);
+						width: calc(33.333333% - 12px);
+					}
+
+					.label {
+						font-weight: 700;
+					}
+
+					.input {
+						width: 100%;
+					}
+				}
+
+				.form-submit {
+					width: calc(100% - 12px);
+					margin: 6px;
+					text-align: left;
+
+					@include breakpoint(crawler) {
+						width: calc(33.333333% - 12px);
+					}
+
+					.button {
+						width: 100%;
+						background-color: #BC9764;
+						padding: 8px 24px;
 					}
 				}
 			}
