@@ -167,7 +167,7 @@
 							}
 
 							.filter-content {
-								border: 1px solid #005473;
+								border: 1px solid $color-loyalty-gold;
 								padding: 24px;
 
 								.form {
@@ -274,7 +274,7 @@
 									width: calc(100% - 32px);
 									margin: 16px;
 									padding: 24px;
-									border: 1px solid #7C174B;
+									border: 1px solid $color-loyalty-gold;
 
 									.loyalty-card-status {
 										align-items: center;
@@ -383,11 +383,10 @@
 						}
 
 						.loyaty-status-card {
-							margin: -12px;
 
 							.status {
 								width: 100%;
-								padding: 12px;
+								padding: 16px;
 
 								.status-heading {
 									margin-bottom: 18px;
@@ -608,6 +607,7 @@
 
 									.input {
 										width: 100%;
+										color: $color-text;
 									}
 								}
 

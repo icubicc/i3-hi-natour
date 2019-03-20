@@ -45,3 +45,12 @@
 	18.03.19 II
 	+ update style.css
 	+ update html convert point, cari "add label 18.03.19"
+
+	20.03.19
+	+ update style.css
+	+ update html di "myaccount-loyalty.html", cari <!-- 20.03.19 -->
+	+ update wording label dan button di "loyalty-redeem-convert.html"
+	+ Opsi IDR dan USD di header homepage di hilangkan
+	+ update html di "loyalty-earn.html", cari <!-- 20.03.19 --> (field currency di take out, lalu placeholder "Stay Rates diubah jadi "Stay Rates (IDR)")
+	+ Icon FB dan Google untuk social login di take out
+	+ ganti wording di page sign up, “Address” edit jadi “Mailing Address”

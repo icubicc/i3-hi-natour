@@ -601,6 +601,10 @@
         border-bottom: 5px solid #7C174B;
         overflow: hidden;
 
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+
         .banner-text {
           top: 0;
           bottom: 0;
