@@ -35,16 +35,31 @@
 			.instagram-feed-item {
 				width: 50%;
 				padding: 8px;
+				position: relative;
+
+				.placeholder {
+					visibility: hidden;
+					opacity: 0;
+				}
 
 				.link {
-					display: block;
-					background-position: center !important;
-					background-size: cover !important;
+					display: flex;
+					position: absolute;
+					align-items: center;
+					top: 8px;
+					bottom: 8px;
+					left: 8px;
+					right: 8px;
+					background-color: #EAEAEA;
+					overflow: hidden;
 				}
 
 				img {
-					visibility: hidden;
-					opacity: 0;
+					//visibility: hidden;
+					//opacity: 0;
+					width: 100%;
+					height: auto;
+					display: block;
 				}
 			}
 

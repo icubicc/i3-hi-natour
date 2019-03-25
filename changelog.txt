@@ -54,3 +54,8 @@
 	+ update html di "loyalty-earn.html", cari <!-- 20.03.19 --> (field currency di take out, lalu placeholder "Stay Rates diubah jadi "Stay Rates (IDR)")
 	+ Icon FB dan Google untuk social login di take out
 	+ ganti wording di page sign up, “Address” edit jadi “Mailing Address”
+
+	25.03.19
+	+ update style.css
+	+ update html instagram-feed.html, cari "25.03.19"
+	+ update html cafe dan meeting room di accommodation-detail.html, cari "25.03.19"
