@@ -28,7 +28,6 @@
 		}
 
     .hero-text {
-			text-align: center;
 			position: relative;
 			z-index: 1;
 
@@ -64,9 +63,11 @@
 					background-color: rgba(#331321, 0.4);
 					color: $white;
 					margin-left: 16px;
+					width: 100%;
 					max-width: 640px;
 					padding: 40px 24px;
 					position: relative;
+					margin-right: 48px;
 
 					@include breakpoint(creeper) {
 						margin-left: 24px;

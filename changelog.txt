@@ -59,3 +59,10 @@
 	+ update style.css
 	+ update html instagram-feed.html, cari "25.03.19"
 	+ update html cafe dan meeting room di accommodation-detail.html, cari "25.03.19"
+
+	05.04.19
+	+ update style.css
+	+ update career.html
+	+ tambah career-detail.html
+	+ update procurement.html
+	+ tambah procurement-detail.html
