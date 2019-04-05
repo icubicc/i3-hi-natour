@@ -39,6 +39,7 @@
 		.site-header-frame {
 			background-color: #1A1919;
 			padding: 16px 0;
+			position: relative;
 		}
 
 		.header-top {
@@ -176,6 +177,55 @@
 						&.item-current {
 
 							a {
+								color: $color-one-500;
+							}
+						}
+					}
+				}
+
+				.site-header-account {
+					background-color: rgba($color-800, 0.88);
+					color: $white;
+					display: none;
+					position: absolute;
+					right: 0;
+					top: 100%;
+
+					.account {
+						border-bottom: 2px solid rgba($white, 0.2);
+						margin: 0;
+						padding: 12px 32px;
+
+						.name {
+							@include font-size-h5;
+							display: block;
+							font-weight: 700;
+							margin-bottom: 4px;
+						}
+
+						.level {
+							@include font-size-200;
+							color: $color-text-light;
+							display: block;
+						}
+					}
+
+					.menus {
+						margin: 12px 32px;
+						padding: 0;
+					}
+
+					.menu.menu {
+						text-align: left;
+
+						.link {
+							color: $white;
+							font-weight: 400;
+							padding: 4px 0;
+							text-align: left;
+
+							&:hover,
+							&:focus {
 								color: $color-one-500;
 							}
 						}
