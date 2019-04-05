@@ -1395,3 +1395,132 @@
 		}
 	}
 }
+
+.myaccount-voucher {
+
+	@at-root {
+		.myaccount-voucher-cards {}
+
+		.myaccount-voucher-card {
+			background-color: $white;
+			border-left: 4px solid $color-two-500;
+			border-radius: 4px;
+			box-shadow: $box-shadow-400;
+			display: flex;
+
+			+ .myaccount-voucher-card {
+				margin-top: 32px;
+			}
+		}
+
+		.myaccount-voucher-image {
+			display: none;
+
+			@include breakpoint(walker) {
+				display: flex;
+				flex: 0 1 40%;
+				flex-direction: column;
+				max-width: 320px;
+			}
+
+			@include breakpoint(jumper) {
+				flex-basis: 33.33333%;
+			}
+
+			.image {
+				flex: 1 1 auto;
+				object-fit: cover;
+			}
+		}
+
+		.myaccount-voucher-text {
+			align-self: center;
+			flex: 1 1 0;
+			padding: 16px;
+
+			@include breakpoint(creeper) {
+				padding: 24px;
+			}
+
+			@include breakpoint(runner) {
+				padding: 24px 48px;
+			}
+
+			.title {
+				@include font-size-h5;
+				margin-bottom: 4px;
+
+				@include breakpoint(creeper) {
+					@include font-size-h4;
+				}
+			}
+
+			.metas {
+				@include font-size-400;
+				color: $color-text-light;
+				list-style: none;
+				margin-bottom: 12px;
+				padding: 0;
+			}
+
+			.meta {
+
+				.value {
+					font-weight: 700;
+				}
+			}
+
+			.desc {
+				@include font-size-300;
+				border-top: 2px solid $color-border;
+				padding-top: 12px;
+
+				@include breakpoint(crawler) {
+					@include font-size-400;
+				}
+			}
+
+			.action {
+				display: flex;
+
+				.label {
+					@include font-size-400;
+					background-color: $color-one-500;
+					color: $color-text-dark;
+					padding: 8px 8px;
+					text-align: center;
+				}
+
+				.code {
+					border: 1px solid $color-one-500;
+					color: $color-text-dark;
+					display: inline-block;
+					font-weight: 700;
+					padding: 6px 8px;
+					text-transform: uppercase;
+					vertical-align: middle;
+
+					@include breakpoint(creeper) {
+						padding-left: 16px;
+						padding-right: 16px;
+					}
+				}
+			}
+		}
+
+		.myaccount-voucher-more {
+			border-top: 2px solid $color-border;
+			margin-top: 32px;
+			padding-top: 24px;
+			text-align: center;
+
+			.link {
+				@include font-size-600;
+				color: $color-text;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

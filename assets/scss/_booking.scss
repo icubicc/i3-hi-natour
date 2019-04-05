@@ -271,8 +271,10 @@
 					margin-bottom: 24px;
 
 					.price-label {
+						@include font-size-300;
+						color: $color-text-light;
 						margin-bottom: 12px;
-						font-size: 14px;
+						text-transform: uppercase;
 					}
 
 					.price {
@@ -289,6 +291,7 @@
 					}
 
 					.price-info {
+						color: $color-text-dark;
 						font-size: 14px;
 					}
 				}
@@ -303,6 +306,15 @@
 				}
 			}
 		}
+	}
+
+	.booking-detail-notif {
+		border: 1px solid $color-success-dark;
+		color: $color-success-dark;
+		font-weight: 700;
+		margin-bottom: 24px;
+		padding: 12px;
+		text-align: center;
 	}
 
 	.booking-detail-action {
