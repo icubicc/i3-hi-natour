@@ -65,3 +65,62 @@
 		}
 	}
 }
+
+.career-archive {
+
+	@at-root {
+		.career-archive-heading {
+			margin-bottom: 48px;
+
+			.title {
+				font-weight: 400;
+			}
+		}
+
+		.career-archive-items {
+			margin: -16px;
+			display: flex;
+			flex-wrap: wrap;
+
+			.item {
+				width: calc(100% - 32px);
+				padding: 24px;
+				margin: 16px;
+				background-color: $white;
+				border-left: 5px solid $color-two-500;
+				box-shadow: 0 0 8px 2px rgba($black, 0.1);
+
+				.title {
+					text-transform: uppercase;
+				}
+
+				.desc {
+					color: $color-text-light;
+				}
+
+				@include breakpoint(crawler) {
+					padding: 32px;
+				}
+
+				@include breakpoint(walker) {
+					width: calc(50% - 32px);
+				}
+			}
+		}
+
+		.career-archive-loadmore {
+			border-top: 1px solid $color-400;
+			margin-top: 48px;
+			padding-top: 24px;
+			text-align: center;
+
+			.link {
+				font-weight: 700;
+				display: inline-block;
+				color: $color-text;
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+}
