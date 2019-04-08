@@ -560,12 +560,12 @@
 
 	function accommodationRoomHero() {
 		var header = document.getElementById('site-header');
-		var accommodationRoomHero = document.getElementById('accommodation-room-hero');
-		var heroHeight = accommodationRoomHero.offsetHeight;
+		var $roomHero = document.getElementById('accommodation-room-hero');
 		var heroLogo = document.getElementById('hero-logo');
 
-		if(accommodationRoomHero != null) {
-			accommodationRoomHero.style.paddingTop = (header.offsetHeight) + 'px';
+		if($roomHero != null) {
+			var heroHeight = $roomHero.offsetHeight;
+			$roomHero.style.paddingTop = (header.offsetHeight) + 'px';
 			heroLogo.style.minHeight = (heroHeight - header.offsetHeight) + 'px';
 		}
 	}
