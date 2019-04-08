@@ -22,7 +22,7 @@
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
 
-	<body class="is-loading">
+	<body>
 		<div id="site-container" class="site-container">
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-inner wrapper">
@@ -59,7 +59,24 @@
 									<ul class="items">
 										<li class="item"><a href="loyalty-benefit-status.html" class="mega-menu-toggle" data-menu-target="#mega-loyalty">Loyalty Program</a></li>
 										<li class="item"><a href="support.html">Support</a></li>
-										<li class="item item-current"><a href="myaccount-dashboard.html"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> My Account</a></li>
+										<li class="item item-current">
+											<!-- TOMMY 08.04.19 -->
+											<a href="myaccount-dashboard.html" class="header-account-toggler" data-toggle-target="#site-header-account">
+												<svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg>
+												My Account
+											</a>
+											<!-- TOMMY 08.04.19 -->
+											<div id="site-header-account" class="site-header-account">
+												<p class="account">
+													<span class="name">John Doe</span>
+													<span class="level">High Rewards Blue</span>
+												</p>
+												<ul class="menus">
+													<li class="menu"><a href="myaccount-personal-information.html" class="link">Account Preferences</a></li>
+													<li class="menu"><a href="#" class="link">Log Out</a></li>
+												</ul>
+											</div>
+										</li>
 									</ul>
 								</nav>
 								<div class="switch-widget-mobile">
@@ -176,7 +193,7 @@
 												<a href="myaccount-dashboard.html" class="tab">MY DASHBOARD</a>
 												<a href="myaccount-reservation.html" class="tab">MY RESERVATION</a>
 												<a href="myaccount-loyalty.html" class="tab is-current">MY LOYALTY AREA AND MEMBERSHIP</a>
-												<a href="myaccount-personal-information.html" class="tab">MY PREFERENCES & PERSONAL INFORMATION</a>
+												<a href="myaccount-voucher.html" class="tab">MY VOUCHER</a>
 											</div>
 										</div>
 										<div class="myaccount-content">

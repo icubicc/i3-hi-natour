@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
 		removalDelay: 200
 	});
 
+	// TOMMY 08.04.19
 	$('.site-header-nav .item a').hover(function() {
 		var $currentToggled = '#' + $('.mega-menu-item.is-toggled').attr('id');
 
@@ -22,6 +23,8 @@ jQuery(document).ready(function($) {
 			if($menutarget != $currentToggled) {
 				$($currentToggled).removeClass('is-toggled');
 				$($currentToggled).slideUp(200);
+				$('.site-header-account').removeClass('is-toggled');
+				$('.site-header-account').slideUp(200);
 			}
 
 			$($menutarget).addClass('is-toggled');
@@ -31,14 +34,25 @@ jQuery(document).ready(function($) {
 			$($currentToggled).removeClass('is-toggled');
 			$($currentToggled).slideUp(200);
 		}
-	});
 
+		var accTarget = $('#site-header-account');
+		if($(this).hasClass('header-account-toggler')) {
+			accTarget.addClass('is-toggled');
+			accTarget.slideDown(200);
+		}
+	});
+	// TOMMY 08.04.19
+
+	// TOMMY 08.04.19
 	$('.site-header-container').hover(function() {
 
 	}, function() {
 		$('.mega-menu-item').removeClass('is-toggled');
 		$('.mega-menu-item').slideUp(200);
+		$('.site-header-account').removeClass('is-toggled');
+		$('.site-header-account').slideUp(200);
 	});
+	// TOMMY 08.04.19
 
 	$('.featured-hotel-slider').find('.slides').flickity({
 		imagesLoaded: true,

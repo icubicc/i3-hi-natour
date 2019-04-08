@@ -66,3 +66,7 @@
 	+ tambah career-detail.html
 	+ update procurement.html
 	+ tambah procurement-detail.html
+
+	08.04.19
+	+ update script.js, cari comment "TOMMY 08.04.19"
+	+ update html header di halaman myaccount, cari comment "TOMMY 08.04.19"
