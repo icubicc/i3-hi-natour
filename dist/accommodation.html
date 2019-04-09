@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -17,7 +18,9 @@
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#ffffff">
 
-		<script src="assets/js/modernizr.js"></script>
+		<!--build:js assets/js/modernizr.js -->
+		<script src="assets/js/vendor/modernizr.min.js"></script>
+		<!-- endbuild -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
@@ -90,7 +93,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-benefit-status.html">Benefits & Status</a></li>
+									<li class="item""><a href="loyalty-benefit-status.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -153,104 +156,103 @@
 				</div>
 			</div>
 
-			<div id="site-content" class="site-content">
+<div id="site-content" class="site-content">
 
-				<div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-					<div class="page-container">
-						<div class="page-hero" style="background: url('assets/images/home-hero.jpg')"></div>
+    <div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+      <div class="page-container">
+        <div class="page-hero" style="background: url('assets/images/home-hero.jpg')"></div>
 
-						<div class="search-filter">
-							<div class="inner wrapper">
-								<div class="search-filter-container">
-									<div class="filter-head"><h3>Find Your Room</h3>
-									</div>
-									<div class="filter-content">
+        <div class="search-filter">
+  <div class="inner wrapper">
+    <div class="search-filter-container">
+      <div class="filter-head"><h3>Find Your Room</h3></div>
+      <div class="filter-content">
 
-										<form class="form" role="form" id="frmquick" name="frmquick" method="get" action="{!! route('front.accommodation') !!}" onSubmit="return checkform(frmquick);">
+        <form class="form" role="form" id="frmquick" name="frmquick" method="get" action="{!! route('front.accommodation') !!}" onSubmit="return checkform(frmquick);" >
 
-											<div class="filter-fields">
-												<input name="nights_h" type="hidden" id="nights_h" value="40">
-												<input name="adults_h" type="hidden" id="adults_h" value="3">
-												<input name="childs_h" type="hidden" id="childs_h" value="2">
-												<input name="rooms_h" type="hidden" id="rooms_h" value="2">
-												<input name="departuretype" type="hidden" id="departuretype" value="night">
-												<input name="userType" type="hidden" id="userType" value="agent">
-												<input name="user_ID" type="hidden" id="user_ID" value="5">
-												<input name="avail_sold" type="hidden" id="avail_sold" value="0">
-												<input name="rooms" type="hidden" id="rooms" value="1">
-												<div class="filter-field prty">
-													<label class="label">Select Hotel</label>
-													<select id="propertycheck" name="propertycheck" class="input input-hotel form-controlbox">
-														<option value="18">Select</option>
-														<optgroup label="Bali">
-															<option value="35">Asana Agung Putra Bali</option>
-															<option value="19">Grand Inna Kuta</option>
-															<option value="15">Inna Sindhu Beach Hotel & Resort</option>
-															<option value="16">Grand Inna Bali Beach</option>
-															<option value="78">Inna Bali Beach Garden</option>
-															<option value="79">Inna Bali Beach Resort</option>
-															<option value="10">Inna Bali Heritage Hotel</option>
-															<option value="18">Inaya Putri Bali Nusa Dua</option>
-															<option value="33">Kila Infinity8 Bali</option>
-															<option value="12">The Patra Bali Resorts & Villas</option>
-															<option value="34">Prama Sanur Beach Bali</option>
-														</optgroup>
-														<optgroup label="Java">
-															<option value="31">Asana Kawanua Jakarta</option>
-															<option value="21">Grand Inna Samudra Beach</option>
-															<option value="22">Grand Inna Malioboro</option>
-															<option value="23">Grand Inna Tunjungan</option>
-															<option value="26">Inna Tretes Hotel & Resort Hotel & Resort</option>
-															<option value="25">Patra Comfort Anyer</option>
-															<option value="11">Patra Comfort Jakarta</option>
-															<option value="13">Patra Comfort Bandung</option>
-															<option value="14">Patra Semarang Hotel & Convention</option>
-															<!--<option value="17">Patra Jasa Cirebon Hotel</option>-->
-															<option value="36">Prama Grand Preanger Hotel Bandung</option>
-															<option value="498">Homestay Ngaran</option>
-															<option value="499">Homestay Karangrejo</option>
-															<option value="559">Grand Cempaka Business Hotel</option>
-															<option value="559">Grand Cempaka Resort And Convention</option>
-														</optgroup>
-														<optgroup label="Sumatra">
-															<option value="28">Grand Inna Padang</option>
-															<option value="30">Grand Inna Medan</option>
-															<option value="20">Inna Parapat Hotel & Resort</option>
-															<option value="24">Patra Comfort Parapat</option>
-															<option value="556">Grand Inna Daira Palembang</option>
-														</optgroup>
-														<optgroup label="Lombok">
-															<option value="27">Kila Senggigi Beach Lombok</option>
-															<option value="29">Pool Villa Club Senggigi</option>
-														</optgroup>
-														<optgroup label="Papua">
-															<option value="32">Asana Biak Papua</option>
-														</optgroup>
-													</select>
-												</div>
+            <div class="filter-fields">
+                <input name="nights_h" type="hidden" id="nights_h" value="40">
+                <input name="adults_h" type="hidden" id="adults_h" value="3">
+                <input name="childs_h" type="hidden" id="childs_h" value="2">
+                <input name="rooms_h" type="hidden" id="rooms_h" value="2">
+                <input name="departuretype" type="hidden" id="departuretype" value="night">
+                <input name="userType" type="hidden" id="userType" value="agent">
+                <input name="user_ID" type="hidden" id="user_ID" value="5">
+                <input name="avail_sold" type="hidden" id="avail_sold" value="0">
+                <input name="rooms" type="hidden" id="rooms" value="1">
+                <div class="filter-field prty">
+                  <label class="label">Select Hotel</label>
+                    <select id="propertycheck" name="propertycheck" class="input input-hotel form-controlbox">
+                        <option value="18">Select</option>
+                        <optgroup label="Bali">
+                            <option value="35">Asana Agung Putra Bali</option>
+                            <option value="19">Grand Inna Kuta</option>
+                            <option value="15">Inna Sindhu Beach Hotel & Resort</option>
+                            <option value="16">Grand Inna Bali Beach</option>
+                            <option value="78">Inna Bali Beach Garden</option>
+                            <option value="79">Inna Bali Beach Resort</option>
+                            <option value="10">Inna Bali Heritage Hotel</option>
+                            <option value="18">Inaya Putri Bali Nusa Dua</option>
+                            <option value="33">Kila Infinity8 Bali</option>
+                            <option value="12">The Patra Bali Resorts & Villas</option>
+                            <option value="34">Prama Sanur Beach Bali</option>
+                        </optgroup>
+                        <optgroup label="Java">
+                            <option value="31">Asana Kawanua Jakarta</option>
+                            <option value="21">Grand Inna Samudra Beach</option>
+                            <option value="22">Grand Inna Malioboro</option>
+                            <option value="23">Grand Inna Tunjungan</option>
+                            <option value="26">Inna Tretes Hotel & Resort Hotel & Resort</option>
+                            <option value="25">Patra Comfort Anyer</option>
+                            <option value="11">Patra Comfort Jakarta</option>
+                            <option value="13">Patra Comfort Bandung</option>
+                            <option value="14">Patra Semarang Hotel & Convention</option>
+                            <!--<option value="17">Patra Jasa Cirebon Hotel</option>-->
+                            <option value="36">Prama Grand Preanger Hotel Bandung</option>
+                            <option value="498">Homestay Ngaran</option>
+                            <option value="499">Homestay Karangrejo</option>
+                            <option value="559">Grand Cempaka Business Hotel</option>
+                            <option value="559">Grand Cempaka Resort And Convention</option>
+                        </optgroup>
+                        <optgroup label="Sumatra">
+                            <option value="28">Grand Inna Padang</option>
+                            <option value="30">Grand Inna Medan</option>
+                            <option value="20">Inna Parapat Hotel & Resort</option>
+                            <option value="24">Patra Comfort Parapat</option>
+                            <option value="556">Grand Inna Daira Palembang</option>
+                        </optgroup>
+                        <optgroup label="Lombok">
+                            <option value="27">Kila Senggigi Beach Lombok</option>
+                            <option value="29">Pool Villa Club Senggigi</option>
+                        </optgroup>
+                        <optgroup label="Papua">
+                            <option value="32">Asana Biak Papua</option>
+                        </optgroup>
+                    </select>
+                </div>
 
-												<div class="filter-field">
-													<label class="label">Check In</label>
-													<a href="javascript:displayDatePicker('arrival','','ymd');">
+                <div class="filter-field">
+                    <label class="label">Check In</label>
+                    <a href="javascript:displayDatePicker('arrival','','ymd');">
                         <input name="arrival" type="text" class="input txtx" id="arrival" onFocus="plusDate();" onBlur="jhari();" value="<?php echo $tgskrx; ?>" readonly />
                     </a>
-													<input name="hiddendate" type="hidden" id="hiddendate" value="<?php echo $tgskr; ?>" />
+                    <input name="hiddendate" type="hidden" id="hiddendate" value="<?php echo $tgskr; ?>" />
                 </div>
 
-													<div class="filter-field">
-														<label class="label">Check Out</label>
-														<a href="javascript:displayDatePicker('departure','','ymd');">
+                <div class="filter-field">
+                  <label class="label">Check Out</label>
+                    <a href="javascript:displayDatePicker('departure','','ymd');">
                         <input name="departure" type="text" class="input txtx" id="departure" onFocus="jhari();" onBlur="jhari();" value="<?php echo $tgbskx; ?>" readonly/>
                     </a>
-													</div>
-													<div class="form-group" style="display: none;"> Night(s)<br />
-														<input name="nights" type="text" class="input txtx" id="nights" value="<?php echo $nights; ?>" size="3" readonly>
                 </div>
-														<div class="filter-field">
-															<label class="label">Adult(s)</label>
-															<select name="adults" class="input input-qty form-controlbox" id="adults">
+                <div class="form-group" style="display: none;"> Night(s)<br />
+                    <input name="nights" type="text" class="input txtx" id="nights" value="<?php echo $nights; ?>" size="3" readonly>
+                </div>
+                <div class="filter-field">
+                  <label class="label">Adult(s)</label>
+                    <select name="adults" class="input input-qty form-controlbox" id="adults">
 
-																<?php
+                        <?php
                         $i=1;
                         for($i=1;$i<=10;$i++){
                         if($i==2){
@@ -260,50 +262,46 @@
                         }
                         ?>
 
-																<option value="<?php echo $i; ?>" <?php echo $sel; ?>>
-																	<?php echo $i; ?>
-																</option>
+                        <option value="<?php echo $i; ?>" <?php  echo $sel; ?>><?php echo $i; ?></option>
 
-																<?php
+                        <?php
                         }
                         ?>
 
-															</select>
-														</div>
-														<div class="filter-field">
-															<label class="label">Children</label>
-															<select name="childs" id="childs" class="input input-qty form-controlbox">
+                    </select>
+                </div>
+                <div class="filter-field">
+                  <label class="label">Children</label>
+                    <select name="childs" id="childs" class="input input-qty form-controlbox">
 
-																<?php
+                        <?php
                         $i=0;
                         for($i=0;$i<=6;$i++){
                         ?>
-																<option value="<?php echo $i; ?>">
-																	<?php echo $i; ?>
-																</option>
-																<?php
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                        <?php
                         }
                         ?>
 
-															</select>
-														</div>
-														<div class="filter-field">
-															<label class="label">Promo</label>
-															<input name="promo" type="text" class="input input-promo txtx" id="promo" value=""/>
+                    </select>
                 </div>
-														</div>
-														<div class="filter-action">
-															<button class="button" type="submit">BOOK NOW</button>
-														</div>
+                <div class="filter-field">
+                  <label class="label">Promo</label>
+                    <input name="promo" type="text" class="input input-promo txtx" id="promo" value=""/>
+                </div>
+            </div>
+            <div class="filter-action">
+              <button class="button" type="submit">BOOK NOW</button>
+            </div>
 
-										</form>
+        </form>
 
-									</div>
-								</div>
-							</div>
-						</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-						<!-- <form class="form">
+<!-- <form class="form">
   <div class="filter-fields">
     <div class="filter-field">
       <label class="label">Select Hotel</label>
@@ -332,150 +330,150 @@
   </div>
 </form> -->
 
-						<div class="page-content with-filter zero-bottom">
-							<div class="page-content-heading">
-								<div class="inner wrapper">
-									<h1 class="title"><strong>Accommodation</strong></h1>
-								</div>
-							</div>
-							<div class="page-content-main">
-								<div class="accommodation-sections">
-									<section class="section fivestars-hotel">
-										<div class="inner wrapper">
-											<div class="section-content">
-												<div class="accommodation-list">
-													<div class="accommodation-item">
-														<div class="image">
-															<img src="assets/images/accommodation-1.jpg" alt="">
+        <div class="page-content with-filter zero-bottom">
+          <div class="page-content-heading">
+            <div class="inner wrapper">
+              <h1 class="title"><strong>Accommodation</strong></h1>
+            </div>
+          </div>
+          <div class="page-content-main">
+            <div class="accommodation-sections">
+              <section class="section fivestars-hotel">
+                <div class="inner wrapper">
+                  <div class="section-content">
+                    <div class="accommodation-list">
+                      <div class="accommodation-item">
+                        <div class="image">
+                          <img src="assets/images/accommodation-1.jpg" alt="">
                         </div>
-															<div class="meta">
-																<p class="title">The Patra Bali Resort & Villas</p>
-																<p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
-																<a href="accommodation-detail.html" class="button button-findout">+ Find out more</a>
-															</div>
-															<div class="footer">
-																<div class="rating">
-																	<div class="rating-star">
-																		<div class="star" title="Rated 4.0 out of 5">
-																			<span class="fill" style="width: 80%"></span>
-																		</div>
-																	</div>
-																</div>
-																<div class="action"><a href="#" class="button button-book">Book now</a></div>
-															</div>
-														</div>
-														<div class="accommodation-item">
-															<div class="image">
-																<img src="assets/images/accommodation-1.jpg" alt="">
+                        <div class="meta">
+                          <p class="title">The Patra Bali Resort & Villas</p>
+                          <p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
+                          <a href="accommodation-detail.html" class="button button-findout">+ Find out more</a>
                         </div>
-																<div class="meta">
-																	<p class="title">Patra Semarang Hotel & Convention</p>
-																	<p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
-																	<a href="#" class="button button-findout">+ Find out more</a>
-																</div>
-																<div class="footer">
-																	<div class="rating">
-																		<div class="rating-star">
-																			<div class="star" title="Rated 3.0 out of 5">
-																				<span class="fill" style="width: 60%"></span>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="action"><a href="#" class="button button-book">Book now</a></div>
-																</div>
-															</div>
-															<div class="accommodation-item">
-																<div class="image">
-																	<img src="assets/images/accommodation-3.jpg" alt="">
+                        <div class="footer">
+                          <div class="rating">
+                            <div class="rating-star">
+                              <div class="star" title="Rated 4.0 out of 5">
+                                <span class="fill" style="width: 80%"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action"><a href="#" class="button button-book">Book now</a></div>
                         </div>
-																	<div class="meta">
-																		<p class="title">Patra Comfort Anyer</p>
-																		<p class="desc">For you, a weekend for two is rarely just sitting quietly by the fireplace.</p>
-																		<a href="#" class="button button-findout">+ Find out more</a>
-																	</div>
-																	<div class="footer">
-																		<div class="rating">
-																			<div class="rating-star">
-																				<div class="star" title="Rated 4.0 out of 5">
-																					<span class="fill" style="width: 80%"></span>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="action"><a href="#" class="button button-book">Book now</a></div>
-																	</div>
-																</div>
-																<div class="accommodation-item">
-																	<div class="image">
-																		<img src="assets/images/accommodation-1.jpg" alt="">
+                      </div>
+                      <div class="accommodation-item">
+                        <div class="image">
+                          <img src="assets/images/accommodation-1.jpg" alt="">
                         </div>
-																		<div class="meta">
-																			<p class="title">The Patra Bali Resort & Villas</p>
-																			<p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
-																			<a href="accommodation-detail.html" class="button button-findout">+ Find out more</a>
-																		</div>
-																		<div class="footer">
-																			<div class="rating">
-																				<div class="rating-star">
-																					<div class="star" title="Rated 4.0 out of 5">
-																						<span class="fill" style="width: 80%"></span>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="action"><a href="#" class="button button-book">Book now</a></div>
-																		</div>
-																	</div>
-																	<div class="accommodation-item">
-																		<div class="image">
-																			<img src="assets/images/accommodation-1.jpg" alt="">
+                        <div class="meta">
+                          <p class="title">Patra Semarang Hotel & Convention</p>
+                          <p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
+                          <a href="#" class="button button-findout">+ Find out more</a>
                         </div>
-																			<div class="meta">
-																				<p class="title">Patra Semarang Hotel & Convention</p>
-																				<p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
-																				<a href="#" class="button button-findout">+ Find out more</a>
-																			</div>
-																			<div class="footer">
-																				<div class="rating">
-																					<div class="rating-star">
-																						<div class="star" title="Rated 3.0 out of 5">
-																							<span class="fill" style="width: 60%"></span>
-																						</div>
-																					</div>
-																				</div>
-																				<div class="action"><a href="#" class="button button-book">Book now</a></div>
-																			</div>
-																		</div>
-																		<div class="accommodation-item">
-																			<div class="image">
-																				<img src="assets/images/accommodation-3.jpg" alt="">
+                        <div class="footer">
+                          <div class="rating">
+                            <div class="rating-star">
+                              <div class="star" title="Rated 3.0 out of 5">
+                                <span class="fill" style="width: 60%"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action"><a href="#" class="button button-book">Book now</a></div>
                         </div>
-																				<div class="meta">
-																					<p class="title">Patra Comfort Anyer</p>
-																					<p class="desc">For you, a weekend for two is rarely just sitting quietly by the fireplace.</p>
-																					<a href="#" class="button button-findout">+ Find out more</a>
-																				</div>
-																				<div class="footer">
-																					<div class="rating">
-																						<div class="rating-star">
-																							<div class="star" title="Rated 4.0 out of 5">
-																								<span class="fill" style="width: 80%"></span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="action"><a href="#" class="button button-book">Book now</a></div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="accommodation-view-more"><a href="#">View More</a></div>
-																	</div>
-																</div>
-									</section>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                      </div>
+                      <div class="accommodation-item">
+                        <div class="image">
+                          <img src="assets/images/accommodation-3.jpg" alt="">
+                        </div>
+                        <div class="meta">
+                          <p class="title">Patra Comfort Anyer</p>
+                          <p class="desc">For you, a weekend for two is rarely just sitting quietly by the fireplace.</p>
+                          <a href="#" class="button button-findout">+ Find out more</a>
+                        </div>
+                        <div class="footer">
+                          <div class="rating">
+                            <div class="rating-star">
+                              <div class="star" title="Rated 4.0 out of 5">
+                                <span class="fill" style="width: 80%"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action"><a href="#" class="button button-book">Book now</a></div>
+                        </div>
+                      </div>
+                      <div class="accommodation-item">
+                        <div class="image">
+                          <img src="assets/images/accommodation-1.jpg" alt="">
+                        </div>
+                        <div class="meta">
+                          <p class="title">The Patra Bali Resort & Villas</p>
+                          <p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
+                          <a href="accommodation-detail.html" class="button button-findout">+ Find out more</a>
+                        </div>
+                        <div class="footer">
+                          <div class="rating">
+                            <div class="rating-star">
+                              <div class="star" title="Rated 4.0 out of 5">
+                                <span class="fill" style="width: 80%"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action"><a href="#" class="button button-book">Book now</a></div>
+                        </div>
+                      </div>
+                      <div class="accommodation-item">
+                        <div class="image">
+                          <img src="assets/images/accommodation-1.jpg" alt="">
+                        </div>
+                        <div class="meta">
+                          <p class="title">Patra Semarang Hotel & Convention</p>
+                          <p class="desc">Come and enjoy a pleasant, relaxing moment in one of our resort hotels.</p>
+                          <a href="#" class="button button-findout">+ Find out more</a>
+                        </div>
+                        <div class="footer">
+                          <div class="rating">
+                            <div class="rating-star">
+                              <div class="star" title="Rated 3.0 out of 5">
+                                <span class="fill" style="width: 60%"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action"><a href="#" class="button button-book">Book now</a></div>
+                        </div>
+                      </div>
+                      <div class="accommodation-item">
+                        <div class="image">
+                          <img src="assets/images/accommodation-3.jpg" alt="">
+                        </div>
+                        <div class="meta">
+                          <p class="title">Patra Comfort Anyer</p>
+                          <p class="desc">For you, a weekend for two is rarely just sitting quietly by the fireplace.</p>
+                          <a href="#" class="button button-findout">+ Find out more</a>
+                        </div>
+                        <div class="footer">
+                          <div class="rating">
+                            <div class="rating-star">
+                              <div class="star" title="Rated 4.0 out of 5">
+                                <span class="fill" style="width: 80%"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="action"><a href="#" class="button button-book">Book now</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accommodation-view-more"><a href="#">View More</a></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			</div>
+  </div>
 
 			<footer id="site-footer" class="site-footer" role="contentinfo">
 				<div class="site-footer-inner wrapper">
@@ -506,42 +504,58 @@
 							<div class="footer-logo">
 								<img src="assets/images/logo-bumn.svg" alt="">
 							</div>
-							</div>
-							<div class="footer-right">
-								<div class="footer-nav">
-									<div class="footer-nav-item">
-										<p class="heading">HELPFUL <strong>INFO</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">News</a></li>
-											<li class="item"><a href="#">Contact Us</a></li>
-											<li class="item"><a href="#">Loyalty Programme</a></li>
-											<li class="item"><a href="#">Faq</a></li>
-											<li class="item"><a href="#">Careers</a></li>
-											<li class="item"><a href="#">About Us</a></li>
-										</ul>
-									</div>
+						</div>
+						<div class="footer-right">
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">HELPFUL <strong>INFO</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">News</a></li>
+										<li class="item"><a href="#">Contact Us</a></li>
+										<li class="item"><a href="#">Loyalty Programme</a></li>
+										<li class="item"><a href="#">Faq</a></li>
+										<li class="item"><a href="#">Careers</a></li>
+										<li class="item"><a href="#">About Us</a></li>
+									</ul>
 								</div>
-								<div class="footer-nav">
-									<div class="footer-nav-item">
-										<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">By STARS</a></li>
-											<li class="item"><a href="#">By DESTINATIONS</a></li>
-										</ul>
-									</div>
+							</div>
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">By STARS</a></li>
+										<li class="item"><a href="#">By DESTINATIONS</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-
-						<div class="site-footer-attribution">
-							<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
-						</div>
-
 					</div>
+
+					<div class="site-footer-attribution">
+						<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
+					</div>
+
+				</div>
 			</footer>
 		</div> <!-- #site-container -->
 
-		<script src="assets/js/vendor.js"></script>
-		<script src="assets/js/bundle.js"></script>
+		<!--build:js assets/js/vendor.js -->
+		<script src="assets/js/vendor/svg4everybody.min.js"></script>
+		<script src="assets/js/vendor/stickyfill.min.js"></script>
+		<script src="assets/js/vendor/imagesloaded.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.ScrollToPlugin.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.debug.addIndicators.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.animation.gsap.min.js"></script>
+		<script src="assets/js/vendor/fluidvids.min.js"></script>
+		<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/vendor/flickity.min.js"></script>
+		<!-- endbuild -->
+		<!--build:js assets/js/bundle.js -->
+		<script src="assets/js/helper.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/style.js"></script>
+		<!-- endbuild -->
 	</body>
 </html> <!-- haunter owned! -->

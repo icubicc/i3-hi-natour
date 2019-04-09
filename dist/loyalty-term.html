@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
 	<head>
@@ -17,7 +18,9 @@
 		<link rel="manifest" href="/manifest.json">
 		<meta name="theme-color" content="#ffffff">
 
-		<script src="assets/js/modernizr.js"></script>
+		<!--build:js assets/js/modernizr.js -->
+		<script src="assets/js/vendor/modernizr.min.js"></script>
+		<!-- endbuild -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>if (!window.jQuery) { document.write('<script src="assets/js/vendor/jquery.js" async><\/script>'); }</script>
 	</head>
@@ -90,7 +93,7 @@
 							</div>
 							<div id="mega-loyalty" class="mega-menu-item">
 								<ul class="list">
-									<li class="item""><a href=" loyalty-benefit-status.html">Benefits & Status</a></li>
+									<li class="item""><a href="loyalty-benefit-status.html">Benefits & Status</a></li>
 									<li class="item"><a href="loyalty-earn.html">Earns Points</a></li>
 									<li class="item"><a href="loyalty-redeem.html">Redeem Points</a></li>
 									<li class="item"><a href="loyalty-offer.html">Current Offers</a></li>
@@ -518,9 +521,9 @@
 											<ul>
 												<li>lead to the temporary suspension of the individual's membership for a period to be decided by the Programme Administrator, which cannot exceed three (3) months (the 'Suspension Period');</li>
 												<li>be sanctioned by the termination of the membership, that is, the immediate cancellation of the card, its benefits, the closure of the account and the cancellation of the Points earned, without any claim for compensation by the Member, for whatever reason.
-													11.3. Effects of suspension
-													During the Suspension Period, the Member may not redeem his/her Rewards Points according to the conditions stipulated in Article 10 herein.
-													During the Suspension Period, and no later than the expiry date of the Suspension Period, the Programme Administrator may decide to:</li>
+												11.3. Effects of suspension
+												During the Suspension Period, the Member may not redeem his/her Rewards Points according to the conditions stipulated in Article 10 herein.
+												During the Suspension Period, and no later than the expiry date of the Suspension Period, the Programme Administrator may decide to:</li>
 												<li>lift the suspension, in which case the Member can take advantage of the benefits and services available to Members and redeem his/her Rewards Points once again; or</li>
 												<li>Order the termination of the membership in accordance with the provisions of Article 12 herein.</li>
 											</ul>
@@ -540,11 +543,11 @@
 												<li>In accordance with Article 4.1, Members are reminded that by becoming a Member of the Programme, they agree to receive electronic communications associated with the operation and services offered by the Programme (information messages, Points statements, etc.). If the Member no longer wishes to receive this information, which is deemed essential for Programme operation, he/she must ask to leave the Programme (see the termination procedure described in Article 11.1).</li>
 												<li>Any Member who joins the Programme further agrees to receive commercial information electronically by email from the Programme, including promotions for Members only. If the Member no longer wishes to receive commercial communications by email, he/she may unsubscribe at any time from these commercial offers by clicking on the unsubscribe link at the end of the email or via his/her personal account. This action has no effect on his/her membership.</li>
 												<li>The Member must notify the Programme of any change of email or postal address, name, or any other relevant information, by providing the relevant proof to the customer care team.
-													14. PROTECTION OF PERSONAL DATA
-													Personal information regarding the Member collected at the time of subscription or during his/her membership in the Programme is processed by Hotel Indonesia Group, as data controller (with a registered office at Grha Inna, jl. Prof. Dr. Soepomo no. 8 Jakarta Selatan), for the purposes corresponding to the execution of the programme terms and conditions and, based on legitimate interest, for marketing activities (including targeted marketing campaigns).</li>
+												14. PROTECTION OF PERSONAL DATA
+												Personal information regarding the Member collected at the time of subscription or during his/her membership in the Programme is processed by Hotel Indonesia Group, as data controller (with a registered office at Grha Inna, jl. Prof. Dr. Soepomo no. 8 Jakarta Selatan), for the purposes corresponding to the execution of the programme terms and conditions and, based on legitimate interest, for marketing activities (including targeted marketing campaigns).</li>
 												<li>The data may also be disclosed to the programme contracting partners (hotels, airlines and other partners) in order for the member to take full advantage of these partners’ offers. The data may be transferred to countries which might not ensure an adequate level of protection. Therefore, appropriate and suitable safeguards are provided and you can request to obtain a copy. Data concerning Members may indeed be transmitted to recipients located in countries outside of the Indonesia. These include:</li>
 												<li>Partner loyalty programmes and airlines that Members choose for Rewards Points or air miles transfer purposes and claim management. The list of Partners and companies is available in the HIGH Rewards section on www.hotelindonesiagroup.co.id. Members must expressly agree to each transfer of data, which is required for processing Rewards Points or transferring miles; - Entities and hotels within the Hotel Indonesia Group, since transfer is required for the execution of the contract between the Member and the data processor; - External service providers with call centres that handle claims within their scope of activity, where data transmission is governed by cross-border flow agreements.
-													Hotel Indonesia Group also processes personal data, based on its legitimate interest, to detect and manage anomalies, notably fraud, which may occur when a Member joins the Programme or when earning or using Points. The data collected in this context is for authorised staff at Hotel Indonesia Group, its services providers and, if necessary, loyalty programme Partners and the manager of the hotel concerned by the anomaly. Members are informed by post of any anomalies related to them.</li>
+												Hotel Indonesia Group also processes personal data, based on its legitimate interest, to detect and manage anomalies, notably fraud, which may occur when a Member joins the Programme or when earning or using Points. The data collected in this context is for authorised staff at Hotel Indonesia Group, its services providers and, if necessary, loyalty programme Partners and the manager of the hotel concerned by the anomaly. Members are informed by post of any anomalies related to them.</li>
 											</ul>
 
 											<h2>
@@ -604,42 +607,58 @@
 							<div class="footer-logo">
 								<img src="assets/images/logo-bumn.svg" alt="">
 							</div>
-							</div>
-							<div class="footer-right">
-								<div class="footer-nav">
-									<div class="footer-nav-item">
-										<p class="heading">HELPFUL <strong>INFO</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">News</a></li>
-											<li class="item"><a href="#">Contact Us</a></li>
-											<li class="item"><a href="#">Loyalty Programme</a></li>
-											<li class="item"><a href="#">Faq</a></li>
-											<li class="item"><a href="#">Careers</a></li>
-											<li class="item"><a href="#">About Us</a></li>
-										</ul>
-									</div>
+						</div>
+						<div class="footer-right">
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">HELPFUL <strong>INFO</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">News</a></li>
+										<li class="item"><a href="#">Contact Us</a></li>
+										<li class="item"><a href="#">Loyalty Programme</a></li>
+										<li class="item"><a href="#">Faq</a></li>
+										<li class="item"><a href="#">Careers</a></li>
+										<li class="item"><a href="#">About Us</a></li>
+									</ul>
 								</div>
-								<div class="footer-nav">
-									<div class="footer-nav-item">
-										<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
-										<ul class="list">
-											<li class="item"><a href="#">By STARS</a></li>
-											<li class="item"><a href="#">By DESTINATIONS</a></li>
-										</ul>
-									</div>
+							</div>
+							<div class="footer-nav">
+								<div class="footer-nav-item">
+									<p class="heading">FIND <strong>YOUR HOTEL</strong></p>
+									<ul class="list">
+										<li class="item"><a href="#">By STARS</a></li>
+										<li class="item"><a href="#">By DESTINATIONS</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-
-						<div class="site-footer-attribution">
-							<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
-						</div>
-
 					</div>
+
+					<div class="site-footer-attribution">
+						<p class="site-copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> Hotel Indonesia Group. All rights reserved.</p>
+					</div>
+
+				</div>
 			</footer>
 		</div> <!-- #site-container -->
 
-		<script src="assets/js/vendor.js"></script>
-		<script src="assets/js/bundle.js"></script>
+		<!--build:js assets/js/vendor.js -->
+		<script src="assets/js/vendor/svg4everybody.min.js"></script>
+		<script src="assets/js/vendor/stickyfill.min.js"></script>
+		<script src="assets/js/vendor/imagesloaded.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.min.js"></script>
+		<script src="assets/js/vendor/TweenMax.ScrollToPlugin.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.debug.addIndicators.min.js"></script>
+		<script src="assets/js/vendor/ScrollMagic.animation.gsap.min.js"></script>
+		<script src="assets/js/vendor/fluidvids.min.js"></script>
+		<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/vendor/flickity.min.js"></script>
+		<!-- endbuild -->
+		<!--build:js assets/js/bundle.js -->
+		<script src="assets/js/helper.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/style.js"></script>
+		<!-- endbuild -->
 	</body>
 </html> <!-- haunter owned! -->
