@@ -651,6 +651,15 @@
 					margin-right: 8px;
 				}
 			}
+
+			.link-preferences {
+				color: $white;
+				transition: all 0.2s ease-out;
+
+				&:hover {
+					color: $color-one-500;
+				}
+			}
 		}
 
 		.mobile-menu-nav {

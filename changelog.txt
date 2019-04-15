@@ -71,3 +71,7 @@
 	+ update script.js, cari comment "TOMMY 08.04.19"
 	+ update html header di halaman myaccount, cari comment "TOMMY 08.04.19"
 	+ update style.js
+
+	15.04.19
+	+ update style.css
+	+ update link account preferences di mobile menu, di halaman myaccount-dashboard.html cari "15.04.19"
