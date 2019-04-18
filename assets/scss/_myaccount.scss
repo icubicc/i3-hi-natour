@@ -1500,13 +1500,16 @@
 				.label {
 					@include font-size-400;
 					background-color: $color-one-500;
+					border: 1px solid $color-one-500;
 					color: $color-text-dark;
 					padding: 8px 8px;
 					text-align: center;
+					cursor: pointer;
 				}
 
 				.code {
 					border: 1px solid $color-one-500;
+					border-left: none;
 					color: $color-text-dark;
 					display: inline-block;
 					font-weight: 700;

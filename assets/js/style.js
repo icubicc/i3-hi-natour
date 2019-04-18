@@ -570,6 +570,22 @@
 		}
 	}
 
+	let couponToggler = document.getElementsByClassName('js-coupon-toggler');
+	if(couponToggler[0]) {
+		couponToggler = couponToggler[0];
+
+		couponToggler.onclick = function() {
+			let $display = this.parentElement.getElementsByClassName('js-coupon-display')[0];
+
+			if($display.classList.contains('is-hidden')) {
+				$display.classList.remove('is-hidden');
+			}
+			else {
+				$display.classList.add('is-hidden');
+			}
+		};
+	}
+
 	// Run Functions
 	function run() {
 		accommodationFacilityHero();

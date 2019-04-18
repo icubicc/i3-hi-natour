@@ -79,3 +79,8 @@
 	18.04.19
 	+ update style.css
 	+ update myaccount-personal-information.html, cari "profile image 18.04.19"
+
+	18.04.19 b
+	+ update style.css
+	+ update style.js
+	+ update html di halaman myaccount-voucher.html, cari comment "18.04.19"
