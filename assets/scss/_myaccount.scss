@@ -1198,6 +1198,20 @@
 					}
 				}
 
+				.profile-image-input {
+					.image {
+						width: 80px;
+						height: 80px;
+						object-fit: cover;
+						margin-right: 12px;
+					}
+
+					.file-input {
+						font-size: 14px;
+						margin-top: 12px;
+					}
+				}
+
 				@include breakpoint(crawler) {
 					display: flex;
 

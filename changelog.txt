@@ -75,3 +75,7 @@
 	15.04.19
 	+ update style.css
 	+ update link account preferences di mobile menu, di halaman myaccount-dashboard.html cari "15.04.19"
+
+	18.04.19
+	+ update style.css
+	+ update myaccount-personal-information.html, cari "profile image 18.04.19"
