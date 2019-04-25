@@ -570,22 +570,18 @@
 		}
 	}
 
-	let couponToggler = document.getElementsByClassName('js-coupon-toggler');
-	for(var i = 0; i < couponToggler.length; i++)
-	{
-		if(couponToggler[i]) {
-			couponToggler[i].onclick = function() {
-				let $display = this.parentElement.getElementsByClassName('js-coupon-display')[0];
+	document.addEventListener('click',function(e){
+		if (e.target && e.target.matches(".js-coupon-toggler")) {
+			let $display = e.target.parentElement.getElementsByClassName('js-coupon-display')[0];
 
-				if($display.classList.contains('is-hidden')) {
-					$display.classList.remove('is-hidden');
-				}
-				else {
-					$display.classList.add('is-hidden');
-				}
-			};
+			if($display.classList.contains('is-hidden')) {
+				$display.classList.remove('is-hidden');
+			}
+			else {
+				$display.classList.add('is-hidden');
+			}
 		}
-	}
+	});
 
 	// Run Functions
 	function run() {
