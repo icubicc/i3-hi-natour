@@ -113,6 +113,7 @@
         .form-newsletter {
           display: flex;
           align-items: flex-start;
+          flex-wrap: wrap;
           margin-bottom: 16px;
 
           #newsletter-subscribtion {
@@ -142,6 +143,7 @@
             border-radius: 3px;
             padding: 3px;
             position: relative;
+            margin-top: 1px;
 
             .icon {
               line-height: 1;
@@ -163,7 +165,8 @@
           }
 
           .label {
-            padding-left: 16px;
+            width: calc(100% - 20px);
+            padding-left: 12px;
             margin-bottom: 0;
             color: #868686;
           }
