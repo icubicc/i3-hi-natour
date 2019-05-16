@@ -87,3 +87,5 @@
 
 	16.05.19
 	+ update style.css
+	+ update svg-symbols.svg
+	+ update html signup.html, comment "16.05.19"
