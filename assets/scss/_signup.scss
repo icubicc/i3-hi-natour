@@ -28,7 +28,8 @@
           }
 
           select.input {
-            padding: 11px 12px;
+            padding: 12px;
+            height: 50px;
           }
 
           &.form-text-title {
@@ -114,7 +115,7 @@
           align-items: flex-start;
           margin-bottom: 16px;
 
-          input[name="newsletter_subscribtion"] {
+          #newsletter-subscribtion {
             margin-top: 5px;
             transform: scale(1.2);
           }
