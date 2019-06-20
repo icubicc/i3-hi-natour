@@ -336,6 +336,7 @@ select {
 
 	&:disabled {
 		background-color: $color-300;
+		background-image: none;
 		cursor: default;
 	}
 
